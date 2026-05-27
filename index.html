@@ -4,134 +4,188 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atelier PACA - Plombier, Electricien, Climatisation - Alpes-Maritimes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --rouge: #E63946;
-      --bleu: #1D3557;
-      --blanc: #FFFFFF;
-      --gris: #F4F6F8;
-      --texte: #1a1a2e;
+      --rouge:   #E63946;
+      --bleu:    #1D3557;
+      --blanc:   #FFFFFF;
+      --gris:    #F7F8FA;
+      --gris2:   #EEF0F3;
+      --texte:   #111827;
+      --sous:    #6B7280;
     }
-    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--texte); background: var(--blanc); overflow-x: hidden; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--texte); background: var(--blanc); overflow-x: hidden; }
 
-    /* HEADER */
-    header { background: var(--bleu); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.3); height: 68px; }
-    .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
-    .logo-box { width: 44px; height: 44px; background: var(--rouge); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; font-size: 16px; }
-    .logo-text { font-size: 21px; font-weight: 800; }
-    .logo-text .atelier { color: white; }
-    .logo-text .paca { color: var(--rouge); }
-    nav { display: flex; gap: 6px; align-items: center; }
-    nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; font-weight: 500; padding: 7px 13px; border-radius: 6px; transition: all 0.2s; }
-    nav a:hover { background: rgba(255,255,255,0.15); color: white; }
-    .nav-cta { background: var(--rouge) !important; color: white !important; font-weight: 700 !important; }
-    .nav-cta:hover { background: #c0303a !important; }
-    .tel-header { color: white; font-weight: 700; font-size: 15px; }
+    /* ======= HEADER ======= */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--bleu);
+      height: 66px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.08), 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-icon { width: 40px; height: 40px; background: var(--rouge); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #fff; font-size: 15px; letter-spacing: -0.5px; flex-shrink: 0; }
+    .logo-nom { font-size: 18px; font-weight: 700; color: #fff; }
+    .logo-nom span { color: var(--rouge); }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 500; padding: 6px 14px; border-radius: 6px; transition: all 0.15s; }
+    nav a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+    .btn-devis { background: var(--rouge); color: #fff !important; font-weight: 700 !important; border-radius: 8px; padding: 8px 18px !important; }
+    .btn-devis:hover { background: #c9303c !important; }
+    .header-tel { color: #fff; font-weight: 700; font-size: 15px; white-space: nowrap; }
 
-    /* URGENCE BAND */
-    .urgence-band { background: linear-gradient(90deg, var(--rouge), #c0303a); padding: 13px 24px; display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; text-align: center; }
-    .urgence-band p { color: white; font-size: 14px; font-weight: 600; }
-    .urgence-band a { color: white; font-weight: 900; text-decoration: none; font-size: 17px; white-space: nowrap; }
+    /* ======= HERO (tout texte) ======= */
+    .hero {
+      background: var(--bleu);
+      padding: 80px 48px 88px;
+      text-align: center;
+    }
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(230,57,70,0.18);
+      border: 1px solid rgba(230,57,70,0.45);
+      color: #f87171;
+      font-size: 13px; font-weight: 600;
+      padding: 5px 16px; border-radius: 100px;
+      margin-bottom: 28px; letter-spacing: 0.4px;
+    }
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(34px, 5.5vw, 62px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+    .hero h1 em { color: #60c5f7; font-style: normal; }
+    .hero-sub {
+      color: rgba(255,255,255,0.72);
+      font-size: clamp(15px, 1.8vw, 18px);
+      max-width: 580px; margin: 0 auto 20px;
+      line-height: 1.7;
+    }
+    .hero-cta { color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 36px; }
+    .hero-cta strong { color: #fff; }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+    .btn-rouge { background: var(--rouge); color: #fff; padding: 14px 30px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; box-shadow: 0 4px 18px rgba(230,57,70,0.4); transition: all 0.2s; }
+    .btn-rouge:hover { background: #c9303c; transform: translateY(-2px); }
+    .btn-ghost { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.3); color: #fff; padding: 14px 30px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.2s; }
+    .btn-ghost:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.6); }
 
-    /* HERO */
-    .hero { background: linear-gradient(135deg, var(--bleu) 0%, #0d1f3c 100%); padding: 70px 32px 60px; text-align: center; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(230,57,70,0.2); border: 1px solid rgba(230,57,70,0.5); color: #ff8a93; padding: 6px 18px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-bottom: 22px; }
-    .hero h1 { color: white; font-size: clamp(30px, 5vw, 54px); font-weight: 900; line-height: 1.15; margin-bottom: 14px; }
-    .hero h1 .accent { color: #5bc4f5; }
-    .hero p { color: rgba(255,255,255,0.8); font-size: clamp(15px, 2vw, 18px); max-width: 620px; margin: 0 auto 32px; line-height: 1.65; }
-    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px; }
-    .btn-primary { background: var(--rouge); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; transition: all 0.2s; box-shadow: 0 4px 20px rgba(230,57,70,0.45); }
-    .btn-primary:hover { background: #c0303a; transform: translateY(-2px); }
-    .btn-secondary { background: transparent; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; border: 2px solid rgba(255,255,255,0.4); transition: all 0.2s; }
-    .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.1); }
+    /* CHIPS services dans le hero */
+    .hero-chips { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.85);
+      font-size: 13px; font-weight: 500;
+      padding: 7px 14px; border-radius: 8px;
+    }
 
-    /* HERO PHOTOS */
-    .hero-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 900px; margin: 0 auto; }
-    .hero-photo { border-radius: 12px; overflow: hidden; height: 160px; position: relative; }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
-    .hero-photo .photo-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(0,0,0,0.75), transparent); color: white; font-size: 13px; font-weight: 700; padding: 18px 10px 8px; text-align: center; }
+    /* ======= STATS ======= */
+    .stats {
+      background: #fff;
+      display: flex; justify-content: center; flex-wrap: wrap;
+      border-bottom: 1px solid var(--gris2);
+    }
+    .stat { padding: 28px 48px; text-align: center; border-right: 1px solid var(--gris2); }
+    .stat:last-child { border-right: none; }
+    .stat-n { font-size: 30px; font-weight: 900; color: var(--rouge); display: block; }
+    .stat-l { font-size: 13px; color: var(--sous); margin-top: 2px; }
 
-    /* STATS */
-    .stats-bar { background: white; padding: 28px 32px; display: flex; justify-content: center; flex-wrap: wrap; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
-    .stat-item { text-align: center; padding: 0 40px; border-right: 1px solid #e0e4ea; }
-    .stat-item:last-child { border-right: none; }
-    .stat-num { color: var(--rouge); font-size: 34px; font-weight: 900; display: block; }
-    .stat-label { color: #666; font-size: 13px; }
+    /* ======= URGENCE BAND ======= */
+    .urgence-band {
+      background: var(--rouge);
+      padding: 14px 32px;
+      display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;
+      text-align: center;
+    }
+    .urgence-band p { color: #fff; font-size: 15px; font-weight: 600; }
+    .urgence-band a { color: #fff; font-weight: 800; font-size: 18px; text-decoration: none; border-bottom: 1.5px solid rgba(255,255,255,0.5); }
 
-    /* SECTION TITLES */
-    .section-title { text-align: center; margin-bottom: 44px; }
-    .tag { display: inline-block; background: var(--rouge); color: white; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 4px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; }
-    .section-title h2 { font-size: clamp(24px, 4vw, 38px); font-weight: 900; color: var(--bleu); line-height: 1.2; }
-    .section-title p { color: #666; font-size: 16px; margin-top: 10px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.6; }
-
-    .section-pad { padding: 72px 32px; }
+    /* ======= SECTION COMMUNE ======= */
+    .section { padding: 80px 48px; }
     .bg-grey { background: var(--gris); }
+    .section-head { text-align: center; margin-bottom: 52px; }
+    .section-head .eyebrow { display: inline-block; background: rgba(230,57,70,0.1); color: var(--rouge); font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 6px; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 14px; }
+    .section-head h2 { font-size: clamp(24px, 3.5vw, 36px); font-weight: 900; color: var(--bleu); letter-spacing: -0.5px; line-height: 1.2; }
+    .section-head p { color: var(--sous); font-size: 16px; margin-top: 10px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.65; }
 
-    /* CLIMATISATION */
-    .clim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-    .clim-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 20px rgba(0,0,0,0.09); transition: all 0.25s; }
-    .clim-card:hover { transform: translateY(-6px); box-shadow: 0 10px 36px rgba(0,0,0,0.15); }
-    .clim-card .c-img { height: 180px; overflow: hidden; position: relative; }
-    .clim-card .c-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
-    .clim-card:hover .c-img img { transform: scale(1.06); }
-    .clim-card .c-img .c-badge { position: absolute; top: 12px; left: 12px; background: var(--rouge); color: white; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; }
-    .clim-card .c-body { padding: 20px 22px 22px; }
-    .clim-card h3 { font-size: 17px; font-weight: 800; color: var(--bleu); margin-bottom: 8px; }
-    .clim-card p { font-size: 14px; color: #555; line-height: 1.6; }
-    .c-tag { display: inline-block; margin-top: 12px; background: rgba(230,57,70,0.1); color: var(--rouge); font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 4px; }
+    /* ======= SERVICES CARDS (photo + texte) ======= */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .scard {
+      border-radius: 14px; overflow: hidden;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 6px 24px rgba(0,0,0,0.07);
+      transition: transform 0.22s, box-shadow 0.22s;
+      display: flex; flex-direction: column;
+    }
+    .scard:hover { transform: translateY(-6px); box-shadow: 0 4px 8px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.12); }
+    .scard-img { position: relative; height: 210px; overflow: hidden; }
+    .scard-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .scard:hover .scard-img img { transform: scale(1.05); }
+    .scard-badge { position: absolute; top: 14px; left: 14px; background: var(--rouge); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .scard-body { padding: 22px 24px 26px; flex: 1; display: flex; flex-direction: column; }
+    .scard-icon { font-size: 28px; margin-bottom: 10px; }
+    .scard-body h3 { font-size: 18px; font-weight: 800; color: var(--bleu); margin-bottom: 8px; }
+    .scard-body p { font-size: 14px; color: var(--sous); line-height: 1.65; flex: 1; }
+    .scard-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: var(--rouge); font-size: 14px; font-weight: 700; text-decoration: none; }
+    .scard-link:hover { text-decoration: underline; }
 
-    /* SERVICES */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-    .service-card { border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 2px 14px rgba(0,0,0,0.08); text-decoration: none; transition: all 0.25s; display: flex; flex-direction: column; }
-    .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 28px rgba(0,0,0,0.14); }
-    .service-card .s-img { height: 180px; overflow: hidden; }
-    .service-card .s-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
-    .service-card:hover .s-img img { transform: scale(1.06); }
-    .service-card .s-body { padding: 18px 20px 20px; background: var(--bleu); flex: 1; }
-    .service-card h3 { color: white; font-size: 17px; font-weight: 800; margin-bottom: 6px; }
-    .service-card p { color: rgba(255,255,255,0.75); font-size: 13px; line-height: 1.55; }
+    /* ======= AGENCES ======= */
+    .zone-section { background: var(--bleu); padding: 80px 48px; }
+    .zone-section .section-head h2 { color: #fff; }
+    .zone-section .section-head p { color: rgba(255,255,255,0.65); }
+    .agences-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; max-width: 1000px; margin: 0 auto; }
+    .agence-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 20px 22px; transition: background 0.2s; }
+    .agence-card:hover { background: rgba(255,255,255,0.14); }
+    .agence-card h4 { color: #60c5f7; font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .agence-card p { color: rgba(255,255,255,0.7); font-size: 13px; line-height: 1.6; }
 
-    /* AGENCES */
-    .zone-section { background: var(--bleu); padding: 72px 32px; }
-    .zone-section .section-title h2 { color: white; }
-    .zone-section .section-title p { color: rgba(255,255,255,0.7); }
-    .agences-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; max-width: 1000px; margin: 0 auto; }
-    .agence-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; padding: 20px; display: flex; align-items: flex-start; gap: 12px; transition: all 0.2s; }
-    .agence-card:hover { background: rgba(255,255,255,0.18); }
-    .agence-card h4 { color: #5bc4f5; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-    .agence-card p { color: rgba(255,255,255,0.75); font-size: 13px; line-height: 1.55; }
+    /* ======= URGENCE 24/7 ======= */
+    .cta-section { background: linear-gradient(135deg, #c0303c 0%, #8b0000 100%); padding: 80px 48px; text-align: center; }
+    .cta-section h2 { color: #fff; font-size: clamp(26px, 4vw, 42px); font-weight: 900; margin-bottom: 12px; letter-spacing: -0.5px; }
+    .cta-section p { color: rgba(255,255,255,0.82); font-size: 17px; max-width: 500px; margin: 0 auto 36px; line-height: 1.6; }
+    .tel-cards { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .tel-card { background: rgba(255,255,255,0.14); border: 1.5px solid rgba(255,255,255,0.3); border-radius: 14px; padding: 18px 36px; text-decoration: none; transition: all 0.2s; }
+    .tel-card:hover { background: rgba(255,255,255,0.22); transform: scale(1.03); }
+    .tel-card span { display: block; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+    .tel-card strong { color: #fff; font-size: clamp(22px, 3.5vw, 36px); font-weight: 900; letter-spacing: 0.5px; }
 
-    /* URGENCE 24/7 */
-    .urgence-section { background: linear-gradient(135deg, var(--rouge), #8b0000); padding: 72px 32px; text-align: center; }
-    .urgence-section h2 { color: white; font-size: clamp(24px, 4vw, 42px); font-weight: 900; margin-bottom: 12px; }
-    .urgence-section p { color: rgba(255,255,255,0.85); font-size: 17px; max-width: 540px; margin: 0 auto 32px; line-height: 1.6; }
-    .tel-big { display: inline-block; color: white; font-size: clamp(26px, 4vw, 44px); font-weight: 900; text-decoration: none; background: rgba(255,255,255,0.15); padding: 16px 38px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.4); margin: 8px; transition: all 0.2s; letter-spacing: 1px; }
-    .tel-big:hover { background: rgba(255,255,255,0.25); transform: scale(1.03); }
+    /* ======= CONTACT ======= */
+    .contact-section { padding: 80px 48px; background: var(--gris); }
+    .contact-wrap { max-width: 680px; margin: 0 auto; background: #fff; border-radius: 20px; padding: 48px 44px; box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 16px 48px rgba(0,0,0,0.08); }
+    .cform { display: flex; flex-direction: column; gap: 16px; }
+    .crow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .cg { display: flex; flex-direction: column; gap: 6px; }
+    .cg label { font-size: 13px; font-weight: 600; color: var(--bleu); }
+    .cg input, .cg textarea, .cg select { padding: 11px 14px; border: 1.5px solid #DDE1E7; border-radius: 8px; font-size: 14px; font-family: inherit; background: var(--gris); transition: border-color 0.2s, background 0.2s; }
+    .cg input:focus, .cg textarea:focus, .cg select:focus { outline: none; border-color: var(--rouge); background: #fff; }
+    .cg textarea { min-height: 100px; resize: vertical; }
+    .btn-send { background: var(--rouge); color: #fff; border: none; padding: 15px; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; width: 100%; font-family: inherit; }
+    .btn-send:hover { background: #c9303c; transform: translateY(-2px); }
 
-    /* CONTACT */
-    .contact-section { padding: 72px 32px; background: var(--gris); }
-    .contact-wrapper { max-width: 700px; margin: 0 auto; background: white; border-radius: 16px; padding: 44px 40px; box-shadow: 0 4px 30px rgba(0,0,0,0.1); }
-    .contact-form { display: flex; flex-direction: column; gap: 16px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-group label { font-size: 13px; font-weight: 600; color: var(--bleu); }
-    .form-group input, .form-group textarea, .form-group select { padding: 12px 14px; border: 2px solid #e8ecf0; border-radius: 8px; font-size: 14px; transition: border-color 0.2s; font-family: inherit; background: white; }
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--rouge); }
-    .form-group textarea { min-height: 100px; resize: vertical; }
-    .btn-submit { background: var(--rouge); color: white; border: none; padding: 15px 32px; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; width: 100%; }
-    .btn-submit:hover { background: #c0303a; transform: translateY(-2px); }
+    /* ======= FOOTER ======= */
+    footer { background: #0b1120; padding: 56px 48px 28px; }
+    .fgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto 40px; }
+    .fcol h4 { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 16px; }
+    .fcol p, .fcol a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; display: block; margin-bottom: 8px; line-height: 1.6; }
+    .fcol a:hover { color: #60c5f7; }
+    .fbot { text-align: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); font-size: 13px; color: rgba(255,255,255,0.28); }
 
-    /* FOOTER */
-    footer { background: #080e1d; padding: 44px 32px 24px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px; max-width: 1000px; margin: 0 auto 32px; }
-    .footer-col h4 { color: white; font-size: 15px; font-weight: 700; margin-bottom: 14px; }
-    .footer-col p, .footer-col a { font-size: 13px; color: rgba(255,255,255,0.55); text-decoration: none; display: block; margin-bottom: 7px; line-height: 1.6; }
-    .footer-col a:hover { color: #5bc4f5; }
-    .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: rgba(255,255,255,0.3); }
-
-    @media (max-width: 768px) { .hero-photos { grid-template-columns: repeat(2, 1fr); } nav { display: none; } }
-    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } .contact-wrapper { padding: 28px 20px; } .stat-item { padding: 0 20px; } }
+    @media (max-width: 768px) { header { padding: 0 20px; } nav { display: none; } .hero { padding: 60px 20px; } .section { padding: 60px 20px; } .zone-section, .cta-section, .contact-section { padding: 60px 20px; } footer { padding: 40px 20px 24px; } .crow { grid-template-columns: 1fr; } .contact-wrap { padding: 32px 22px; } .stat { padding: 22px 24px; } }
   </style>
 </head>
 <body>
@@ -139,220 +193,234 @@
 <!-- HEADER -->
 <header>
   <a href="#" class="logo">
-    <div class="logo-box">AP</div>
-    <div class="logo-text"><span class="atelier">Atelier </span><span class="paca">PACA</span></div>
+    <div class="logo-icon">AP</div>
+    <div class="logo-nom">Atelier <span>PACA</span></div>
   </a>
   <nav>
-    <a href="#climatisation">Climatisation</a>
     <a href="#services">Services</a>
     <a href="#agences">Agences</a>
-    <a href="#contact" class="nav-cta">Devis Gratuit</a>
+    <a href="#contact" class="btn-devis">Devis gratuit</a>
   </nav>
-  <span class="tel-header">&#128222; 04 92 14 14 14</span>
+  <span class="header-tel">&#128222; 04 92 14 14 14</span>
 </header>
 
-<!-- URGENCE BAND -->
-<div class="urgence-band">
-  <span>&#127777;&#65039;</span>
-  <p>Fortes chaleurs cet ete ! Installation climatisation disponible rapidement.</p>
-  <a href="tel:0492141414">&#128222; 04 92 14 14 14 &mdash; Depannage 24h/24</a>
-  <span>&#10052;&#65039;</span>
-</div>
-
-<!-- HERO -->
+<!-- HERO TOUT TEXTE -->
 <section class="hero">
-  <div class="hero-badge">&#9728;&#65039; &nbsp;Ete 2025 &mdash; Vague de chaleur</div>
-  <h1>Votre artisan de confiance<br/>dans les <span class="accent">Alpes-Maritimes</span></h1>
-  <p>Vous cherchez un artisan pour resoudre vos problemes de plomberie, d'electricite, de chauffage, de climatisation, de serrurerie ou de volets roulants ? Atelier PACA est a votre service !</p>
+  <div class="hero-pill">&#9728;&#65039; &nbsp;Ete 2025 &mdash; Vague de chaleur dans les Alpes-Maritimes</div>
+  <h1>C&rsquo;est l&rsquo;&eacute;t&eacute;,<br/>installez votre <em>climatisation</em><br/>maintenant.</h1>
+  <p class="hero-sub">Atelier PACA intervient chez vous rapidement dans les Alpes-Maritimes. Plomberie, &eacute;lectricit&eacute;, chauffage, serrurerie, volets roulants &mdash; un seul num&eacute;ro pour tout.</p>
+  <p class="hero-cta">Nos artisans qualifi&eacute;s interviennent <strong>24h/24, 7j/7</strong> dans toute la r&eacute;gion.</p>
   <div class="hero-btns">
-    <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
-    <a href="tel:0492141414" class="btn-secondary">&#128222; 04 92 14 14 14</a>
+    <a href="#contact" class="btn-rouge">Demander un devis gratuit</a>
+    <a href="tel:0492141414" class="btn-ghost">&#128222; 04 92 14 14 14</a>
   </div>
-  <div class="hero-photos">
-    <div class="hero-photo">
-      <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=400&q=80" alt="Plomberie" />
-      <div class="photo-label">Plomberie</div>
-    </div>
-    <div class="hero-photo">
-      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&q=80" alt="Electricite" />
-      <div class="photo-label">Electricite</div>
-    </div>
-    <div class="hero-photo">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Climatisation" />
-      <div class="photo-label">Climatisation</div>
-    </div>
+  <div class="hero-chips">
+    <span class="chip">&#10052; Climatisation</span>
+    <span class="chip">&#128295; Plomberie</span>
+    <span class="chip">&#9889; Electricite</span>
+    <span class="chip">&#128293; Chauffage</span>
+    <span class="chip">&#128274; Serrurerie</span>
+    <span class="chip">&#129695; Volets Roulants</span>
   </div>
 </section>
 
 <!-- STATS -->
-<div class="stats-bar">
-  <div class="stat-item"><span class="stat-num">7</span><span class="stat-label">Agences locales</span></div>
-  <div class="stat-item"><span class="stat-num">24/7</span><span class="stat-label">Depannage urgent</span></div>
-  <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Ans d experience</span></div>
-  <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Artisans qualifies</span></div>
+<div class="stats">
+  <div class="stat"><span class="stat-n">7</span><span class="stat-l">Agences locales</span></div>
+  <div class="stat"><span class="stat-n">24/7</span><span class="stat-l">Depannage urgent</span></div>
+  <div class="stat"><span class="stat-n">10&nbsp;ans</span><span class="stat-l">D&rsquo;exp&eacute;rience</span></div>
+  <div class="stat"><span class="stat-n">100&nbsp;%</span><span class="stat-l">Artisans qualifi&eacute;s</span></div>
 </div>
 
-<!-- CLIMATISATION -->
-<section class="section-pad bg-grey" id="climatisation">
-  <div class="section-title">
-    <span class="tag">&#10052;&#65039; Priorite de l ete</span>
-    <h2>Climatisation &mdash; Restez au frais<br/>meme quand il fait 40 degres</h2>
-    <p>Installation rapide, entretien et depannage sur tous types de climatiseurs dans les Alpes-Maritimes.</p>
-  </div>
-  <div class="clim-grid">
-    <div class="clim-card">
-      <div class="c-img">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Installation climatiseur" />
-        <span class="c-badge">Installation</span>
-      </div>
-      <div class="c-body">
-        <h3>Installation Climatiseur</h3>
-        <p>Pose de climatisation split et multi-split. Conseil personnalise selon votre piece. Devis gratuit sous 24h, intervention rapide.</p>
-        <span class="c-tag">Devis gratuit en 24h</span>
-      </div>
-    </div>
-    <div class="clim-card">
-      <div class="c-img">
-        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80" alt="Entretien climatisation" />
-        <span class="c-badge">Entretien</span>
-      </div>
-      <div class="c-body">
-        <h3>Entretien &amp; Maintenance</h3>
-        <p>Nettoyage des filtres, verification du gaz, controle des performances. Un entretien annuel = moins de pannes, moins de consommation.</p>
-        <span class="c-tag">Economies d energie</span>
-      </div>
-    </div>
-    <div class="clim-card">
-      <div class="c-img">
-        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="Depannage climatisation" />
-        <span class="c-badge">Depannage urgent</span>
-      </div>
-      <div class="c-body">
-        <h3>Depannage Urgent</h3>
-        <p>Votre clim tombe en panne en pleine canicule ? Nos techniciens interviennent 7j/7 en urgence, dans les 2h si possible.</p>
-        <span class="c-tag">7j/7 &mdash; 24h/24</span>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- URGENCE BAND -->
+<div class="urgence-band">
+  <p>&#128680; Panne ou urgence ? On intervient maintenant.</p>
+  <a href="tel:0492141414">04 92 14 14 14</a>
+  <a href="tel:0677203752">06 77 20 37 52</a>
+</div>
 
-<!-- SERVICES -->
-<section class="section-pad" id="services">
-  <div class="section-title">
-    <span class="tag">Nos metiers</span>
+<!-- SERVICES AVEC PHOTOS -->
+<section class="section bg-grey" id="services">
+  <div class="section-head">
+    <span class="eyebrow">Nos m&eacute;tiers</span>
     <h2>Un artisan pour chaque besoin</h2>
-    <p>Plomberie, electricite, chauffage, serrurerie, volets roulants &mdash; des professionnels certifies disponibles partout dans les Alpes-Maritimes.</p>
+    <p>Des professionnels certifi&eacute;s disponibles partout dans les Alpes-Maritimes, disponibles 24h/24.</p>
   </div>
   <div class="services-grid">
-    <a href="#contact" class="service-card">
-      <div class="s-img"><img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=500&q=80" alt="Plombier" /></div>
-      <div class="s-body"><h3>Plomberie</h3><p>Fuites, canalisations bouchees, robinetterie, sanitaires. Intervention rapide.</p></div>
-    </a>
-    <a href="#contact" class="service-card">
-      <div class="s-img"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=500&q=80" alt="Electricien" /></div>
-      <div class="s-body"><h3>Electricien</h3><p>Tableau electrique, prises, eclairage, mise aux normes. Devis gratuit.</p></div>
-    </a>
-    <a href="#contact" class="service-card">
-      <div class="s-img"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=80" alt="Chauffagiste" /></div>
-      <div class="s-body"><h3>Chauffage</h3><p>Chaudieres, radiateurs, plancher chauffant. Installation et entretien.</p></div>
-    </a>
-    <a href="#contact" class="service-card">
-      <div class="s-img"><img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=500&q=80" alt="Serrurier" /></div>
-      <div class="s-body"><h3>Serrurerie</h3><p>Ouverture de porte, blindage, changement de serrure. Disponible 24h/24.</p></div>
-    </a>
-    <a href="#contact" class="service-card">
-      <div class="s-img"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80" alt="Volets roulants" /></div>
-      <div class="s-body"><h3>Volets Roulants</h3><p>Reparation, motorisation, remplacement. Toutes marques.</p></div>
-    </a>
+
+    <!-- CLIMATISATION -->
+    <div class="scard">
+      <div class="scard-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Technicien qui installe un climatiseur" />
+        <span class="scard-badge">&#10052; Priorite ete</span>
+      </div>
+      <div class="scard-body">
+        <div class="scard-icon">&#10052;&#65039;</div>
+        <h3>Climatisation</h3>
+        <p>Installation, entretien et d&eacute;pannage de climatiseurs. Nos techniciens interviennent rapidement pour que vous restiez au frais m&ecirc;me par 40&deg;.</p>
+        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+      </div>
+    </div>
+
+    <!-- PLOMBERIE -->
+    <div class="scard">
+      <div class="scard-img">
+        <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&q=80" alt="Plombier qui repare des tuyaux" />
+        <span class="scard-badge">Depannage rapide</span>
+      </div>
+      <div class="scard-body">
+        <div class="scard-icon">&#128295;</div>
+        <h3>Plomberie</h3>
+        <p>Fuite d&rsquo;eau, canalisation bouch&eacute;e, robinetterie, chauffe-eau. Nos plombiers r&eacute;solvent votre probl&egrave;me vite et bien.</p>
+        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+      </div>
+    </div>
+
+    <!-- ELECTRICITE -->
+    <div class="scard">
+      <div class="scard-img">
+        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80" alt="Electricien qui travaille sur un tableau electrique" />
+        <span class="scard-badge">Mise aux normes</span>
+      </div>
+      <div class="scard-body">
+        <div class="scard-icon">&#9889;</div>
+        <h3>Electricit&eacute;</h3>
+        <p>Tableau &eacute;lectrique, prises, &eacute;clairage, mise aux normes. Nos &eacute;lectriciens certifi&eacute;s interviennent en toute s&eacute;curit&eacute;.</p>
+        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+      </div>
+    </div>
+
+    <!-- CHAUFFAGE -->
+    <div class="scard">
+      <div class="scard-img">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80" alt="Chauffagiste qui repare une chaudiere" />
+        <span class="scard-badge">Installation &amp; entretien</span>
+      </div>
+      <div class="scard-body">
+        <div class="scard-icon">&#128293;</div>
+        <h3>Chauffage</h3>
+        <p>Chaudiere, radiateurs, plancher chauffant. Installation, entretien annuel et d&eacute;pannage par des chauffagistes qualifi&eacute;s.</p>
+        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+      </div>
+    </div>
+
+    <!-- SERRURERIE -->
+    <div class="scard">
+      <div class="scard-img">
+        <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&q=80" alt="Serrurier qui intervient sur une serrure" />
+        <span class="scard-badge">24h/24 &mdash; 7j/7</span>
+      </div>
+      <div class="scard-body">
+        <div class="scard-icon">&#128274;</div>
+        <h3>Serrurerie</h3>
+        <p>Ouverture de porte claqu&eacute;e, changement de serrure, blindage. Intervention d&rsquo;urgence disponible &agrave; toute heure.</p>
+        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+      </div>
+    </div>
+
+    <!-- VOLETS ROULANTS -->
+    <div class="scard">
+      <div class="scard-img">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Volets roulants sur une maison" />
+        <span class="scard-badge">Toutes marques</span>
+      </div>
+      <div class="scard-body">
+        <div class="scard-icon">&#129695;</div>
+        <h3>Volets Roulants</h3>
+        <p>R&eacute;paration, motorisation, remplacement. Volets manuels ou &eacute;lectriques, nous intervenons sur toutes les marques.</p>
+        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- AGENCES -->
 <section class="zone-section" id="agences">
-  <div class="section-title">
-    <span class="tag">Zone d intervention</span>
+  <div class="section-head">
+    <span class="eyebrow" style="background:rgba(96,197,247,0.15);color:#60c5f7;">Zone d&rsquo;intervention</span>
     <h2>7 agences dans les Alpes-Maritimes</h2>
-    <p>Toujours un artisan pres de chez vous pour intervenir rapidement.</p>
+    <p>Toujours un artisan pr&egrave;s de chez vous pour intervenir rapidement.</p>
   </div>
   <div class="agences-grid">
-    <div class="agence-card"><span style="font-size:22px;flex-shrink:0">&#128205;</span><div><h4>Antibes</h4><p>48, chemin des Autrichiens<br/>06600 Antibes</p></div></div>
-    <div class="agence-card"><span style="font-size:22px;flex-shrink:0">&#128205;</span><div><h4>Nice</h4><p>34, av. Georges Clemenceau<br/>06000 Nice</p></div></div>
-    <div class="agence-card"><span style="font-size:22px;flex-shrink:0">&#128205;</span><div><h4>Cannes</h4><p>5 Rue Boucicaut<br/>06400 Cannes</p></div></div>
-    <div class="agence-card"><span style="font-size:22px;flex-shrink:0">&#128205;</span><div><h4>Grasse</h4><p>24, avenue Mathias Duval<br/>06130 Grasse</p></div></div>
-    <div class="agence-card"><span style="font-size:22px;flex-shrink:0">&#128205;</span><div><h4>Cagnes-sur-Mer</h4><p>9, rue Pasteur<br/>06800 Cagnes-sur-Mer</p></div></div>
-    <div class="agence-card"><span style="font-size:22px;flex-shrink:0">&#128205;</span><div><h4>Saint-Laurent-du-Var</h4><p>127, rue Alphonse Daudet<br/>06700 Saint-Laurent-du-Var</p></div></div>
-    <div class="agence-card"><span style="font-size:22px;flex-shrink:0">&#128205;</span><div><h4>Le Cannet</h4><p>32 Chemin l Olivet<br/>06110 Le Cannet</p></div></div>
+    <div class="agence-card"><h4>Antibes</h4><p>48, chemin des Autrichiens<br/>06600 Antibes</p></div>
+    <div class="agence-card"><h4>Nice</h4><p>34, av. Georges Cl&eacute;menceau<br/>06000 Nice</p></div>
+    <div class="agence-card"><h4>Cannes</h4><p>5 Rue Boucicaut<br/>06400 Cannes</p></div>
+    <div class="agence-card"><h4>Grasse</h4><p>24, avenue Mathias Duval<br/>06130 Grasse</p></div>
+    <div class="agence-card"><h4>Cagnes-sur-Mer</h4><p>9, rue Pasteur<br/>06800 Cagnes-sur-Mer</p></div>
+    <div class="agence-card"><h4>Saint-Laurent-du-Var</h4><p>127, rue Alphonse Daudet<br/>06700 Saint-Laurent-du-Var</p></div>
+    <div class="agence-card"><h4>Le Cannet</h4><p>32 Chemin l&rsquo;Olivet<br/>06110 Le Cannet</p></div>
   </div>
 </section>
 
 <!-- URGENCE 24/7 -->
-<section class="urgence-section">
-  <h2>&#128680; Panne ? Urgence ? On arrive !</h2>
-  <p>Notre equipe intervient 24h/24 et 7j/7 pour toutes vos urgences dans les Alpes-Maritimes.</p>
-  <a href="tel:0492141414" class="tel-big">04 92 14 14 14</a>
-  <a href="tel:0677203752" class="tel-big">06 77 20 37 52</a>
+<section class="cta-section">
+  <h2>&#128680; Panne ? Urgence ? On arrive.</h2>
+  <p>Notre &eacute;quipe intervient 24h/24 et 7j/7 pour toutes vos urgences dans les Alpes-Maritimes.</p>
+  <div class="tel-cards">
+    <a href="tel:0492141414" class="tel-card"><span>T&eacute;l&eacute;phone fixe</span><strong>04 92 14 14 14</strong></a>
+    <a href="tel:0677203752" class="tel-card"><span>Mobile</span><strong>06 77 20 37 52</strong></a>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
-  <div class="section-title">
-    <span class="tag">Devis Gratuit</span>
-    <h2>Contactez-nous</h2>
-    <p>Reponse sous 24h &mdash; Devis sans engagement &mdash; Gratuit</p>
+  <div class="section-head">
+    <span class="eyebrow">Contact</span>
+    <h2>Demandez un devis gratuit</h2>
+    <p>R&eacute;ponse sous 24h &mdash; Sans engagement</p>
   </div>
-  <div class="contact-wrapper">
-    <form class="contact-form" action="mailto:contact@atelierpaca.fr" method="GET">
-      <div class="form-row">
-        <div class="form-group"><label>Prenom</label><input type="text" placeholder="Votre prenom" /></div>
-        <div class="form-group"><label>Nom</label><input type="text" placeholder="Votre nom" /></div>
+  <div class="contact-wrap">
+    <form class="cform" action="mailto:contact@atelierpaca.fr" method="GET">
+      <div class="crow">
+        <div class="cg"><label>Pr&eacute;nom</label><input type="text" placeholder="Votre pr&eacute;nom" /></div>
+        <div class="cg"><label>Nom</label><input type="text" placeholder="Votre nom" /></div>
       </div>
-      <div class="form-row">
-        <div class="form-group"><label>Telephone</label><input type="tel" placeholder="06 XX XX XX XX" /></div>
-        <div class="form-group"><label>Email</label><input type="email" placeholder="votre@email.fr" /></div>
+      <div class="crow">
+        <div class="cg"><label>T&eacute;l&eacute;phone</label><input type="tel" placeholder="06 XX XX XX XX" /></div>
+        <div class="cg"><label>Email</label><input type="email" placeholder="votre@email.fr" /></div>
       </div>
-      <div class="form-group">
-        <label>Service</label>
+      <div class="cg">
+        <label>Service souhait&eacute;</label>
         <select>
           <option>Climatisation</option>
           <option>Plomberie</option>
-          <option>Electricite</option>
+          <option>Electricit&eacute;</option>
           <option>Chauffage</option>
           <option>Serrurerie</option>
           <option>Volets Roulants</option>
         </select>
       </div>
-      <div class="form-group"><label>Message</label><textarea placeholder="Decrivez votre besoin..."></textarea></div>
-      <button type="submit" class="btn-submit">Envoyer ma demande &mdash; Gratuit et sans engagement</button>
+      <div class="cg"><label>Message</label><textarea placeholder="D&eacute;crivez votre besoin..."></textarea></div>
+      <button type="submit" class="btn-send">Envoyer ma demande &mdash; Gratuit et sans engagement</button>
     </form>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-col">
+  <div class="fgrid">
+    <div class="fcol">
       <h4>Atelier PACA</h4>
-      <p>Votre artisan de confiance dans les Alpes-Maritimes. Plomberie, electricite, chauffage, climatisation, serrurerie, volets roulants.</p>
-      <p style="margin-top:8px">48 chemin des Autrichiens, 06600 Antibes</p>
+      <p>Votre artisan de confiance dans les Alpes-Maritimes. Plomberie, &eacute;lectricit&eacute;, chauffage, climatisation, serrurerie, volets roulants.</p>
     </div>
-    <div class="footer-col">
+    <div class="fcol">
       <h4>Nos services</h4>
-      <a href="#climatisation">Climatisation</a>
+      <a href="#services">Climatisation</a>
       <a href="#services">Plomberie</a>
-      <a href="#services">Electricite</a>
+      <a href="#services">Electricit&eacute;</a>
       <a href="#services">Chauffage</a>
       <a href="#services">Serrurerie</a>
       <a href="#services">Volets Roulants</a>
     </div>
-    <div class="footer-col">
+    <div class="fcol">
       <h4>Contact</h4>
       <a href="tel:0492141414">&#128222; 04 92 14 14 14</a>
       <a href="tel:0677203752">&#128241; 06 77 20 37 52</a>
-      <a href="mailto:contact@atelierpaca.fr">&#9993;&#65039; contact@atelierpaca.fr</a>
-      <p style="margin-top:10px;font-size:12px">Depannage urgent 24h/24 &mdash; 7j/7</p>
+      <a href="mailto:contact@atelierpaca.fr">&#9993; contact@atelierpaca.fr</a>
     </div>
   </div>
-  <div class="footer-bottom">&#169; 2025 Atelier PACA &mdash; Tous droits reserves</div>
+  <div class="fbot">&copy; 2025 Atelier PACA &mdash; Tous droits r&eacute;serv&eacute;s &mdash; Artisans certifi&eacute;s RGE</div>
 </footer>
 
 </body>
