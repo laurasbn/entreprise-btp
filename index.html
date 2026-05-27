@@ -645,13 +645,16 @@
     <p>R&eacute;ponse sous 24h &mdash; Sans engagement &mdash; Gratuit</p>
   </div>
   <div class="contact-wrap">
-    <form class="cform" action="mailto:atelierpaca.06@gmail.com" method="GET">
+    <form class="cform" action="https://api.web3forms.com/submit" method="POST">
       <div class="crow">
         <div class="cg"><label for="f-prenom">Pr&eacute;nom</label><input id="f-prenom" type="text" name="prenom" placeholder="Votre pr&eacute;nom" autocomplete="given-name" /></div>
         <div class="cg"><label for="f-nom">Nom</label><input id="f-nom" type="text" name="nom" placeholder="Votre nom" autocomplete="family-name" /></div>
       </div>
       <div class="crow">
         <div class="cg"><label for="f-tel">T&eacute;l&eacute;phone</label><input id="f-tel" type="tel" name="tel" placeholder="06 XX XX XX XX" autocomplete="tel" /></div>
+              <input type="hidden" name="access_key" value="atelierpaca.06@gmail.com">
+              <input type="hidden" name="subject" value="Nouvelle demande de devis - Atelier PACA">
+              <input type="hidden" name="from_name" value="Atelier PACA - Site web">
         <div class="cg"><label for="f-email">Email</label><input id="f-email" type="email" name="email" placeholder="votre@email.fr" autocomplete="email" /></div>
       </div>
       <div class="cg">
