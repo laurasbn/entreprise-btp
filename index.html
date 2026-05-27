@@ -283,6 +283,16 @@
     .btn-send { background: var(--rouge); color: #fff; border: none; padding: 15px; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; width: 100%; font-family: inherit; }
     .btn-send:hover { background: #c9303c; transform: translateY(-2px); }
 
+    /* ======= SEO LIENS VILLES ======= */
+    .seo-links-section { background: var(--gris2); padding: 44px 48px; border-top: 1px solid #dde1e7; }
+    .seo-links-title { font-size: 15px; font-weight: 700; color: var(--bleu); text-align: center; margin-bottom: 24px; letter-spacing: -0.2px; }
+    .seo-links-grid { display: flex; gap: 48px; justify-content: center; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+    .seo-col h3 { font-size: 11px; font-weight: 800; color: var(--bleu); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1.2px; }
+    .seo-col ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .seo-col a { font-size: 13px; color: var(--sous); text-decoration: none; transition: color 0.15s; }
+    .seo-col a:hover { color: var(--rouge); text-decoration: underline; }
+    @media (max-width: 768px) { .seo-links-section { padding: 36px 20px; } .seo-links-grid { gap: 28px; } }
+
     /* ======= FOOTER ======= */
     footer { background: #0b1120; padding: 56px 48px 28px; }
     .fgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 40px; max-width: 1000px; margin: 0 auto 40px; }
@@ -659,6 +669,35 @@
       <div class="cg"><label for="f-msg">Message</label><textarea id="f-msg" name="body" placeholder="D&eacute;crivez votre besoin..."></textarea></div>
       <button type="submit" class="btn-send">Envoyer ma demande &mdash; Gratuit et sans engagement</button>
     </form>
+  </div>
+</section>
+
+<!-- SEO LIENS VILLES -->
+<section class="seo-links-section" aria-label="Nos services par ville">
+  <p class="seo-links-title">Atelier PACA intervient dans toutes les Alpes-Maritimes &mdash; retrouvez nos pages par ville et m&eacute;tier</p>
+  <div class="seo-links-grid">
+    <div class="seo-col">
+      <h3>&#10052; Climatisation</h3>
+      <ul>
+        <li><a href="climatisation-antibes.html">Climatisation Antibes</a></li>
+        <li><a href="climatisation-nice.html">Climatisation Nice</a></li>
+        <li><a href="climatisation-cannes.html">Climatisation Cannes</a></li>
+      </ul>
+    </div>
+    <div class="seo-col">
+      <h3>&#128295; Plomberie</h3>
+      <ul>
+        <li><a href="plombier-nice.html">Plombier Nice</a></li>
+        <li><a href="plombier-cannes.html">Plombier Cannes</a></li>
+      </ul>
+    </div>
+    <div class="seo-col">
+      <h3>&#128274; Serrurerie</h3>
+      <ul>
+        <li><a href="serrurier-nice.html">Serrurier Nice</a></li>
+        <li><a href="serrurier-grasse.html">Serrurier Grasse</a></li>
+      </ul>
+    </div>
   </div>
 </section>
 
