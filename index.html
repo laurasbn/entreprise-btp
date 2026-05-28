@@ -11,6 +11,7 @@
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Atelier PACA" />
   <link rel="canonical" href="https://atelierpaca.fr/" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -65,10 +66,18 @@
       "opens": "00:00",
       "closes": "23:59"
     },
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Alpes-Maritimes"
-    },
+    "areaServed": [
+      {"@type": "AdministrativeArea", "name": "Alpes-Maritimes"},
+      {"@type": "AdministrativeArea", "name": "Var"},
+      {"@type": "City", "name": "Nice"},
+      {"@type": "City", "name": "Cannes"},
+      {"@type": "City", "name": "Antibes"},
+      {"@type": "City", "name": "Grasse"},
+      {"@type": "City", "name": "Cagnes-sur-Mer"},
+      {"@type": "City", "name": "Saint-Laurent-du-Var"},
+      {"@type": "City", "name": "Le Cannet"},
+      {"@type": "City", "name": "Saint-Raphaël"}
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Services Atelier PACA",
@@ -322,7 +331,33 @@
       .stat { padding: 22px 24px; }
       .google-badge { padding: 22px 32px; }
       .badge-score { font-size: 38px; }
+      /* dropdown mobile : items always visible */
+      .nav-dropdown > a::after { display: none; }
+      .dropdown-menu { display: block !important; position: static; background: transparent; box-shadow: none; border: none; border-radius: 0; padding: 0 0 4px 0; min-width: 0; }
+      .dropdown-menu a { padding: 10px 16px 10px 28px; font-size: 14px; color: rgba(255,255,255,0.7); }
+      /* trust band mobile */
+      .trust-items { flex-direction: column; }
+      .trust-item { border-right: none; border-bottom: 1px solid var(--gris2); width: 100%; }
+      .trust-item:last-child { border-bottom: none; }
     }
+
+    /* ======= MENU DÉROULANT SERVICES ======= */
+    .nav-dropdown { position: relative; display: flex; align-items: center; }
+    .nav-dropdown > a::after { content: ' \25BE'; font-size: 10px; opacity: 0.6; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 0; background: #1a3460; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.12); min-width: 215px; padding: 8px 0; z-index: 200; }
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 10px 18px; color: rgba(255,255,255,0.82) !important; font-size: 13px; font-weight: 500 !important; border-radius: 0 !important; background: none !important; white-space: nowrap; }
+    .dropdown-menu a:hover { background: rgba(255,255,255,0.09) !important; color: #fff !important; }
+
+    /* ======= TRUST BAND ======= */
+    .trust-band { background: #fff; border-bottom: 1px solid var(--gris2); }
+    .trust-items { display: flex; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+    .trust-item { display: flex; align-items: center; gap: 10px; padding: 18px 28px; border-right: 1px solid var(--gris2); flex-shrink: 0; }
+    .trust-item:last-child { border-right: none; }
+    .trust-icon { font-size: 22px; line-height: 1; }
+    .trust-text strong { display: block; font-size: 13px; font-weight: 800; color: var(--bleu); line-height: 1.3; }
+    .trust-text span { font-size: 12px; color: var(--sous); }
   </style>
 </head>
 <body>
@@ -334,9 +369,20 @@
     <div class="logo-nom">Atelier <span>PACA</span></div>
   </a>
   <nav id="main-nav">
-    <a href="#services">Services</a>
+    <div class="nav-dropdown">
+      <a href="#services">Services</a>
+      <div class="dropdown-menu">
+        <a href="#services">&#10052;&#65039; Climatisation</a>
+        <a href="#services">&#128295; Plomberie</a>
+        <a href="#services">&#9889; &Eacute;lectricit&eacute;</a>
+        <a href="#services">&#128293; Chauffage</a>
+        <a href="#services">&#128274; Serrurerie</a>
+        <a href="#services">&#129695; Volets roulants</a>
+      </div>
+    </div>
     <a href="#avis">Avis</a>
     <a href="#agences">Agences</a>
+    <a href="realisations.html">R&eacute;alisations</a>
     <a href="#contact" class="btn-devis">Devis gratuit</a>
   </nav>
   <span class="header-tel">&#128222; 04 92 14 14 14</span>
@@ -378,10 +424,36 @@
 <!-- STATS -->
 <div class="stats">
   <div class="stat"><span class="stat-n">4,9&#11088;</span><span class="stat-l">Sur Google &mdash; 166 avis</span></div>
-  <div class="stat"><span class="stat-n">7</span><span class="stat-l">Agences locales</span></div>
+  <div class="stat"><span class="stat-n">8</span><span class="stat-l">Agences locales</span></div>
   <div class="stat"><span class="stat-n">24/7</span><span class="stat-l">D&eacute;pannage urgent</span></div>
   <div class="stat"><span class="stat-n">10&nbsp;ans</span><span class="stat-l">D&rsquo;exp&eacute;rience</span></div>
   <div class="stat"><span class="stat-n">100&nbsp;%</span><span class="stat-l">Artisans qualifi&eacute;s</span></div>
+</div>
+
+<!-- ARGUMENTS DE CONFIANCE -->
+<div class="trust-band">
+  <div class="trust-items">
+    <div class="trust-item">
+      <span class="trust-icon">&#127881;</span>
+      <div class="trust-text"><strong>Devis gratuit sous 24h</strong><span>Sans engagement</span></div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">&#127959;&#65039;</span>
+      <div class="trust-text"><strong>Garantie d&eacute;cennale</strong><span>Travaux couverts 10 ans</span></div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">&#9989;</span>
+      <div class="trust-text"><strong>Agr&eacute;&eacute; par les assurances</strong><span>Prise en charge assurance</span></div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">&#128680;</span>
+      <div class="trust-text"><strong>Astreinte 24h/24, 7j/7</strong><span>Urgences nuit et week-end</span></div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">&#9889;</span>
+      <div class="trust-text"><strong>Partenaire Enedis</strong><span>Habilitation &eacute;lectrique certifi&eacute;e</span></div>
+    </div>
+  </div>
 </div>
 
 <!-- URGENCE BAND -->
@@ -563,8 +635,8 @@
 <section class="zone-section" id="agences">
   <div class="section-head">
     <span class="eyebrow" style="background:rgba(96,197,247,0.15);color:#60c5f7;">Zone d&rsquo;intervention</span>
-    <h2>7 agences dans les Alpes-Maritimes</h2>
-    <p>Toujours un artisan pr&egrave;s de chez vous pour intervenir rapidement.</p>
+    <h2>8 agences &mdash; Alpes-Maritimes &amp; Var</h2>
+    <p>De Nice &agrave; Saint-Rapha&euml;l, toujours un artisan pr&egrave;s de chez vous pour intervenir rapidement.</p>
   </div>
   <div class="agences-grid">
 
@@ -624,6 +696,14 @@
       </div>
     </div>
 
+    <div class="agence-card">
+      <div class="agence-top"><span class="agence-pin">&#128205;</span><h4>Saint-Rapha&euml;l</h4></div>
+      <div class="agence-body">
+        <p>81, rue Waldeck Rousseau<br/>83700 Saint-Rapha&euml;l</p>
+        <a href="https://maps.google.com/?q=81+rue+Waldeck+Rousseau+83700+Saint-Raphael" target="_blank" rel="noopener" class="agence-maps">Voir sur Maps &rarr;</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -643,18 +723,23 @@
     <span class="eyebrow">Contact</span>
     <h2>Demandez un devis gratuit</h2>
     <p>R&eacute;ponse sous 24h &mdash; Sans engagement &mdash; Gratuit</p>
+    <p style="margin-top:10px;font-size:14px;color:var(--sous);">
+      Ou &eacute;crivez-nous directement :
+      <a href="mailto:atelierpaca.06@gmail.com" style="color:var(--rouge);font-weight:700;">atelierpaca.06@gmail.com</a>
+    </p>
   </div>
   <div class="contact-wrap">
-    <form class="cform" action="https://api.web3forms.com/submit" method="POST">
+    <form class="cform" action="https://api.web3forms.com/submit" method="POST" id="devis-form">
+      <input type="hidden" name="access_key" value="c6decf2e-8b5c-4881-b7ef-d0c9e9f87e88" />
+      <input type="hidden" name="subject" value="Nouvelle demande de devis — Atelier PACA" />
+      <input type="hidden" name="from_name" value="Atelier PACA - Site web" />
+      <input type="hidden" name="redirect" value="false" />
       <div class="crow">
-        <div class="cg"><label for="f-prenom">Pr&eacute;nom</label><input id="f-prenom" type="text" name="prenom" placeholder="Votre pr&eacute;nom" autocomplete="given-name" /></div>
-        <div class="cg"><label for="f-nom">Nom</label><input id="f-nom" type="text" name="nom" placeholder="Votre nom" autocomplete="family-name" /></div>
+        <div class="cg"><label for="f-prenom">Pr&eacute;nom</label><input id="f-prenom" type="text" name="prenom" placeholder="Votre pr&eacute;nom" autocomplete="given-name" required /></div>
+        <div class="cg"><label for="f-nom">Nom</label><input id="f-nom" type="text" name="nom" placeholder="Votre nom" autocomplete="family-name" required /></div>
       </div>
       <div class="crow">
-        <div class="cg"><label for="f-tel">T&eacute;l&eacute;phone</label><input id="f-tel" type="tel" name="tel" placeholder="06 XX XX XX XX" autocomplete="tel" /></div>
-              <input type="hidden" name="access_key" value="c6decf2e-8b5c-4881-b7ef-d0c9e9f87e88">
-              <input type="hidden" name="subject" value="Nouvelle demande de devis - Atelier PACA">
-              <input type="hidden" name="from_name" value="Atelier PACA - Site web">
+        <div class="cg"><label for="f-tel">T&eacute;l&eacute;phone</label><input id="f-tel" type="tel" name="tel" placeholder="06 XX XX XX XX" autocomplete="tel" required /></div>
         <div class="cg"><label for="f-email">Email</label><input id="f-email" type="email" name="email" placeholder="votre@email.fr" autocomplete="email" /></div>
       </div>
       <div class="cg">
@@ -669,15 +754,46 @@
           <option>Volets Roulants</option>
         </select>
       </div>
-      <div class="cg"><label for="f-msg">Message</label><textarea id="f-msg" name="body" placeholder="D&eacute;crivez votre besoin..."></textarea></div>
-      <button type="submit" class="btn-send">Envoyer ma demande &mdash; Gratuit et sans engagement</button>
+      <div class="cg"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="D&eacute;crivez votre besoin..."></textarea></div>
+      <button type="submit" class="btn-send" id="btn-send">Envoyer ma demande &mdash; Gratuit et sans engagement</button>
+      <div id="form-result" style="display:none;text-align:center;padding:14px;border-radius:8px;font-weight:600;font-size:15px;"></div>
     </form>
+    <script>
+      document.getElementById('devis-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('btn-send');
+        const result = document.getElementById('form-result');
+        btn.disabled = true;
+        btn.textContent = 'Envoi en cours…';
+        const data = new FormData(this);
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+          const json = await res.json();
+          if (json.success) {
+            result.style.display = 'block';
+            result.style.background = '#d1fae5';
+            result.style.color = '#065f46';
+            result.textContent = '✅ Merci ! Votre demande a bien été envoyée. Nous vous recontactons sous 2h.';
+            this.reset();
+          } else {
+            throw new Error();
+          }
+        } catch {
+          result.style.display = 'block';
+          result.style.background = '#fee2e2';
+          result.style.color = '#991b1b';
+          result.textContent = '❌ Une erreur est survenue. Appelez-nous directement au 04 92 14 14 14.';
+        }
+        btn.disabled = false;
+        btn.textContent = 'Envoyer ma demande — Gratuit et sans engagement';
+      });
+    </script>
   </div>
 </section>
 
 <!-- SEO LIENS VILLES -->
 <section class="seo-links-section" aria-label="Nos services par ville">
-  <p class="seo-links-title">Atelier PACA intervient dans toutes les Alpes-Maritimes &mdash; retrouvez nos pages par ville et m&eacute;tier</p>
+  <p class="seo-links-title">Atelier PACA intervient dans les Alpes-Maritimes et le Var &mdash; retrouvez nos pages par ville et m&eacute;tier</p>
   <div class="seo-links-grid">
     <div class="seo-col">
       <h3>&#10052; Climatisation</h3>
@@ -689,6 +805,7 @@
         <li><a href="climatisation-le-cannet.html">Climatisation Le Cannet</a></li>
         <li><a href="climatisation-cagnes-sur-mer.html">Climatisation Cagnes-sur-Mer</a></li>
         <li><a href="climatisation-saint-laurent-du-var.html">Climatisation Saint-Laurent-du-Var</a></li>
+        <li><a href="climatisation-saint-raphael.html">Climatisation Saint-Rapha&euml;l</a></li>
       </ul>
     </div>
     <div class="seo-col">
@@ -701,6 +818,7 @@
         <li><a href="plombier-le-cannet.html">Plombier Le Cannet</a></li>
         <li><a href="plombier-cagnes-sur-mer.html">Plombier Cagnes-sur-Mer</a></li>
         <li><a href="plombier-saint-laurent-du-var.html">Plombier Saint-Laurent-du-Var</a></li>
+        <li><a href="plombier-saint-raphael.html">Plombier Saint-Rapha&euml;l</a></li>
       </ul>
     </div>
     <div class="seo-col">
@@ -713,6 +831,7 @@
         <li><a href="electricien-le-cannet.html">Electricien Le Cannet</a></li>
         <li><a href="electricien-cagnes-sur-mer.html">Electricien Cagnes-sur-Mer</a></li>
         <li><a href="electricien-saint-laurent-du-var.html">Electricien Saint-Laurent-du-Var</a></li>
+        <li><a href="electricien-saint-raphael.html">Electricien Saint-Rapha&euml;l</a></li>
       </ul>
     </div>
     <div class="seo-col">
@@ -725,6 +844,7 @@
         <li><a href="chauffagiste-le-cannet.html">Chauffagiste Le Cannet</a></li>
         <li><a href="chauffagiste-cagnes-sur-mer.html">Chauffagiste Cagnes-sur-Mer</a></li>
         <li><a href="chauffagiste-saint-laurent-du-var.html">Chauffagiste Saint-Laurent-du-Var</a></li>
+        <li><a href="chauffagiste-saint-raphael.html">Chauffagiste Saint-Rapha&euml;l</a></li>
       </ul>
     </div>
     <div class="seo-col">
@@ -737,6 +857,7 @@
         <li><a href="serrurier-le-cannet.html">Serrurier Le Cannet</a></li>
         <li><a href="serrurier-cagnes-sur-mer.html">Serrurier Cagnes-sur-Mer</a></li>
         <li><a href="serrurier-saint-laurent-du-var.html">Serrurier Saint-Laurent-du-Var</a></li>
+        <li><a href="serrurier-saint-raphael.html">Serrurier Saint-Rapha&euml;l</a></li>
       </ul>
     </div>
     <div class="seo-col">
@@ -749,6 +870,7 @@
         <li><a href="volets-roulants-le-cannet.html">Volets roulants Le Cannet</a></li>
         <li><a href="volets-roulants-cagnes-sur-mer.html">Volets roulants Cagnes-sur-Mer</a></li>
         <li><a href="volets-roulants-saint-laurent-du-var.html">Volets roulants Saint-Laurent-du-Var</a></li>
+        <li><a href="volets-roulants-saint-raphael.html">Volets roulants Saint-Rapha&euml;l</a></li>
       </ul>
     </div>
   </div>
@@ -769,21 +891,30 @@
     </div>
     <div class="fcol">
       <h4>Nos services</h4>
-      <a href="#services">Climatisation</a>
-      <a href="#services">Plomberie</a>
-      <a href="#services">Electricit&eacute;</a>
-      <a href="#services">Chauffage</a>
-      <a href="#services">Serrurerie</a>
-      <a href="#services">Volets Roulants</a>
+      <a href="#services">&#10052; Climatisation</a>
+      <a href="#services">&#128295; Plomberie</a>
+      <a href="#services">&#9889; Electricit&eacute;</a>
+      <a href="#services">&#128293; Chauffage</a>
+      <a href="#services">&#128274; Serrurerie</a>
+      <a href="#services">&#129695; Volets Roulants</a>
+      <a href="realisations.html" style="margin-top:6px;color:#60c5f7;">&#128247; R&eacute;alisations</a>
+    </div>
+    <div class="fcol">
+      <h4>Agences</h4>
+      <p>Antibes &bull; Nice &bull; Cannes</p>
+      <p>Grasse &bull; Cagnes-sur-Mer</p>
+      <p>Saint-Laurent-du-Var &bull; Le Cannet</p>
+      <p>Saint-Rapha&euml;l (Var)</p>
     </div>
     <div class="fcol">
       <h4>Contact</h4>
       <a href="tel:0492141414">&#128222; 04 92 14 14 14</a>
       <a href="tel:0677203752">&#128241; 06 77 20 37 52</a>
-      <a href="mailto:c6decf2e-8b5c-4881-b7ef-d0c9e9f87e88">&#9993; c6decf2e-8b5c-4881-b7ef-d0c9e9f87e88</a>
+      <a href="mailto:atelierpaca.06@gmail.com">&#9993; atelierpaca.06@gmail.com</a>
+      <a href="#contact" style="margin-top:8px;background:var(--rouge);color:#fff;padding:8px 14px;border-radius:8px;font-weight:700;font-size:13px;text-align:center;">Devis gratuit &rarr;</a>
     </div>
   </div>
-  <div class="fbot">&copy; 2026 Atelier PACA &mdash; Tous droits r&eacute;serv&eacute;s &mdash; Artisans qualifi&eacute;s &mdash; Alpes-Maritimes</div>
+  <div class="fbot">&copy; 2026 Atelier PACA &mdash; Tous droits r&eacute;serv&eacute;s &mdash; Artisans qualifi&eacute;s &mdash; Alpes-Maritimes &amp; Var</div>
 </footer>
 
 </body>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réalisations | Atelier PACA — Chantiers Climatisation, Plomberie, Électricité 06 &amp; 83</title>
+  <meta name="description" content="Découvrez les réalisations d'Atelier PACA : installations de climatisation, travaux de plomberie, rénovation électrique, pose de volets roulants dans les Alpes-Maritimes et le Var. ⭐ 4,9/5 — 166 avis Google." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://atelierpaca.fr/realisations.html" />
+  <meta property="og:title" content="Réalisations Atelier PACA — Nos chantiers en Côte d'Azur" />
+  <meta property="og:description" content="Photos de nos chantiers : climatisation, plomberie, électricité, volets roulants dans les Alpes-Maritimes et le Var." />
+  <meta property="og:url" content="https://atelierpaca.fr/realisations.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--rouge:#E63946;--bleu:#1D3557;--bleu2:#0f1f36;--gris:#F7F8FA;--gris2:#EEF0F3;--texte:#111827;--sous:#6B7280}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:var(--texte);background:#fff;overflow-x:hidden}
+
+    /* HEADER */
+    header{position:sticky;top:0;z-index:100;background:var(--bleu);height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 4px 20px rgba(0,0,0,0.25)}
+    .logo{display:flex;align-items:center;gap:12px;text-decoration:none}.logo-icon{width:40px;height:40px;background:var(--rouge);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:15px}.logo-nom{font-size:18px;font-weight:700;color:#fff}.logo-nom span{color:var(--rouge)}
+    .header-right{display:flex;align-items:center;gap:16px}.header-tel{color:#fff;font-weight:700;font-size:15px;white-space:nowrap;text-decoration:none}.btn-devis-h{background:var(--rouge);color:#fff;font-weight:700;border-radius:8px;padding:8px 18px;text-decoration:none;font-size:14px}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,#0a1628 0%,var(--bleu) 60%,#0a1628 100%);padding:72px 48px;text-align:center}
+    .breadcrumb{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:20px}.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}
+    .hero h1{color:#fff;font-size:clamp(28px,4vw,48px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:16px}.hero h1 em{color:#60c5f7;font-style:normal}
+    .hero-sub{color:rgba(255,255,255,0.75);font-size:16px;max-width:540px;margin:0 auto}
+
+    /* FILTRES */
+    .filters{background:#fff;border-bottom:1px solid var(--gris2);padding:20px 48px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .filter-btn{background:var(--gris);border:1.5px solid var(--gris2);border-radius:8px;padding:8px 18px;font-size:13px;font-weight:700;color:var(--sous);cursor:pointer;transition:all 0.15s;font-family:inherit}
+    .filter-btn:hover,.filter-btn.active{background:var(--rouge);border-color:var(--rouge);color:#fff}
+
+    /* GALERIE */
+    .gallery-section{padding:64px 48px}
+    .gallery-section-title{font-size:20px;font-weight:900;color:var(--bleu);margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--gris2);display:flex;align-items:center;gap:10px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-bottom:56px}
+    .gallery-card{border-radius:14px;overflow:hidden;background:var(--gris);box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:transform 0.22s,box-shadow 0.22s;cursor:pointer}
+    .gallery-card:hover{transform:translateY(-5px);box-shadow:0 10px 32px rgba(0,0,0,0.14)}
+    .gallery-img{width:100%;height:240px;object-fit:cover;display:block;background:var(--gris2)}
+    .gallery-img-placeholder{width:100%;height:240px;background:linear-gradient(135deg,var(--gris2) 0%,#dde1e7 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+    .placeholder-icon{font-size:40px;opacity:0.35}
+    .placeholder-text{font-size:12px;font-weight:600;color:var(--sous);opacity:0.7;text-align:center;padding:0 20px}
+    .gallery-info{padding:16px 20px 20px}
+    .gallery-info h3{font-size:15px;font-weight:800;color:var(--bleu);margin-bottom:4px}
+    .gallery-info p{font-size:13px;color:var(--sous);line-height:1.5}
+    .gallery-tag{display:inline-block;background:rgba(230,57,70,0.10);color:var(--rouge);font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;margin-top:8px;text-transform:uppercase;letter-spacing:0.5px}
+
+    /* LIGHTBOX */
+    .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:1000;align-items:center;justify-content:center;padding:20px}
+    .lightbox.open{display:flex}
+    .lightbox-inner{max-width:900px;width:100%;position:relative}
+    .lightbox img{width:100%;border-radius:12px;display:block}
+    .lightbox-close{position:absolute;top:-14px;right:-14px;background:var(--rouge);color:#fff;border:none;border-radius:50%;width:36px;height:36px;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700}
+
+    /* CTA */
+    .cta-section{background:linear-gradient(135deg,#c0303c 0%,#8b0000 100%);padding:64px 48px;text-align:center}
+    .cta-section h2{color:#fff;font-size:clamp(22px,3.5vw,36px);font-weight:900;margin-bottom:12px}
+    .cta-section p{color:rgba(255,255,255,0.82);font-size:16px;max-width:480px;margin:0 auto 28px;line-height:1.6}
+    .tel-cards{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}.tel-card{background:rgba(255,255,255,0.14);border:1.5px solid rgba(255,255,255,0.3);border-radius:12px;padding:16px 32px;text-decoration:none}.tel-card span{display:block;color:rgba(255,255,255,0.7);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}.tel-card strong{color:#fff;font-size:clamp(20px,3vw,30px);font-weight:900}
+
+    /* FOOTER */
+    footer{background:#0b1120;padding:40px 48px 24px}.fbot{text-align:center;font-size:13px;color:rgba(255,255,255,0.3)}.fbot a{color:rgba(255,255,255,0.5);text-decoration:none}.fbot a:hover{color:#60c5f7}
+
+    @media(max-width:768px){
+      header{padding:0 20px}.hero{padding:48px 20px}.filters{padding:16px 20px}.gallery-section{padding:40px 20px}.gallery-grid{grid-template-columns:1fr}.cta-section{padding:48px 20px}footer{padding:28px 20px 16px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">AP</div>
+    <div class="logo-nom">Atelier <span>PACA</span></div>
+  </a>
+  <div class="header-right">
+    <a href="tel:0492141414" class="header-tel">&#128222; 04 92 14 14 14</a>
+    <a href="index.html#contact" class="btn-devis-h">Devis gratuit</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; R&eacute;alisations</p>
+  <h1>Nos <em>R&eacute;alisations</em><br/>en C&ocirc;te d&rsquo;Azur</h1>
+  <p class="hero-sub">Climatisation, plomberie, &eacute;lectricit&eacute;, volets roulants &mdash; d&eacute;couvrez quelques-uns de nos chantiers dans les Alpes-Maritimes et le Var.</p>
+</section>
+
+<!-- FILTRES -->
+<div class="filters">
+  <button class="filter-btn active" onclick="filterGallery('all', this)">Tout voir</button>
+  <button class="filter-btn" onclick="filterGallery('clim', this)">&#10052; Climatisation</button>
+  <button class="filter-btn" onclick="filterGallery('plomberie', this)">&#128295; Plomberie</button>
+  <button class="filter-btn" onclick="filterGallery('electricite', this)">&#9889; Electricit&eacute;</button>
+  <button class="filter-btn" onclick="filterGallery('chauffage', this)">&#128293; Chauffage</button>
+  <button class="filter-btn" onclick="filterGallery('serrurerie', this)">&#128274; Serrurerie</button>
+  <button class="filter-btn" onclick="filterGallery('volets', this)">&#129695; Volets</button>
+</div>
+
+<!-- GALERIE CLIMATISATION -->
+<section class="gallery-section" id="section-clim" data-category="clim">
+  <h2 class="gallery-section-title">&#10052;&#65039; Climatisation</h2>
+  <div class="gallery-grid">
+
+    <div class="gallery-card" data-category="clim">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#10052;&#65039;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Installation split &mdash; Antibes</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Installation split Daikin &mdash; Antibes</h3>
+        <p>Pose climatiseur split mural 3,5 kW en appartement, discr&egrave;te et soign&eacute;e.</p>
+        <span class="gallery-tag">Installation</span>
+      </div>
+    </div>
+
+    <div class="gallery-card" data-category="clim">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#10052;&#65039;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Multi-split &mdash; Nice</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Multi-split Mitsubishi &mdash; Nice</h3>
+        <p>Installation multi-split 4 t&ecirc;tes dans une villa, unit&eacute; ext&eacute;rieure en toiture-terrasse.</p>
+        <span class="gallery-tag">Installation</span>
+      </div>
+    </div>
+
+    <div class="gallery-card" data-category="clim">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#10052;&#65039;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Gainable &mdash; Cannes</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Climatisation gainable &mdash; Cannes</h3>
+        <p>Syst&egrave;me gainable invisible int&eacute;gr&eacute; dans les combles, diffusion dans 5 pi&egrave;ces.</p>
+        <span class="gallery-tag">Installation</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALERIE PLOMBERIE -->
+<section class="gallery-section" id="section-plomberie" data-category="plomberie" style="background:var(--gris);padding:64px 48px;">
+  <h2 class="gallery-section-title">&#128295; Plomberie</h2>
+  <div class="gallery-grid">
+
+    <div class="gallery-card" data-category="plomberie">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#128295;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Salle de bain &mdash; Antibes</span>
+      </div>
+      <div class="gallery-info">
+        <h3>R&eacute;novation salle de bain &mdash; Antibes</h3>
+        <p>Remplacement baignoire par douche italienne, nouvelle robinetterie Grohe, WC suspendu.</p>
+        <span class="gallery-tag">R&eacute;novation</span>
+      </div>
+    </div>
+
+    <div class="gallery-card" data-category="plomberie">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#128295;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Chauffe-eau &mdash; Nice</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Chauffe-eau thermodynamique &mdash; Nice</h3>
+        <p>Remplacement ballon &eacute;lectrique par chauffe-eau thermodynamique Atlantic &mdash; &eacute;conomies garanties.</p>
+        <span class="gallery-tag">Installation</span>
+      </div>
+    </div>
+
+    <div class="gallery-card" data-category="plomberie">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#128295;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>D&eacute;pannage fuite &mdash; Cannes</span>
+      </div>
+      <div class="gallery-info">
+        <h3>D&eacute;tection &amp; r&eacute;paration fuite &mdash; Cannes</h3>
+        <p>D&eacute;tection non destructive par cam&eacute;ra thermique, r&eacute;paration canalisation encastr&eacute;e.</p>
+        <span class="gallery-tag">D&eacute;pannage</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALERIE ELECTRICITE -->
+<section class="gallery-section" id="section-electricite" data-category="electricite">
+  <h2 class="gallery-section-title">&#9889; Electricit&eacute;</h2>
+  <div class="gallery-grid">
+
+    <div class="gallery-card" data-category="electricite">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#9889;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Tableau &eacute;lectrique &mdash; Grasse</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Remplacement tableau &eacute;lectrique &mdash; Grasse</h3>
+        <p>Mise aux normes NFC 15-100, nouveau tableau Legrand avec disjoncteurs diff&eacute;rentiels.</p>
+        <span class="gallery-tag">Mise aux normes</span>
+      </div>
+    </div>
+
+    <div class="gallery-card" data-category="electricite">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#9889;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Borne IRVE &mdash; Antibes</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Borne de recharge IRVE &mdash; Antibes</h3>
+        <p>Installation wallbox 7 kW en garage priv&eacute;, c&acirc;blage d&eacute;di&eacute; depuis le tableau.</p>
+        <span class="gallery-tag">IRVE</span>
+      </div>
+    </div>
+
+    <div class="gallery-card" data-category="electricite">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#9889;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Eclairage LED &mdash; Nice</span>
+      </div>
+      <div class="gallery-info">
+        <h3>R&eacute;novation &eacute;clairage LED &mdash; Nice</h3>
+        <p>Remplacement &eacute;clairage hallog&egrave;ne par spots LED encastr&eacute;s, &eacute;conomies 60 % sur la facture.</p>
+        <span class="gallery-tag">R&eacute;novation</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALERIE VOLETS -->
+<section class="gallery-section" id="section-volets" data-category="volets" style="background:var(--gris);padding:64px 48px;">
+  <h2 class="gallery-section-title">&#129695; Volets roulants</h2>
+  <div class="gallery-grid">
+
+    <div class="gallery-card" data-category="volets">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#129695;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Motorisation Somfy &mdash; Cannes</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Motorisation Somfy &mdash; Cannes</h3>
+        <p>Motorisation 4 volets existants, moteurs radio Somfy, t&eacute;l&eacute;commande Situo 5 canaux.</p>
+        <span class="gallery-tag">Motorisation</span>
+      </div>
+    </div>
+
+    <div class="gallery-card" data-category="volets">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#129695;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Volets aluminium &mdash; Nice</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Installation volets aluminium &mdash; Nice</h3>
+        <p>Pose de 6 volets roulants aluminium sur mesure, motoris&eacute;s, int&eacute;gr&eacute;s &agrave; la box domotique.</p>
+        <span class="gallery-tag">Installation</span>
+      </div>
+    </div>
+
+    <div class="gallery-card" data-category="volets">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#129695;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>R&eacute;paration tablier &mdash; Antibes</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Remplacement tablier &mdash; Antibes</h3>
+        <p>Remplacement tablier PVC d&eacute;t&eacute;rior&eacute;, lames aluminium neuves, remise en service le jour m&ecirc;me.</p>
+        <span class="gallery-tag">R&eacute;paration</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALERIE SERRURERIE + CHAUFFAGE -->
+<section class="gallery-section" id="section-serrurerie" data-category="serrurerie">
+  <h2 class="gallery-section-title">&#128274; Serrurerie &amp; &#128293; Chauffage</h2>
+  <div class="gallery-grid">
+
+    <div class="gallery-card" data-category="serrurerie">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#128274;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Blindage porte &mdash; Nice</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Blindage de porte &mdash; Nice</h3>
+        <p>Pose blindage Fichet avec serrure A2P 3 &eacute;toiles et gonds renforc&eacute;s.</p>
+        <span class="gallery-tag">S&eacute;curit&eacute;</span>
+      </div>
+    </div>
+
+    <div class="gallery-card" data-category="chauffage">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#128293;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>PAC air/eau &mdash; Antibes</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Pompe &agrave; chaleur air/eau &mdash; Antibes</h3>
+        <p>Installation PAC Atlantic 12 kW en remplacement d&rsquo;une chaudière fioul, r&eacute;duction facture &gt; 40 %.</p>
+        <span class="gallery-tag">Installation</span>
+      </div>
+    </div>
+
+    <div class="gallery-card" data-category="chauffage">
+      <div class="gallery-img-placeholder">
+        <span class="placeholder-icon">&#128293;</span>
+        <span class="placeholder-text">Photo &agrave; ajouter<br/>Entretien chaudière &mdash; Cannes</span>
+      </div>
+      <div class="gallery-info">
+        <h3>Entretien chaudière Vaillant &mdash; Cannes</h3>
+        <p>Entretien annuel obligatoire, nettoyage br&ucirc;leur, r&eacute;glage combustion, certificat remis.</p>
+        <span class="gallery-tag">Entretien</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NOTE AJOUT PHOTOS -->
+<div style="background:rgba(29,53,87,0.06);border:1.5px dashed rgba(29,53,87,0.2);border-radius:12px;padding:28px 32px;margin:0 48px 48px;text-align:center;">
+  <p style="font-size:14px;color:var(--sous);font-weight:600;">&#128247; Vous avez des photos de chantiers &agrave; ajouter ? Remplacez les placeholders par vos images dans le dossier <code>images/realisations/</code> et mettez &agrave; jour les balises <code>&lt;img&gt;</code> dans cette page.</p>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Un projet ? Demandez un devis gratuit</h2>
+  <p>D&eacute;pannage ou travaux neufs &mdash; nos artisans qualifi&eacute;s interviennent rapidement dans les Alpes-Maritimes et le Var.</p>
+  <div class="tel-cards">
+    <a href="tel:0492141414" class="tel-card"><span>T&eacute;l&eacute;phone fixe</span><strong>04 92 14 14 14</strong></a>
+    <a href="tel:0677203752" class="tel-card"><span>Mobile</span><strong>06 77 20 37 52</strong></a>
+  </div>
+</section>
+
+<footer>
+  <div class="fbot">
+    &copy; 2026 Atelier PACA &mdash; R&eacute;alisations &mdash;
+    <a href="index.html">Retour &agrave; l&rsquo;accueil</a> &mdash;
+    <a href="index.html#contact">Devis gratuit</a>
+  </div>
+</footer>
+
+<!-- FILTRE JS -->
+<script>
+  function filterGallery(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.gallery-section').forEach(section => {
+      if (cat === 'all') {
+        section.style.display = '';
+      } else {
+        section.style.display = section.dataset.category === cat ? '' : 'none';
+      }
+    });
+    document.querySelectorAll('.gallery-card').forEach(card => {
+      if (cat === 'all' || card.dataset.category === cat) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
