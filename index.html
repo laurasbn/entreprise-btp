@@ -252,9 +252,8 @@
     .scard-body h3 { font-size: 18px; font-weight: 800; color: var(--bleu); margin-bottom: 8px; }
     .scard-body p { font-size: 14px; color: var(--sous); line-height: 1.65; flex: 1; }
     .scard-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: var(--rouge); font-size: 14px; font-weight: 700; }
-    /* Highlight carte climatisation */
-    .scard-clim { border: 2px solid #60c5f7; box-shadow: 0 2px 8px rgba(96,197,247,0.18), 0 10px 32px rgba(0,0,0,0.09); }
-    .scard-clim .scard-body h3 { color: #0a6ea0; }
+    /* Carte climatisation — même style que les autres */
+    .scard-clim .scard-body h3 { color: var(--bleu); }
 
     /* ======= AGENCES — redesign 2026 ======= */
     .zone-section { background: linear-gradient(160deg, #0d2240 0%, var(--bleu) 60%, #122040 100%); padding: 80px 48px; }
@@ -374,7 +373,7 @@
     .trust-icon svg.lucide { width: 22px; height: 22px; color: var(--rouge); }
     .pourquoi-ico svg.lucide { width: 38px; height: 38px; color: var(--rouge); }
     .scard-icon svg.lucide { width: 28px; height: 28px; color: var(--rouge); }
-    .scard-clim .scard-icon svg.lucide { color: #0a6ea0; }
+    .scard-clim .scard-icon svg.lucide { color: var(--rouge); }
     .zone-card-icon svg.lucide { width: 20px; height: 20px; color: var(--rouge); }
     .agence-pin svg.lucide { width: 16px; height: 16px; color: rgba(255,255,255,0.9); }
     .btn-appel-fixe svg.lucide { width: 18px; height: 18px; }
@@ -403,6 +402,22 @@
     .pourquoi-card p { font-size: 13px; color: var(--sous); line-height: 1.65; }
     @media (max-width: 900px) { .pourquoi-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 768px) { .pourquoi-section { padding: 60px 20px; } .pourquoi-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* ======= BANDEAU MARQUES DÉFILANT ======= */
+    .marques-band { background: var(--gris); border-top: 1px solid var(--gris2); border-bottom: 1px solid var(--gris2); padding: 34px 0; }
+    .marques-label { text-align: center; font-size: 11px; font-weight: 700; color: var(--sous); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 22px; }
+    .marques-overflow { overflow: hidden; position: relative; }
+    .marques-overflow::before,
+    .marques-overflow::after { content: ''; position: absolute; top: 0; bottom: 0; width: 100px; z-index: 2; pointer-events: none; }
+    .marques-overflow::before { left: 0; background: linear-gradient(to right, var(--gris), transparent); }
+    .marques-overflow::after { right: 0; background: linear-gradient(to left, var(--gris), transparent); }
+    .marques-track { display: flex; align-items: center; width: max-content; animation: marques-scroll 22s linear infinite; }
+    .marques-track:hover { animation-play-state: paused; }
+    .marque-item { font-size: clamp(22px, 3vw, 30px); font-weight: 800; color: var(--bleu); letter-spacing: -0.5px; opacity: 0.55; padding: 0 44px; transition: opacity 0.2s; white-space: nowrap; }
+    .marque-item:hover { opacity: 1; }
+    .marque-sep { font-size: 18px; color: var(--rouge); opacity: 0.35; flex-shrink: 0; }
+    @keyframes marques-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (max-width: 768px) { .marques-overflow::before, .marques-overflow::after { width: 40px; } .marque-item { font-size: 20px; padding: 0 28px; } }
 
     /* ======= ZONES D'INTERVENTION ======= */
     .zones-section { background: var(--gris); padding: 80px 48px; }
@@ -542,7 +557,7 @@
   <div class="section-head">
     <span class="eyebrow">Nos m&eacute;tiers</span>
     <h2>Un artisan pour chaque besoin</h2>
-    <p>Des professionnels certifi&eacute;s disponibles partout dans les Alpes-Maritimes, 24h/24.</p>
+    <p>Des professionnels certifi&eacute;s disponibles partout dans les <span style="white-space:nowrap">Alpes-Maritimes</span>, 24h/24.</p>
   </div>
   <div class="services-grid">
 
@@ -558,7 +573,7 @@
       </div>
       <div class="scard-body">
         <div class="scard-icon"><i data-lucide="snowflake"></i></div>
-        <h3>Climatisation &mdash; Installation &amp; D&eacute;pannage</h3>
+        <h3>Climatisation</h3>
         <p>Installation de climatiseurs split, entretien annuel et d&eacute;pannage rapide dans les Alpes-Maritimes. Techniciens certifi&eacute;s, devis gratuit sous 2h.</p>
         <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
       </div>
@@ -636,6 +651,26 @@
 
   </div>
 </section>
+
+<!-- BANDEAU MARQUES DÉFILANT -->
+<div class="marques-band" aria-label="Nos marques partenaires">
+  <p class="marques-label">Nos marques partenaires</p>
+  <div class="marques-overflow">
+    <div class="marques-track">
+      <span class="marque-item">Daikin</span><span class="marque-sep" aria-hidden="true">·</span>
+      <span class="marque-item">Mitsubishi</span><span class="marque-sep" aria-hidden="true">·</span>
+      <span class="marque-item">Atlantic</span><span class="marque-sep" aria-hidden="true">·</span>
+      <span class="marque-item">Hitachi</span><span class="marque-sep" aria-hidden="true">·</span>
+      <span class="marque-item">Panasonic</span><span class="marque-sep" aria-hidden="true">·</span>
+      <!-- Duplication pour la boucle infinie -->
+      <span class="marque-item" aria-hidden="true">Daikin</span><span class="marque-sep" aria-hidden="true">·</span>
+      <span class="marque-item" aria-hidden="true">Mitsubishi</span><span class="marque-sep" aria-hidden="true">·</span>
+      <span class="marque-item" aria-hidden="true">Atlantic</span><span class="marque-sep" aria-hidden="true">·</span>
+      <span class="marque-item" aria-hidden="true">Hitachi</span><span class="marque-sep" aria-hidden="true">·</span>
+      <span class="marque-item" aria-hidden="true">Panasonic</span><span class="marque-sep" aria-hidden="true">·</span>
+    </div>
+  </div>
+</div>
 
 <!-- POURQUOI NOUS CHOISIR -->
 <section class="pourquoi-section">
