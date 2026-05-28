@@ -241,7 +241,7 @@
 
     /* ======= SERVICES CARDS ======= */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
-    .scard { border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 6px 24px rgba(0,0,0,0.07); transition: transform 0.22s, box-shadow 0.22s; display: flex; flex-direction: column; }
+    .scard { border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 6px 24px rgba(0,0,0,0.07); transition: transform 0.22s, box-shadow 0.22s; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
     .scard:hover { transform: translateY(-6px); box-shadow: 0 4px 8px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.12); }
     .scard-img { position: relative; height: 210px; overflow: hidden; }
     .scard-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
@@ -251,8 +251,7 @@
     .scard-icon { font-size: 28px; margin-bottom: 10px; }
     .scard-body h3 { font-size: 18px; font-weight: 800; color: var(--bleu); margin-bottom: 8px; }
     .scard-body p { font-size: 14px; color: var(--sous); line-height: 1.65; flex: 1; }
-    .scard-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: var(--rouge); font-size: 14px; font-weight: 700; text-decoration: none; }
-    .scard-link:hover { text-decoration: underline; }
+    .scard-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: var(--rouge); font-size: 14px; font-weight: 700; }
     /* Highlight carte climatisation */
     .scard-clim { border: 2px solid #60c5f7; box-shadow: 0 2px 8px rgba(96,197,247,0.18), 0 10px 32px rgba(0,0,0,0.09); }
     .scard-clim .scard-body h3 { color: #0a6ea0; }
@@ -347,9 +346,12 @@
     /* ======= MENU DÉROULANT SERVICES ======= */
     .nav-dropdown { position: relative; display: flex; align-items: center; }
     .nav-dropdown > a::after { content: ' \25BE'; font-size: 10px; opacity: 0.6; }
-    .dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 0; background: #1a3460; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.12); min-width: 215px; padding: 8px 0; z-index: 200; }
+    /* Pont invisible au-dessus du menu : comble le gap entre le lien et le menu */
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #1a3460; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.12); min-width: 215px; padding: 12px 0 8px; z-index: 200; margin-top: 6px; }
+    .dropdown-menu::before { content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
     .nav-dropdown:hover .dropdown-menu,
-    .nav-dropdown:focus-within .dropdown-menu { display: block; }
+    .nav-dropdown:focus-within .dropdown-menu,
+    .nav-dropdown.dd-open .dropdown-menu { display: block; }
     .dropdown-menu a { display: block; padding: 10px 18px; color: rgba(255,255,255,0.82) !important; font-size: 13px; font-weight: 500 !important; border-radius: 0 !important; background: none !important; white-space: nowrap; }
     .dropdown-menu a:hover { background: rgba(255,255,255,0.09) !important; color: #fff !important; }
 
@@ -479,7 +481,7 @@
   <div class="services-grid">
 
     <!-- CLIMATISATION — mis en avant -->
-    <div class="scard scard-clim">
+    <a href="climatisation.html" class="scard scard-clim">
       <div class="scard-img">
         <img
           src="images/service-climatisation.jpg"
@@ -492,12 +494,12 @@
         <div class="scard-icon">&#10052;&#65039;</div>
         <h3>Climatisation &mdash; Installation &amp; D&eacute;pannage</h3>
         <p>Installation de climatiseurs split, entretien annuel et d&eacute;pannage rapide dans les Alpes-Maritimes. Techniciens certifi&eacute;s, devis gratuit sous 2h.</p>
-        <a href="climatisation.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
+        <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
       </div>
-    </div>
+    </a>
 
     <!-- PLOMBERIE -->
-    <div class="scard">
+    <a href="plomberie.html" class="scard">
       <div class="scard-img">
         <img src="images/service-plomberie.jpg" alt="Plombier qui r&eacute;pare des tuyaux" width="600" height="400" loading="lazy" />
         <span class="scard-badge">D&eacute;pannage rapide</span>
@@ -506,12 +508,12 @@
         <div class="scard-icon">&#128295;</div>
         <h3>Plomberie</h3>
         <p>Fuite d&rsquo;eau, canalisation bouch&eacute;e, robinetterie, chauffe-eau. Nos plombiers r&eacute;solvent votre probl&egrave;me vite et bien.</p>
-        <a href="plomberie.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
+        <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
       </div>
-    </div>
+    </a>
 
     <!-- ELECTRICITE -->
-    <div class="scard">
+    <a href="electricite.html" class="scard">
       <div class="scard-img">
         <img src="images/service-electricite.jpg" alt="Electricien avec gants rouges de protection devant un tableau &eacute;lectrique" width="600" height="400" loading="lazy" />
         <span class="scard-badge">Mise aux normes</span>
@@ -520,12 +522,12 @@
         <div class="scard-icon">&#9889;</div>
         <h3>Electricit&eacute;</h3>
         <p>Tableau &eacute;lectrique, prises, &eacute;clairage, mise aux normes. Nos &eacute;lectriciens certifi&eacute;s interviennent en toute s&eacute;curit&eacute;.</p>
-        <a href="electricite.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
+        <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
       </div>
-    </div>
+    </a>
 
     <!-- CHAUFFAGE -->
-    <div class="scard">
+    <a href="chauffage.html" class="scard">
       <div class="scard-img">
         <img src="images/service-chauffage.jpg" alt="Chauffagiste qui r&eacute;pare une chaudi&egrave;re" width="600" height="400" loading="lazy" />
         <span class="scard-badge">Installation &amp; entretien</span>
@@ -534,12 +536,12 @@
         <div class="scard-icon">&#128293;</div>
         <h3>Chauffage</h3>
         <p>Chaudi&egrave;re, radiateurs, plancher chauffant. Installation, entretien annuel et d&eacute;pannage par des chauffagistes qualifi&eacute;s.</p>
-        <a href="chauffage.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
+        <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
       </div>
-    </div>
+    </a>
 
     <!-- SERRURERIE -->
-    <div class="scard">
+    <a href="serrurerie.html" class="scard">
       <div class="scard-img">
         <img src="images/service-serrurerie.jpg" alt="Mains d&rsquo;un serrurier installant une serrure sur une porte en bois" width="600" height="400" loading="lazy" />
         <span class="scard-badge">24h/24 &mdash; 7j/7</span>
@@ -548,12 +550,12 @@
         <div class="scard-icon">&#128274;</div>
         <h3>Serrurerie</h3>
         <p>Ouverture de porte claqu&eacute;e, changement de serrure, blindage. Intervention d&rsquo;urgence disponible &agrave; toute heure.</p>
-        <a href="serrurerie.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
+        <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
       </div>
-    </div>
+    </a>
 
     <!-- VOLETS ROULANTS -->
-    <div class="scard">
+    <a href="volets-roulants.html" class="scard">
       <div class="scard-img">
         <img src="images/service-volets.webp" alt="Volets roulants ferm&eacute;s sur une maison" width="600" height="400" loading="lazy" />
         <span class="scard-badge">Toutes marques</span>
@@ -562,9 +564,9 @@
         <div class="scard-icon">&#129695;</div>
         <h3>Volets Roulants</h3>
         <p>R&eacute;paration, motorisation, remplacement. Volets manuels ou &eacute;lectriques, nous intervenons sur toutes les marques.</p>
-        <a href="volets-roulants.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
+        <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>
@@ -923,5 +925,18 @@
   <div class="fbot">&copy; 2026 Atelier PACA &mdash; Tous droits r&eacute;serv&eacute;s &mdash; Artisans qualifi&eacute;s &mdash; Alpes-Maritimes &amp; Var</div>
 </footer>
 
+<script>
+  // Dropdown desktop : délai à la fermeture pour éviter fermeture en traversant le pont
+  (function () {
+    var dd = document.querySelector('.nav-dropdown');
+    if (!dd) return;
+    var closeTimer;
+    dd.addEventListener('mouseenter', function () { clearTimeout(closeTimer); });
+    dd.addEventListener('mouseleave', function () {
+      closeTimer = setTimeout(function () { dd.classList.remove('dd-open'); }, 200);
+    });
+    dd.addEventListener('mouseenter', function () { dd.classList.add('dd-open'); });
+  })();
+</script>
 </body>
 </html>
