@@ -369,6 +369,30 @@
       .trust-item:nth-child(3) { border-right: none; }
     }
 
+    /* ======= ICÔNES LUCIDE ======= */
+    svg.lucide { display: inline-block; vertical-align: middle; flex-shrink: 0; stroke-width: 1.75; transition: inherit; }
+    .trust-icon svg.lucide { width: 22px; height: 22px; color: var(--rouge); }
+    .pourquoi-ico svg.lucide { width: 38px; height: 38px; color: var(--rouge); }
+    .scard-icon svg.lucide { width: 28px; height: 28px; color: var(--rouge); }
+    .scard-clim .scard-icon svg.lucide { color: #0a6ea0; }
+    .zone-card-icon svg.lucide { width: 20px; height: 20px; color: var(--rouge); }
+    .agence-pin svg.lucide { width: 16px; height: 16px; color: rgba(255,255,255,0.9); }
+    .btn-appel-fixe svg.lucide { width: 18px; height: 18px; }
+    .chip svg.lucide { width: 13px; height: 13px; }
+    .hero-pill svg.lucide { width: 13px; height: 13px; }
+    .hero-cta svg.lucide { width: 15px; height: 15px; color: var(--google-jaune); }
+    .urgence-band p svg.lucide { width: 18px; height: 18px; }
+    .badge-voir svg.lucide { width: 13px; height: 13px; }
+    .avis-service svg.lucide { width: 11px; height: 11px; }
+    .fcol a svg.lucide { width: 13px; height: 13px; }
+    .f-badge svg.lucide { width: 14px; height: 14px; }
+    .seo-col h3 svg.lucide { width: 13px; height: 13px; color: var(--bleu); }
+    .dropdown-menu a svg.lucide { width: 14px; height: 14px; }
+    .header-tel svg.lucide { width: 16px; height: 16px; }
+    .scard-badge svg.lucide { width: 11px; height: 11px; }
+    .stat-n svg.lucide { width: 26px; height: 26px; }
+    .cta-section h2 svg.lucide { width: 36px; height: 36px; }
+
     /* ======= POURQUOI NOUS CHOISIR ======= */
     .pourquoi-section { background: #fff; padding: 80px 48px; }
     .pourquoi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
@@ -399,7 +423,7 @@
 <body>
 
 <!-- BOUTON APPEL FIXE MOBILE -->
-<a href="tel:0492141414" class="btn-appel-fixe">&#128222; 04 92 14 14 14</a>
+<a href="tel:0492141414" class="btn-appel-fixe"><i data-lucide="phone"></i> 04 92 14 14 14</a>
 
 <!-- HEADER -->
 <header>
@@ -411,22 +435,22 @@
     <div class="nav-dropdown">
       <a href="#services">Services</a>
       <div class="dropdown-menu">
-        <a href="climatisation.html">&#10052;&#65039; Climatisation</a>
-        <a href="plomberie.html">&#128295; Plomberie</a>
-        <a href="electricite.html">&#9889; &Eacute;lectricit&eacute;</a>
-        <a href="chauffage.html">&#128293; Chauffage</a>
-        <a href="serrurerie.html">&#128274; Serrurerie</a>
-        <a href="volets-roulants.html">&#129695; Volets roulants</a>
+        <a href="climatisation.html"><i data-lucide="snowflake"></i> Climatisation</a>
+        <a href="plomberie.html"><i data-lucide="wrench"></i> Plomberie</a>
+        <a href="electricite.html"><i data-lucide="zap"></i> &Eacute;lectricit&eacute;</a>
+        <a href="chauffage.html"><i data-lucide="flame"></i> Chauffage</a>
+        <a href="serrurerie.html"><i data-lucide="lock"></i> Serrurerie</a>
+        <a href="volets-roulants.html"><i data-lucide="align-justify"></i> Volets roulants</a>
       </div>
     </div>
     <div class="nav-dropdown">
       <a href="marques.html">Marques</a>
       <div class="dropdown-menu">
-        <a href="marques.html#daikin">&#10052; Daikin</a>
-        <a href="marques.html#mitsubishi">&#10052; Mitsubishi</a>
-        <a href="marques.html#atlantic">&#128293; Atlantic</a>
-        <a href="marques.html#hitachi">&#10052; Hitachi</a>
-        <a href="marques.html#panasonic">&#10052; Panasonic</a>
+        <a href="marques.html#daikin"><i data-lucide="snowflake"></i> Daikin</a>
+        <a href="marques.html#mitsubishi"><i data-lucide="snowflake"></i> Mitsubishi</a>
+        <a href="marques.html#atlantic"><i data-lucide="flame"></i> Atlantic</a>
+        <a href="marques.html#hitachi"><i data-lucide="snowflake"></i> Hitachi</a>
+        <a href="marques.html#panasonic"><i data-lucide="snowflake"></i> Panasonic</a>
       </div>
     </div>
     <a href="#avis">Avis</a>
@@ -435,7 +459,7 @@
     <a href="realisations.html">R&eacute;alisations</a>
     <a href="#contact" class="btn-devis">Devis gratuit</a>
   </nav>
-  <span class="header-tel">&#128222; 04 92 14 14 14</span>
+  <span class="header-tel"><i data-lucide="phone"></i> 04 92 14 14 14</span>
   <button class="ham" id="ham-btn" aria-label="Ouvrir le menu" onclick="document.getElementById('main-nav').classList.toggle('open');this.classList.toggle('active');">
     <span></span><span></span><span></span>
   </button>
@@ -452,28 +476,28 @@
     />
   </div>
   <div class="hero-content">
-    <div class="hero-pill">&#9728;&#65039;&nbsp; &Eacute;t&eacute; 2026 &mdash; C&ocirc;te d&rsquo;Azur</div>
+    <div class="hero-pill"><i data-lucide="sun"></i>&nbsp; &Eacute;t&eacute; 2026 &mdash; C&ocirc;te d&rsquo;Azur</div>
     <h1>C&rsquo;est l&rsquo;&eacute;t&eacute; sur la<br/><em>C&ocirc;te d&rsquo;Azur</em> &mdash;<br/>installez votre climatisation.</h1>
     <p class="hero-sub">Faites appel &agrave; des artisans certifi&eacute;s qui interviennent en urgence, 24h/24, partout dans le 06 et le Var &mdash; un seul appel suffit pour tous vos besoins.</p>
-    <p class="hero-cta">&#11088; <strong>4,9/5 &mdash; 166 avis Google</strong> &bull; Intervention <strong>24h/24, 7j/7</strong> &bull; Devis gratuit en 2h</p>
+    <p class="hero-cta"><i data-lucide="star"></i> <strong>4,9/5 &mdash; 166 avis Google</strong> &bull; Intervention <strong>24h/24, 7j/7</strong> &bull; Devis gratuit en 2h</p>
     <div class="hero-btns">
       <a href="#contact" class="btn-rouge">Demander un devis gratuit</a>
-      <a href="tel:0492141414" class="btn-ghost">&#128222; 04 92 14 14 14</a>
+      <a href="tel:0492141414" class="btn-ghost"><i data-lucide="phone"></i> 04 92 14 14 14</a>
     </div>
     <div class="hero-chips">
-      <span class="chip chip-star">&#11088; 4,9/5 &mdash; 166 avis Google</span>
-      <span class="chip">&#10052; Climatisation</span>
-      <span class="chip">&#128295; Plomberie</span>
-      <span class="chip">&#9889; &Eacute;lectricit&eacute;</span>
-      <span class="chip">&#128293; Chauffage</span>
-      <span class="chip">&#128274; Serrurerie</span>
+      <span class="chip chip-star"><i data-lucide="star"></i> 4,9/5 &mdash; 166 avis Google</span>
+      <span class="chip"><i data-lucide="snowflake"></i> Climatisation</span>
+      <span class="chip"><i data-lucide="wrench"></i> Plomberie</span>
+      <span class="chip"><i data-lucide="zap"></i> &Eacute;lectricit&eacute;</span>
+      <span class="chip"><i data-lucide="flame"></i> Chauffage</span>
+      <span class="chip"><i data-lucide="lock"></i> Serrurerie</span>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat"><span class="stat-n">4,9&#11088;</span><span class="stat-l">Sur Google &mdash; 166 avis</span></div>
+  <div class="stat"><span class="stat-n">4,9<i data-lucide="star"></i></span><span class="stat-l">Sur Google &mdash; 166 avis</span></div>
   <div class="stat"><span class="stat-n">8</span><span class="stat-l">Agences locales</span></div>
   <div class="stat"><span class="stat-n">24/7</span><span class="stat-l">D&eacute;pannage urgent</span></div>
   <div class="stat"><span class="stat-n">10&nbsp;ans</span><span class="stat-l">D&rsquo;exp&eacute;rience</span></div>
@@ -484,23 +508,23 @@
 <div class="trust-band">
   <div class="trust-items">
     <div class="trust-item">
-      <span class="trust-icon">&#127881;</span>
+      <span class="trust-icon"><i data-lucide="file-check"></i></span>
       <div class="trust-text"><strong>Devis gratuit sous 24h</strong><span>Sans engagement</span></div>
     </div>
     <div class="trust-item">
-      <span class="trust-icon">&#127959;&#65039;</span>
+      <span class="trust-icon"><i data-lucide="shield-check"></i></span>
       <div class="trust-text"><strong>Garantie d&eacute;cennale</strong><span>Travaux garantis 10 ans</span></div>
     </div>
     <div class="trust-item">
-      <span class="trust-icon">&#9989;</span>
+      <span class="trust-icon"><i data-lucide="check-circle"></i></span>
       <div class="trust-text"><strong>Agr&eacute;&eacute; par les assurances</strong><span>Prise en charge assurance</span></div>
     </div>
     <div class="trust-item">
-      <span class="trust-icon">&#128680;</span>
+      <span class="trust-icon"><i data-lucide="bell"></i></span>
       <div class="trust-text"><strong>Astreinte 24h/24, 7j/7</strong><span>Urgences nuit et week-end</span></div>
     </div>
     <div class="trust-item">
-      <span class="trust-icon">&#9889;</span>
+      <span class="trust-icon"><i data-lucide="zap"></i></span>
       <div class="trust-text"><strong>Partenaire Enedis</strong><span>Habilitation &eacute;lectrique certifi&eacute;e</span></div>
     </div>
   </div>
@@ -508,7 +532,7 @@
 
 <!-- URGENCE BAND -->
 <div class="urgence-band">
-  <p>&#128680; Panne ou urgence ? On intervient maintenant.</p>
+  <p><i data-lucide="alert-triangle"></i> Panne ou urgence ? On intervient maintenant.</p>
   <a href="tel:0492141414">04 92 14 14 14</a>
   <a href="tel:0677203752">06 77 20 37 52</a>
 </div>
@@ -530,10 +554,10 @@
           alt="Installation d'une climatisation split dans les Alpes-Maritimes par Atelier PACA"
           width="600" height="400" loading="eager"
         />
-        <span class="scard-badge">&#10052; Sp&eacute;cialit&eacute; N&deg;1</span>
+        <span class="scard-badge"><i data-lucide="snowflake"></i> Sp&eacute;cialit&eacute; N&deg;1</span>
       </div>
       <div class="scard-body">
-        <div class="scard-icon">&#10052;&#65039;</div>
+        <div class="scard-icon"><i data-lucide="snowflake"></i></div>
         <h3>Climatisation &mdash; Installation &amp; D&eacute;pannage</h3>
         <p>Installation de climatiseurs split, entretien annuel et d&eacute;pannage rapide dans les Alpes-Maritimes. Techniciens certifi&eacute;s, devis gratuit sous 2h.</p>
         <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
@@ -547,7 +571,7 @@
         <span class="scard-badge">D&eacute;pannage rapide</span>
       </div>
       <div class="scard-body">
-        <div class="scard-icon">&#128295;</div>
+        <div class="scard-icon"><i data-lucide="wrench"></i></div>
         <h3>Plomberie</h3>
         <p>Fuite d&rsquo;eau, canalisation bouch&eacute;e, robinetterie, chauffe-eau. Nos plombiers r&eacute;solvent votre probl&egrave;me vite et bien.</p>
         <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
@@ -561,7 +585,7 @@
         <span class="scard-badge">Mise aux normes</span>
       </div>
       <div class="scard-body">
-        <div class="scard-icon">&#9889;</div>
+        <div class="scard-icon"><i data-lucide="zap"></i></div>
         <h3>Electricit&eacute;</h3>
         <p>Tableau &eacute;lectrique, prises, &eacute;clairage, mise aux normes. Nos &eacute;lectriciens certifi&eacute;s interviennent en toute s&eacute;curit&eacute;.</p>
         <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
@@ -575,7 +599,7 @@
         <span class="scard-badge">Installation &amp; entretien</span>
       </div>
       <div class="scard-body">
-        <div class="scard-icon">&#128293;</div>
+        <div class="scard-icon"><i data-lucide="flame"></i></div>
         <h3>Chauffage</h3>
         <p>Chaudi&egrave;re, radiateurs, plancher chauffant. Installation, entretien annuel et d&eacute;pannage par des chauffagistes qualifi&eacute;s.</p>
         <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
@@ -589,7 +613,7 @@
         <span class="scard-badge">24h/24 &mdash; 7j/7</span>
       </div>
       <div class="scard-body">
-        <div class="scard-icon">&#128274;</div>
+        <div class="scard-icon"><i data-lucide="lock"></i></div>
         <h3>Serrurerie</h3>
         <p>Ouverture de porte claqu&eacute;e, changement de serrure, blindage. Intervention d&rsquo;urgence disponible &agrave; toute heure.</p>
         <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
@@ -603,7 +627,7 @@
         <span class="scard-badge">Toutes marques</span>
       </div>
       <div class="scard-body">
-        <div class="scard-icon">&#129695;</div>
+        <div class="scard-icon"><i data-lucide="align-justify"></i></div>
         <h3>Volets Roulants</h3>
         <p>R&eacute;paration, motorisation, remplacement. Volets manuels ou &eacute;lectriques, nous intervenons sur toutes les marques.</p>
         <span class="scard-link">Voir nos tarifs &amp; services &rarr;</span>
@@ -622,42 +646,42 @@
   </div>
   <div class="pourquoi-grid">
     <div class="pourquoi-card">
-      <span class="pourquoi-ico">&#128338;</span>
+      <span class="pourquoi-ico"><i data-lucide="clock"></i></span>
       <h3>Intervention le jour m&ecirc;me</h3>
       <p>Disponibles 24h/24, 7j/7. Nous intervenons le jour m&ecirc;me pour toute urgence dans le 06 et le Var.</p>
     </div>
     <div class="pourquoi-card">
-      <span class="pourquoi-ico">&#128179;</span>
+      <span class="pourquoi-ico"><i data-lucide="file-text"></i></span>
       <h3>Devis gratuit &amp; transparent</h3>
       <p>Estimation claire sous 2h, sans surprise. Le tarif est annonc&eacute; avant toute intervention.</p>
     </div>
     <div class="pourquoi-card">
-      <span class="pourquoi-ico">&#127959;&#65039;</span>
+      <span class="pourquoi-ico"><i data-lucide="shield-check"></i></span>
       <h3>Garantie d&eacute;cennale</h3>
       <p>Tous nos travaux sont couverts par la garantie d&eacute;cennale. Votre investissement est prot&eacute;g&eacute; dans la dur&eacute;e.</p>
     </div>
     <div class="pourquoi-card">
-      <span class="pourquoi-ico">&#9989;</span>
+      <span class="pourquoi-ico"><i data-lucide="check-circle"></i></span>
       <h3>Agr&eacute;&eacute; par les assurances</h3>
       <p>Nos artisans sont agr&eacute;&eacute;s par les compagnies d&rsquo;assurances pour une prise en charge directe.</p>
     </div>
     <div class="pourquoi-card">
-      <span class="pourquoi-ico">&#11088;</span>
+      <span class="pourquoi-ico"><i data-lucide="star"></i></span>
       <h3>4,9/5 sur Google</h3>
       <p>166 avis v&eacute;rifi&eacute;s. Notre r&eacute;putation repose sur la satisfaction concr&egrave;te de chaque client.</p>
     </div>
     <div class="pourquoi-card">
-      <span class="pourquoi-ico">&#128295;</span>
+      <span class="pourquoi-ico"><i data-lucide="wrench"></i></span>
       <h3>Artisans certifi&eacute;s</h3>
       <p>Qualifications RGE, habilitations &eacute;lectriques, certifications fluides frigorigènes &mdash; toujours aux normes.</p>
     </div>
     <div class="pourquoi-card">
-      <span class="pourquoi-ico">&#128101;</span>
+      <span class="pourquoi-ico"><i data-lucide="users"></i></span>
       <h3>Un seul interlocuteur</h3>
       <p>Plomberie, &eacute;lectricit&eacute;, climatisation, serrurerie, chauffage, volets roulants &mdash; une seule &eacute;quipe pour tous vos d&eacute;pannages.</p>
     </div>
     <div class="pourquoi-card">
-      <span class="pourquoi-ico">&#9889;</span>
+      <span class="pourquoi-ico"><i data-lucide="zap"></i></span>
       <h3>Partenaire Enedis</h3>
       <p>Atelier PACA est partenaire Enedis, gage de s&eacute;rieux et de conformit&eacute; pour vos installations &eacute;lectriques.</p>
     </div>
@@ -687,7 +711,7 @@
       <div class="badge-stars" aria-label="5 étoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <div class="badge-score">4,9 <small>/ 5</small></div>
       <div class="badge-count">166 avis v&eacute;rifi&eacute;s</div>
-      <span class="badge-voir">&#128205; Voir notre fiche Google &rarr;</span>
+      <span class="badge-voir"><i data-lucide="map-pin"></i> Voir notre fiche Google &rarr;</span>
     </a>
   </div>
 
@@ -703,7 +727,7 @@
       </div>
       <div class="avis-stars" aria-label="5 étoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="avis-txt">&laquo;&nbsp;Excellent travail pour l&rsquo;installation de ma clim split &agrave; Antibes. Technicien ponctuel, soigneux et tr&egrave;s professionnel. R&eacute;sultat impeccable, je recommande vivement&nbsp;!&nbsp;&raquo;</p>
-      <span class="avis-service">&#10052; Installation Climatisation</span>
+      <span class="avis-service"><i data-lucide="snowflake"></i> Installation Climatisation</span>
     </div>
     <div class="avis-card">
       <div class="avis-top">
@@ -715,7 +739,7 @@
       </div>
       <div class="avis-stars" aria-label="5 étoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="avis-txt">&laquo;&nbsp;Panne de clim en pleine canicule. Appel &agrave; 8h, technicien sur place &agrave; 11h. D&eacute;pannage imm&eacute;diat, tarif correct. &Eacute;quipe tr&egrave;s r&eacute;active &mdash; bravo&nbsp;!&nbsp;&raquo;</p>
-      <span class="avis-service">&#10052; D&eacute;pannage Climatisation</span>
+      <span class="avis-service"><i data-lucide="snowflake"></i> D&eacute;pannage Climatisation</span>
     </div>
     <div class="avis-card">
       <div class="avis-top">
@@ -727,7 +751,7 @@
       </div>
       <div class="avis-stars" aria-label="5 étoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="avis-txt">&laquo;&nbsp;Devis gratuit en 2h, installation soign&eacute;e en une journ&eacute;e. Climatiseur Daikin bien pos&eacute;, prix honn&ecirc;te et artisans certifi&eacute;s. Tr&egrave;s satisfait.&nbsp;&raquo;</p>
-      <span class="avis-service">&#10052; Installation Climatisation</span>
+      <span class="avis-service"><i data-lucide="snowflake"></i> Installation Climatisation</span>
     </div>
   </div>
 </section>
@@ -742,7 +766,7 @@
   <div class="agences-grid">
 
     <div class="agence-card">
-      <div class="agence-top"><span class="agence-pin">&#128205;</span><h4>Antibes</h4></div>
+      <div class="agence-top"><span class="agence-pin"><i data-lucide="map-pin"></i></span><h4>Antibes</h4></div>
       <div class="agence-body">
         <p>48, chemin des Autrichiens<br/>06600 Antibes</p>
         <a href="https://maps.google.com/?q=48+chemin+des+Autrichiens+06600+Antibes" target="_blank" rel="noopener" class="agence-maps">Voir sur Maps &rarr;</a>
@@ -750,7 +774,7 @@
     </div>
 
     <div class="agence-card">
-      <div class="agence-top"><span class="agence-pin">&#128205;</span><h4>Nice</h4></div>
+      <div class="agence-top"><span class="agence-pin"><i data-lucide="map-pin"></i></span><h4>Nice</h4></div>
       <div class="agence-body">
         <p>34, av. Georges Cl&eacute;menceau<br/>06000 Nice</p>
         <a href="https://maps.google.com/?q=34+av+Georges+Clemenceau+06000+Nice" target="_blank" rel="noopener" class="agence-maps">Voir sur Maps &rarr;</a>
@@ -758,7 +782,7 @@
     </div>
 
     <div class="agence-card">
-      <div class="agence-top"><span class="agence-pin">&#128205;</span><h4>Cannes</h4></div>
+      <div class="agence-top"><span class="agence-pin"><i data-lucide="map-pin"></i></span><h4>Cannes</h4></div>
       <div class="agence-body">
         <p>5 Rue Boucicaut<br/>06400 Cannes</p>
         <a href="https://maps.google.com/?q=5+rue+Boucicaut+06400+Cannes" target="_blank" rel="noopener" class="agence-maps">Voir sur Maps &rarr;</a>
@@ -766,7 +790,7 @@
     </div>
 
     <div class="agence-card">
-      <div class="agence-top"><span class="agence-pin">&#128205;</span><h4>Grasse</h4></div>
+      <div class="agence-top"><span class="agence-pin"><i data-lucide="map-pin"></i></span><h4>Grasse</h4></div>
       <div class="agence-body">
         <p>24, avenue Mathias Duval<br/>06130 Grasse</p>
         <a href="https://maps.google.com/?q=24+avenue+Mathias+Duval+06130+Grasse" target="_blank" rel="noopener" class="agence-maps">Voir sur Maps &rarr;</a>
@@ -774,7 +798,7 @@
     </div>
 
     <div class="agence-card">
-      <div class="agence-top"><span class="agence-pin">&#128205;</span><h4>Cagnes-sur-Mer</h4></div>
+      <div class="agence-top"><span class="agence-pin"><i data-lucide="map-pin"></i></span><h4>Cagnes-sur-Mer</h4></div>
       <div class="agence-body">
         <p>9, rue Pasteur<br/>06800 Cagnes-sur-Mer</p>
         <a href="https://maps.google.com/?q=9+rue+Pasteur+06800+Cagnes-sur-Mer" target="_blank" rel="noopener" class="agence-maps">Voir sur Maps &rarr;</a>
@@ -782,7 +806,7 @@
     </div>
 
     <div class="agence-card">
-      <div class="agence-top"><span class="agence-pin">&#128205;</span><h4>Saint-Laurent-du-Var</h4></div>
+      <div class="agence-top"><span class="agence-pin"><i data-lucide="map-pin"></i></span><h4>Saint-Laurent-du-Var</h4></div>
       <div class="agence-body">
         <p>127, rue Alphonse Daudet<br/>06700 Saint-Laurent-du-Var</p>
         <a href="https://maps.google.com/?q=127+rue+Alphonse+Daudet+06700+Saint-Laurent-du-Var" target="_blank" rel="noopener" class="agence-maps">Voir sur Maps &rarr;</a>
@@ -790,7 +814,7 @@
     </div>
 
     <div class="agence-card">
-      <div class="agence-top"><span class="agence-pin">&#128205;</span><h4>Le Cannet</h4></div>
+      <div class="agence-top"><span class="agence-pin"><i data-lucide="map-pin"></i></span><h4>Le Cannet</h4></div>
       <div class="agence-body">
         <p>32 Chemin l&rsquo;Olivet<br/>06110 Le Cannet</p>
         <a href="https://maps.google.com/?q=32+chemin+Olivet+06110+Le+Cannet" target="_blank" rel="noopener" class="agence-maps">Voir sur Maps &rarr;</a>
@@ -798,7 +822,7 @@
     </div>
 
     <div class="agence-card">
-      <div class="agence-top"><span class="agence-pin">&#128205;</span><h4>Saint-Rapha&euml;l</h4></div>
+      <div class="agence-top"><span class="agence-pin"><i data-lucide="map-pin"></i></span><h4>Saint-Rapha&euml;l</h4></div>
       <div class="agence-body">
         <p>81, rue Waldeck Rousseau<br/>83700 Saint-Rapha&euml;l</p>
         <a href="https://maps.google.com/?q=81+rue+Waldeck+Rousseau+83700+Saint-Raphael" target="_blank" rel="noopener" class="agence-maps">Voir sur Maps &rarr;</a>
@@ -818,7 +842,7 @@
   <div class="zones-grid">
 
     <div class="zone-card">
-      <div class="zone-card-head"><span class="zone-card-icon">&#10052;&#65039;</span><h3>Climatisation</h3></div>
+      <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="snowflake"></i></span><h3>Climatisation</h3></div>
       <div class="zone-villes">
         <a href="climatisation-nice.html" class="zone-ville">Nice</a>
         <a href="climatisation-cannes.html" class="zone-ville">Cannes</a>
@@ -832,7 +856,7 @@
     </div>
 
     <div class="zone-card">
-      <div class="zone-card-head"><span class="zone-card-icon">&#128295;</span><h3>Plomberie</h3></div>
+      <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="wrench"></i></span><h3>Plomberie</h3></div>
       <div class="zone-villes">
         <a href="plombier-nice.html" class="zone-ville">Nice</a>
         <a href="plombier-cannes.html" class="zone-ville">Cannes</a>
@@ -846,7 +870,7 @@
     </div>
 
     <div class="zone-card">
-      <div class="zone-card-head"><span class="zone-card-icon">&#9889;</span><h3>&Eacute;lectricit&eacute;</h3></div>
+      <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="zap"></i></span><h3>&Eacute;lectricit&eacute;</h3></div>
       <div class="zone-villes">
         <a href="electricien-nice.html" class="zone-ville">Nice</a>
         <a href="electricien-cannes.html" class="zone-ville">Cannes</a>
@@ -860,7 +884,7 @@
     </div>
 
     <div class="zone-card">
-      <div class="zone-card-head"><span class="zone-card-icon">&#128293;</span><h3>Chauffage</h3></div>
+      <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="flame"></i></span><h3>Chauffage</h3></div>
       <div class="zone-villes">
         <a href="chauffagiste-nice.html" class="zone-ville">Nice</a>
         <a href="chauffagiste-cannes.html" class="zone-ville">Cannes</a>
@@ -874,7 +898,7 @@
     </div>
 
     <div class="zone-card">
-      <div class="zone-card-head"><span class="zone-card-icon">&#128274;</span><h3>Serrurerie</h3></div>
+      <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="lock"></i></span><h3>Serrurerie</h3></div>
       <div class="zone-villes">
         <a href="serrurier-nice.html" class="zone-ville">Nice</a>
         <a href="serrurier-cannes.html" class="zone-ville">Cannes</a>
@@ -888,7 +912,7 @@
     </div>
 
     <div class="zone-card">
-      <div class="zone-card-head"><span class="zone-card-icon">&#129695;</span><h3>Volets roulants</h3></div>
+      <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="align-justify"></i></span><h3>Volets roulants</h3></div>
       <div class="zone-villes">
         <a href="volets-roulants-nice.html" class="zone-ville">Nice</a>
         <a href="volets-roulants-cannes.html" class="zone-ville">Cannes</a>
@@ -906,7 +930,7 @@
 
 <!-- URGENCE 24/7 -->
 <section class="cta-section">
-  <h2>&#128680; Panne ? Urgence ? On arrive.</h2>
+  <h2><i data-lucide="alert-triangle"></i> Panne ? Urgence ? On arrive.</h2>
   <p>Notre &eacute;quipe intervient 24h/24 et 7j/7 pour toutes vos urgences dans les Alpes-Maritimes.</p>
   <div class="tel-cards">
     <a href="tel:0492141414" class="tel-card"><span>T&eacute;l&eacute;phone fixe</span><strong>04 92 14 14 14</strong></a>
@@ -993,7 +1017,7 @@
   <p class="seo-links-title">Atelier PACA intervient dans les Alpes-Maritimes et le Var &mdash; retrouvez nos pages par ville et m&eacute;tier</p>
   <div class="seo-links-grid">
     <div class="seo-col">
-      <h3>&#10052; Climatisation</h3>
+      <h3><i data-lucide="snowflake"></i> Climatisation</h3>
       <ul>
         <li><a href="climatisation-nice.html">Climatisation Nice</a></li>
         <li><a href="climatisation-cannes.html">Climatisation Cannes</a></li>
@@ -1006,7 +1030,7 @@
       </ul>
     </div>
     <div class="seo-col">
-      <h3>&#128295; Plomberie</h3>
+      <h3><i data-lucide="wrench"></i> Plomberie</h3>
       <ul>
         <li><a href="plombier-nice.html">Plombier Nice</a></li>
         <li><a href="plombier-cannes.html">Plombier Cannes</a></li>
@@ -1019,7 +1043,7 @@
       </ul>
     </div>
     <div class="seo-col">
-      <h3>&#9889; &Eacute;lectricit&eacute;</h3>
+      <h3><i data-lucide="zap"></i> &Eacute;lectricit&eacute;</h3>
       <ul>
         <li><a href="electricien-nice.html">Electricien Nice</a></li>
         <li><a href="electricien-cannes.html">Electricien Cannes</a></li>
@@ -1032,7 +1056,7 @@
       </ul>
     </div>
     <div class="seo-col">
-      <h3>&#128293; Chauffage</h3>
+      <h3><i data-lucide="flame"></i> Chauffage</h3>
       <ul>
         <li><a href="chauffagiste-nice.html">Chauffagiste Nice</a></li>
         <li><a href="chauffagiste-cannes.html">Chauffagiste Cannes</a></li>
@@ -1045,7 +1069,7 @@
       </ul>
     </div>
     <div class="seo-col">
-      <h3>&#128274; Serrurerie</h3>
+      <h3><i data-lucide="lock"></i> Serrurerie</h3>
       <ul>
         <li><a href="serrurier-nice.html">Serrurier Nice</a></li>
         <li><a href="serrurier-cannes.html">Serrurier Cannes</a></li>
@@ -1058,7 +1082,7 @@
       </ul>
     </div>
     <div class="seo-col">
-      <h3>&#127968; Volets roulants</h3>
+      <h3><i data-lucide="align-justify"></i> Volets roulants</h3>
       <ul>
         <li><a href="volets-roulants-nice.html">Volets roulants Nice</a></li>
         <li><a href="volets-roulants-cannes.html">Volets roulants Cannes</a></li>
@@ -1084,23 +1108,23 @@
         target="_blank"
         rel="noopener"
         class="f-badge"
-      >&#11088; 4,9/5 &mdash; 166 avis Google</a>
+      ><i data-lucide="star"></i> 4,9/5 &mdash; 166 avis Google</a>
     </div>
     <div class="fcol">
       <h4>Nos services</h4>
-      <a href="climatisation.html">&#10052; Climatisation</a>
-      <a href="plomberie.html">&#128295; Plomberie</a>
-      <a href="electricite.html">&#9889; Electricit&eacute;</a>
-      <a href="chauffage.html">&#128293; Chauffage</a>
-      <a href="serrurerie.html">&#128274; Serrurerie</a>
-      <a href="volets-roulants.html">&#129695; Volets Roulants</a>
-      <a href="marques.html" style="margin-top:6px;">&#127881; Nos marques</a>
+      <a href="climatisation.html"><i data-lucide="snowflake"></i> Climatisation</a>
+      <a href="plomberie.html"><i data-lucide="wrench"></i> Plomberie</a>
+      <a href="electricite.html"><i data-lucide="zap"></i> Electricit&eacute;</a>
+      <a href="chauffage.html"><i data-lucide="flame"></i> Chauffage</a>
+      <a href="serrurerie.html"><i data-lucide="lock"></i> Serrurerie</a>
+      <a href="volets-roulants.html"><i data-lucide="align-justify"></i> Volets Roulants</a>
+      <a href="marques.html" style="margin-top:6px;"><i data-lucide="tag"></i> Nos marques</a>
     </div>
     <div class="fcol">
       <h4>Informations</h4>
-      <a href="realisations.html">&#128247; R&eacute;alisations</a>
-      <a href="a-propos.html">&#127962;&#65039; &Agrave; propos</a>
-      <a href="faq.html">&#10067; FAQ</a>
+      <a href="realisations.html"><i data-lucide="image"></i> R&eacute;alisations</a>
+      <a href="a-propos.html"><i data-lucide="info"></i> &Agrave; propos</a>
+      <a href="faq.html"><i data-lucide="help-circle"></i> FAQ</a>
     </div>
     <div class="fcol">
       <h4>Agences</h4>
@@ -1111,15 +1135,16 @@
     </div>
     <div class="fcol">
       <h4>Contact</h4>
-      <a href="tel:0492141414">&#128222; 04 92 14 14 14</a>
-      <a href="tel:0677203752">&#128241; 06 77 20 37 52</a>
-      <a href="mailto:atelierpaca.06@gmail.com">&#9993; atelierpaca.06@gmail.com</a>
+      <a href="tel:0492141414"><i data-lucide="phone"></i> 04 92 14 14 14</a>
+      <a href="tel:0677203752"><i data-lucide="smartphone"></i> 06 77 20 37 52</a>
+      <a href="mailto:atelierpaca.06@gmail.com"><i data-lucide="mail"></i> atelierpaca.06@gmail.com</a>
       <a href="#contact" style="margin-top:8px;background:var(--rouge);color:#fff;padding:8px 14px;border-radius:8px;font-weight:700;font-size:13px;text-align:center;">Devis gratuit &rarr;</a>
     </div>
   </div>
   <div class="fbot">&copy; 2026 Atelier PACA &mdash; Tous droits r&eacute;serv&eacute;s &mdash; Artisans qualifi&eacute;s &mdash; Alpes-Maritimes &amp; Var</div>
 </footer>
 
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script>
   // Dropdown desktop : délai à fermeture pour tous les menus déroulants
   document.querySelectorAll('.nav-dropdown').forEach(function (dd) {
@@ -1129,6 +1154,8 @@
       closeTimer = setTimeout(function () { dd.classList.remove('dd-open'); }, 200);
     });
   });
+  // Initialisation des icônes Lucide
+  lucide.createIcons();
 </script>
 </body>
 </html>
