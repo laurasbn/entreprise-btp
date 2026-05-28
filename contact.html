@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Atelier PACA &mdash; Devis gratuit &amp; Coordonn&eacute;es</title>
+  <meta name="description" content="Contactez Atelier PACA pour un devis gratuit : formulaire en ligne, t&eacute;l&eacute;phone 04 92 14 14 14, email, et adresses de nos 8 agences dans les Alpes-Maritimes et le Var." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://atelierpaca.fr/contact.html" />
+  <meta property="og:title" content="Contact | Atelier PACA &mdash; Devis gratuit" />
+  <meta property="og:description" content="Formulaire de contact, t&eacute;l&eacute;phone, email et adresses de nos agences &mdash; Atelier PACA, Alpes-Maritimes &amp; Var." />
+  <meta property="og:url" content="https://atelierpaca.fr/contact.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--rouge:#E63946;--bleu:#1D3557;--bleu2:#0f1f36;--gris:#F7F8FA;--gris2:#EEF0F3;--texte:#111827;--sous:#6B7280}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:var(--texte);background:#fff;overflow-x:hidden}
+
+    /* HEADER */
+    header{position:sticky;top:0;z-index:100;background:var(--bleu);height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 4px 20px rgba(0,0,0,0.25)}
+    .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo-icon{width:40px;height:40px;background:var(--rouge);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:15px}
+    .logo-nom{font-size:18px;font-weight:700;color:#fff}
+    .logo-nom span{color:var(--rouge)}
+    .header-right{display:flex;align-items:center;gap:16px}
+    .header-tel{color:#fff;font-weight:700;font-size:15px;white-space:nowrap;text-decoration:none}
+    .btn-devis-h{background:var(--rouge);color:#fff;font-weight:700;border-radius:8px;padding:8px 18px;text-decoration:none;font-size:14px;transition:background 0.18s}
+    .btn-devis-h:hover{background:#c9303c}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,#0a1628 0%,var(--bleu) 60%,#0a1628 100%);padding:72px 48px;text-align:center}
+    .breadcrumb{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:20px}
+    .breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.15s}
+    .breadcrumb a:hover{color:#fff}
+    .hero h1{color:#fff;font-size:clamp(28px,4vw,50px);font-weight:900;line-height:1.08;letter-spacing:-1px;margin-bottom:16px}
+    .hero h1 em{color:#60c5f7;font-style:normal}
+    .hero-sub{color:rgba(255,255,255,0.75);font-size:16px;max-width:560px;margin:0 auto;line-height:1.7}
+
+    /* SECTION CONTACT */
+    .contact-section{padding:72px 48px;background:#fff}
+    .contact-wrap{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+
+    /* INFOS CONTACT */
+    .contact-info-col h2{font-size:20px;font-weight:900;color:var(--bleu);margin-bottom:24px;letter-spacing:-0.3px}
+    .info-block{display:flex;flex-direction:column;gap:14px;margin-bottom:36px}
+    .info-item{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:var(--gris);border-radius:12px;border:1px solid var(--gris2)}
+    .info-item-icon{font-size:20px;color:var(--rouge);flex-shrink:0;margin-top:2px}
+    .info-item-text strong{display:block;font-size:14px;font-weight:800;color:var(--bleu);margin-bottom:3px}
+    .info-item-text a{color:var(--texte);text-decoration:none;font-size:15px;font-weight:600;transition:color 0.15s}
+    .info-item-text a:hover{color:var(--rouge)}
+    .info-item-text span{font-size:12px;color:var(--sous)}
+
+    /* AGENCES */
+    .agences-titre{font-size:16px;font-weight:800;color:var(--bleu);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+    .agences-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .agence-pill{background:var(--gris);border:1px solid var(--gris2);border-radius:10px;padding:12px 14px;transition:all 0.18s}
+    .agence-pill:hover{border-color:rgba(230,57,70,0.3);background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.07)}
+    .agence-pill strong{display:block;font-size:13px;font-weight:800;color:var(--bleu);margin-bottom:2px}
+    .agence-pill span{font-size:12px;color:var(--sous);line-height:1.4}
+
+    /* FORMULAIRE */
+    .form-col h2{font-size:20px;font-weight:900;color:var(--bleu);margin-bottom:24px;letter-spacing:-0.3px}
+    .form-wrap{background:#fff;border-radius:16px;padding:36px 32px;box-shadow:0 2px 8px rgba(0,0,0,0.06),0 12px 40px rgba(0,0,0,0.08);border:1px solid var(--gris2)}
+    .cform{display:flex;flex-direction:column;gap:14px}
+    .crow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .cg{display:flex;flex-direction:column;gap:5px}
+    .cg label{font-size:13px;font-weight:600;color:var(--bleu)}
+    .cg input,.cg textarea,.cg select{padding:11px 13px;border:1.5px solid #DDE1E7;border-radius:8px;font-size:14px;font-family:inherit;background:var(--gris);transition:border-color 0.2s,background 0.2s}
+    .cg input:focus,.cg textarea:focus,.cg select:focus{outline:none;border-color:var(--rouge);background:#fff}
+    .cg textarea{min-height:100px;resize:vertical}
+    .btn-send{background:var(--rouge);color:#fff;border:none;padding:14px;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;transition:all 0.2s;width:100%;font-family:inherit}
+    .btn-send:hover{background:#c9303c;transform:translateY(-1px)}
+    .form-note{font-size:12px;color:var(--sous);text-align:center;margin-top:4px}
+
+    /* CTA */
+    .cta-section{background:linear-gradient(135deg,#c0303c 0%,#8b0000 100%);padding:72px 48px;text-align:center}
+    .cta-section h2{color:#fff;font-size:clamp(22px,3.5vw,38px);font-weight:900;margin-bottom:14px}
+    .cta-section p{color:rgba(255,255,255,0.82);font-size:16px;max-width:480px;margin:0 auto 32px;line-height:1.6}
+    .tel-cards{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .tel-card{background:rgba(255,255,255,0.14);border:1.5px solid rgba(255,255,255,0.3);border-radius:12px;padding:16px 32px;text-decoration:none;transition:all 0.2s}
+    .tel-card:hover{background:rgba(255,255,255,0.22)}
+    .tel-card span{display:block;color:rgba(255,255,255,0.7);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+    .tel-card strong{color:#fff;font-size:clamp(20px,3vw,30px);font-weight:900}
+
+    /* FOOTER */
+    footer{background:#0b1120;padding:40px 48px 24px}
+    .flinks{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+    .flinks a{color:rgba(255,255,255,0.45);font-size:13px;text-decoration:none;transition:color 0.15s}
+    .flinks a:hover{color:#60c5f7}
+    .fbot{text-align:center;font-size:12px;color:rgba(255,255,255,0.25);border-top:1px solid rgba(255,255,255,0.07);padding-top:20px}
+
+    /* ICÔNES LUCIDE */
+    svg.lucide{display:inline-block;vertical-align:middle;flex-shrink:0;stroke-width:1.75}
+    .info-item-icon svg.lucide{width:22px;height:22px;color:var(--rouge)}
+    .agences-titre svg.lucide{width:18px;height:18px;color:var(--rouge)}
+    .form-col svg.lucide,.form-col h2 svg.lucide{vertical-align:middle}
+    .header-tel svg.lucide{width:16px;height:16px}
+    .cta-section h2 svg.lucide{width:32px;height:32px}
+    .tel-cards svg.lucide{width:18px;height:18px}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .contact-wrap{grid-template-columns:1fr}
+      .agences-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:768px){
+      header{padding:0 20px}
+      .hero{padding:52px 20px}
+      .contact-section{padding:52px 20px}
+      .form-wrap{padding:26px 18px}
+      .cta-section{padding:52px 20px}
+      footer{padding:28px 20px 16px}
+      .flinks{gap:16px}
+      .crow{grid-template-columns:1fr}
+      .agences-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:480px){
+      .agences-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">AP</div>
+    <div class="logo-nom">Atelier <span>PACA</span></div>
+  </a>
+  <div class="header-right">
+    <a href="tel:0492141414" class="header-tel"><i data-lucide="phone"></i> 04 92 14 14 14</a>
+    <a href="#form" class="btn-devis-h">Devis gratuit</a>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Contact</p>
+  <h1>Contactez <em>Atelier PACA</em></h1>
+  <p class="hero-sub">Un devis gratuit sous 2h, une urgence &agrave; g&eacute;rer, ou simplement une question &mdash; notre &eacute;quipe vous r&eacute;pond rapidement.</p>
+</section>
+
+<section class="contact-section" id="form">
+  <div class="contact-wrap">
+
+    <!-- INFOS CONTACT + AGENCES -->
+    <div class="contact-info-col">
+      <h2>Nos coordonn&eacute;es</h2>
+      <div class="info-block">
+        <div class="info-item">
+          <span class="info-item-icon"><i data-lucide="phone"></i></span>
+          <div class="info-item-text">
+            <strong>T&eacute;l&eacute;phone fixe</strong>
+            <a href="tel:0492141414">04 92 14 14 14</a>
+            <span>Disponible 24h/24, 7j/7</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-item-icon"><i data-lucide="smartphone"></i></span>
+          <div class="info-item-text">
+            <strong>Mobile (urgences nuit &amp; week-end)</strong>
+            <a href="tel:0677203752">06 77 20 37 52</a>
+            <span>Astreinte nuit et week-end</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-item-icon"><i data-lucide="mail"></i></span>
+          <div class="info-item-text">
+            <strong>Email</strong>
+            <a href="mailto:atelierpaca.06@gmail.com">atelierpaca.06@gmail.com</a>
+            <span>R&eacute;ponse sous 2h en journ&eacute;e</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="agences-titre"><i data-lucide="map-pin"></i> Nos 8 agences</p>
+      <div class="agences-grid">
+        <div class="agence-pill">
+          <strong>Antibes</strong>
+          <span>48, chemin des Autrichiens<br/>06600 Antibes</span>
+        </div>
+        <div class="agence-pill">
+          <strong>Nice</strong>
+          <span>34, av. Georges Cl&eacute;menceau<br/>06000 Nice</span>
+        </div>
+        <div class="agence-pill">
+          <strong>Cannes</strong>
+          <span>5 Rue Boucicaut<br/>06400 Cannes</span>
+        </div>
+        <div class="agence-pill">
+          <strong>Grasse</strong>
+          <span>24, avenue Mathias Duval<br/>06130 Grasse</span>
+        </div>
+        <div class="agence-pill">
+          <strong>Cagnes-sur-Mer</strong>
+          <span>9, rue Pasteur<br/>06800 Cagnes-sur-Mer</span>
+        </div>
+        <div class="agence-pill">
+          <strong>Saint-Laurent-du-Var</strong>
+          <span>127, rue Alphonse Daudet<br/>06700 Saint-Laurent-du-Var</span>
+        </div>
+        <div class="agence-pill">
+          <strong>Le Cannet</strong>
+          <span>32 Chemin l&rsquo;Olivet<br/>06110 Le Cannet</span>
+        </div>
+        <div class="agence-pill">
+          <strong>Saint-Rapha&euml;l</strong>
+          <span>81, rue Waldeck Rousseau<br/>83700 Saint-Rapha&euml;l</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMULAIRE -->
+    <div class="form-col">
+      <h2>Demande de devis gratuit</h2>
+      <div class="form-wrap">
+        <form class="cform" action="https://api.web3forms.com/submit" method="POST" id="devis-form">
+          <input type="hidden" name="access_key" value="c6decf2e-8b5c-4881-b7ef-d0c9e9f87e88" />
+          <input type="hidden" name="subject" value="Nouvelle demande de devis — Atelier PACA" />
+          <input type="hidden" name="from_name" value="Atelier PACA - Site web" />
+          <input type="hidden" name="redirect" value="false" />
+          <div class="crow">
+            <div class="cg"><label for="f-prenom">Pr&eacute;nom</label><input id="f-prenom" type="text" name="prenom" placeholder="Votre pr&eacute;nom" autocomplete="given-name" required /></div>
+            <div class="cg"><label for="f-nom">Nom</label><input id="f-nom" type="text" name="nom" placeholder="Votre nom" autocomplete="family-name" required /></div>
+          </div>
+          <div class="crow">
+            <div class="cg"><label for="f-tel">T&eacute;l&eacute;phone</label><input id="f-tel" type="tel" name="tel" placeholder="06 XX XX XX XX" autocomplete="tel" required /></div>
+            <div class="cg"><label for="f-email">Email</label><input id="f-email" type="email" name="email" placeholder="votre@email.fr" autocomplete="email" /></div>
+          </div>
+          <div class="cg">
+            <label for="f-service">Service souhait&eacute;</label>
+            <select id="f-service" name="service">
+              <option>Climatisation &mdash; Installation</option>
+              <option>Climatisation &mdash; D&eacute;pannage / Entretien</option>
+              <option>Plomberie</option>
+              <option>Electricit&eacute;</option>
+              <option>Chauffage</option>
+              <option>Serrurerie</option>
+              <option>Volets Roulants</option>
+            </select>
+          </div>
+          <div class="cg"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="D&eacute;crivez votre besoin..."></textarea></div>
+          <button type="submit" class="btn-send" id="btn-send">Envoyer ma demande &mdash; Gratuit et sans engagement</button>
+          <p class="form-note">R&eacute;ponse garantie sous 2h &bull; Sans engagement</p>
+          <div id="form-result" style="display:none;text-align:center;padding:14px;border-radius:8px;font-weight:600;font-size:15px;margin-top:8px;"></div>
+        </form>
+        <script>
+          document.getElementById('devis-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btn-send');
+            const result = document.getElementById('form-result');
+            btn.disabled = true;
+            btn.textContent = 'Envoi en cours…';
+            const data = new FormData(this);
+            try {
+              const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+              const json = await res.json();
+              if (json.success) {
+                result.style.display = 'block';
+                result.style.background = '#d1fae5';
+                result.style.color = '#065f46';
+                result.textContent = '✓ Merci ! Votre demande a bien été envoyée. Nous vous recontactons sous 2h.';
+                this.reset();
+              } else {
+                throw new Error();
+              }
+            } catch {
+              result.style.display = 'block';
+              result.style.background = '#fee2e2';
+              result.style.color = '#991b1b';
+              result.textContent = 'Erreur lors de l’envoi. Appelez-nous directement au 04 92 14 14 14.';
+            }
+            btn.disabled = false;
+            btn.textContent = 'Envoyer ma demande — Gratuit et sans engagement';
+          });
+        </script>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2><i data-lucide="phone-call"></i> Urgence ? On arrive.</h2>
+  <p>Notre &eacute;quipe intervient 24h/24, 7j/7 pour toutes vos urgences dans les Alpes-Maritimes et le Var.</p>
+  <div class="tel-cards">
+    <a href="tel:0492141414" class="tel-card"><span>T&eacute;l&eacute;phone fixe</span><strong>04 92 14 14 14</strong></a>
+    <a href="tel:0677203752" class="tel-card"><span>Mobile (nuit &amp; WE)</span><strong>06 77 20 37 52</strong></a>
+  </div>
+</section>
+
+<footer>
+  <div class="flinks">
+    <a href="index.html">Accueil</a>
+    <a href="climatisation.html">Climatisation</a>
+    <a href="a-propos.html">&Agrave; propos</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="fbot">&copy; 2026 Atelier PACA &mdash; Tous droits r&eacute;serv&eacute;s &mdash; Alpes-Maritimes &amp; Var</div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
