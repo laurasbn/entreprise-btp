@@ -100,6 +100,9 @@
   <link rel="preload" as="image" href="images/hero-climatisation.jpg" fetchpriority="high" />
 
   <style>
+    /* BOUTON APPEL FIXE MOBILE */
+    .btn-appel-fixe { position: fixed; bottom: 20px; right: 16px; background: var(--rouge); color: #fff; padding: 13px 20px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 15px; z-index: 999; box-shadow: 0 4px 24px rgba(230,57,70,0.55); display: none; align-items: center; gap: 8px; white-space: nowrap; }
+    @media (max-width: 768px) { .btn-appel-fixe { display: flex !important; } }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --rouge:   #E63946;
@@ -362,6 +365,9 @@
 </head>
 <body>
 
+<!-- BOUTON APPEL FIXE MOBILE -->
+<a href="tel:0492141414" class="btn-appel-fixe">&#128222; 04 92 14 14 14</a>
+
 <!-- HEADER -->
 <header>
   <a href="#" class="logo">
@@ -372,12 +378,12 @@
     <div class="nav-dropdown">
       <a href="#services">Services</a>
       <div class="dropdown-menu">
-        <a href="#services">&#10052;&#65039; Climatisation</a>
-        <a href="#services">&#128295; Plomberie</a>
-        <a href="#services">&#9889; &Eacute;lectricit&eacute;</a>
-        <a href="#services">&#128293; Chauffage</a>
-        <a href="#services">&#128274; Serrurerie</a>
-        <a href="#services">&#129695; Volets roulants</a>
+        <a href="climatisation.html">&#10052;&#65039; Climatisation</a>
+        <a href="plomberie.html">&#128295; Plomberie</a>
+        <a href="electricite.html">&#9889; &Eacute;lectricit&eacute;</a>
+        <a href="chauffage.html">&#128293; Chauffage</a>
+        <a href="serrurerie.html">&#128274; Serrurerie</a>
+        <a href="volets-roulants.html">&#129695; Volets roulants</a>
       </div>
     </div>
     <a href="#avis">Avis</a>
@@ -486,7 +492,7 @@
         <div class="scard-icon">&#10052;&#65039;</div>
         <h3>Climatisation &mdash; Installation &amp; D&eacute;pannage</h3>
         <p>Installation de climatiseurs split, entretien annuel et d&eacute;pannage rapide dans les Alpes-Maritimes. Techniciens certifi&eacute;s, devis gratuit sous 2h.</p>
-        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+        <a href="climatisation.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
       </div>
     </div>
 
@@ -500,7 +506,7 @@
         <div class="scard-icon">&#128295;</div>
         <h3>Plomberie</h3>
         <p>Fuite d&rsquo;eau, canalisation bouch&eacute;e, robinetterie, chauffe-eau. Nos plombiers r&eacute;solvent votre probl&egrave;me vite et bien.</p>
-        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+        <a href="plomberie.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
       </div>
     </div>
 
@@ -514,7 +520,7 @@
         <div class="scard-icon">&#9889;</div>
         <h3>Electricit&eacute;</h3>
         <p>Tableau &eacute;lectrique, prises, &eacute;clairage, mise aux normes. Nos &eacute;lectriciens certifi&eacute;s interviennent en toute s&eacute;curit&eacute;.</p>
-        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+        <a href="electricite.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
       </div>
     </div>
 
@@ -528,7 +534,7 @@
         <div class="scard-icon">&#128293;</div>
         <h3>Chauffage</h3>
         <p>Chaudi&egrave;re, radiateurs, plancher chauffant. Installation, entretien annuel et d&eacute;pannage par des chauffagistes qualifi&eacute;s.</p>
-        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+        <a href="chauffage.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
       </div>
     </div>
 
@@ -542,7 +548,7 @@
         <div class="scard-icon">&#128274;</div>
         <h3>Serrurerie</h3>
         <p>Ouverture de porte claqu&eacute;e, changement de serrure, blindage. Intervention d&rsquo;urgence disponible &agrave; toute heure.</p>
-        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+        <a href="serrurerie.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
       </div>
     </div>
 
@@ -556,7 +562,7 @@
         <div class="scard-icon">&#129695;</div>
         <h3>Volets Roulants</h3>
         <p>R&eacute;paration, motorisation, remplacement. Volets manuels ou &eacute;lectriques, nous intervenons sur toutes les marques.</p>
-        <a href="#contact" class="scard-link">Demander un devis &rarr;</a>
+        <a href="volets-roulants.html" class="scard-link">Voir nos tarifs &amp; services &rarr;</a>
       </div>
     </div>
 
@@ -891,12 +897,12 @@
     </div>
     <div class="fcol">
       <h4>Nos services</h4>
-      <a href="#services">&#10052; Climatisation</a>
-      <a href="#services">&#128295; Plomberie</a>
-      <a href="#services">&#9889; Electricit&eacute;</a>
-      <a href="#services">&#128293; Chauffage</a>
-      <a href="#services">&#128274; Serrurerie</a>
-      <a href="#services">&#129695; Volets Roulants</a>
+      <a href="climatisation.html">&#10052; Climatisation</a>
+      <a href="plomberie.html">&#128295; Plomberie</a>
+      <a href="electricite.html">&#9889; Electricit&eacute;</a>
+      <a href="chauffage.html">&#128293; Chauffage</a>
+      <a href="serrurerie.html">&#128274; Serrurerie</a>
+      <a href="volets-roulants.html">&#129695; Volets Roulants</a>
       <a href="realisations.html" style="margin-top:6px;color:#60c5f7;">&#128247; R&eacute;alisations</a>
     </div>
     <div class="fcol">
