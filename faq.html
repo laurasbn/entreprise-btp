@@ -123,6 +123,25 @@
       .flinks{gap:16px}
       .contact-strip{padding:22px 20px}
     }
+    /* ======= ICÔNES LUCIDE ======= */
+    svg.lucide { display: inline-block; vertical-align: middle; flex-shrink: 0; stroke-width: 1.75; }
+    .trust-icon svg.lucide { width: 22px; height: 22px; color: var(--rouge, #E63946); }
+    .presta-icon svg.lucide { width: 30px; height: 30px; color: var(--rouge, #E63946); }
+    .hero-pill svg.lucide { width: 14px; height: 14px; }
+    .highlight-card svg.lucide { width: 16px; height: 16px; color: var(--rouge, #E63946); }
+    .urgence-band p svg.lucide, .urgence-band svg.lucide { width: 18px; height: 18px; }
+    .cta-section h2 svg.lucide { width: 36px; height: 36px; }
+    .fcol a svg.lucide { width: 13px; height: 13px; }
+    .f-badge svg.lucide { width: 14px; height: 14px; }
+    .seo-col h3 svg.lucide { width: 13px; height: 13px; color: var(--bleu, #1D3557); }
+    .header-tel svg.lucide { width: 16px; height: 16px; }
+    .btn-appel-fixe svg.lucide { width: 18px; height: 18px; }
+    .btn-ghost svg.lucide { width: 16px; height: 16px; }
+    .hero-cta svg.lucide { width: 15px; height: 15px; color: #FBBC04; }
+    .contact-info svg.lucide { width: 18px; height: 18px; color: var(--rouge, #E63946); }
+    .aside-links a svg.lucide { width: 14px; height: 14px; }
+    h3 svg.lucide, h2 svg.lucide { vertical-align: middle; }
+  
   </style>
 </head>
 <body>
@@ -133,7 +152,7 @@
     <div class="logo-nom">Atelier <span>PACA</span></div>
   </a>
   <div class="header-right">
-    <a href="tel:0492141414" class="header-tel">&#128222; 04 92 14 14 14</a>
+    <a href="tel:0492141414" class="header-tel"><i data-lucide="phone"></i> 04 92 14 14 14</a>
     <a href="index.html#contact" class="btn-devis-h">Devis gratuit</a>
   </div>
 </header>
@@ -225,9 +244,9 @@
         <summary><span class="faq-q">Comment demander un devis ou prendre rendez-vous ?</span></summary>
         <div class="faq-a">
           <p>Trois fa&ccedil;ons de nous contacter :</p>
-          <p>&#128222; Par t&eacute;l&eacute;phone : <a href="tel:0492141414">04 92 14 14 14</a> ou <a href="tel:0677203752">06 77 20 37 52</a></p>
-          <p>&#9993; Par email : <a href="mailto:atelierpaca.06@gmail.com">atelierpaca.06@gmail.com</a></p>
-          <p>&#128203; Via le <a href="index.html#contact">formulaire en ligne</a> &mdash; r&eacute;ponse sous 2h garantie.</p>
+          <p><i data-lucide="phone"></i> Par t&eacute;l&eacute;phone : <a href="tel:0492141414">04 92 14 14 14</a> ou <a href="tel:0677203752">06 77 20 37 52</a></p>
+          <p><i data-lucide="mail"></i> Par email : <a href="mailto:atelierpaca.06@gmail.com">atelierpaca.06@gmail.com</a></p>
+          <p><i data-lucide="clipboard-list"></i> Via le <a href="index.html#contact">formulaire en ligne</a> &mdash; r&eacute;ponse sous 2h garantie.</p>
         </div>
       </details>
 
@@ -235,13 +254,13 @@
 
     <div class="contact-strip">
       <p><strong>Votre question n&rsquo;est pas list&eacute;e ?</strong> Contactez-nous directement &mdash; nous r&eacute;pondons sous 2h.</p>
-      <a href="index.html#contact" class="btn-contact">&#128203; &Eacute;crire un message</a>
+      <a href="index.html#contact" class="btn-contact"><i data-lucide="clipboard-list"></i> &Eacute;crire un message</a>
     </div>
   </div>
 </section>
 
 <section class="cta-section">
-  <h2>&#128680; Urgence ou question rapide ?</h2>
+  <h2><i data-lucide="alert-triangle"></i> Urgence ou question rapide ?</h2>
   <p>Notre &eacute;quipe d&eacute;croche. Disponibles 24h/24, 7j/7 dans le 06 et le Var.</p>
   <div class="tel-cards">
     <a href="tel:0492141414" class="tel-card"><span>T&eacute;l&eacute;phone fixe</span><strong>04 92 14 14 14</strong></a>
@@ -261,5 +280,8 @@
   <div class="fbot">&copy; 2026 Atelier PACA &mdash; Tous droits r&eacute;serv&eacute;s &mdash; Alpes-Maritimes &amp; Var</div>
 </footer>
 
-</body>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+  lucide.createIcons();
+</script></body>
 </html>

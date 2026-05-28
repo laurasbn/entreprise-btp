@@ -87,6 +87,25 @@
       footer{padding:28px 20px 16px}
       .flinks{gap:16px}
     }
+    /* ======= ICÔNES LUCIDE ======= */
+    svg.lucide { display: inline-block; vertical-align: middle; flex-shrink: 0; stroke-width: 1.75; }
+    .trust-icon svg.lucide { width: 22px; height: 22px; color: var(--rouge, #E63946); }
+    .presta-icon svg.lucide { width: 30px; height: 30px; color: var(--rouge, #E63946); }
+    .hero-pill svg.lucide { width: 14px; height: 14px; }
+    .highlight-card svg.lucide { width: 16px; height: 16px; color: var(--rouge, #E63946); }
+    .urgence-band p svg.lucide, .urgence-band svg.lucide { width: 18px; height: 18px; }
+    .cta-section h2 svg.lucide { width: 36px; height: 36px; }
+    .fcol a svg.lucide { width: 13px; height: 13px; }
+    .f-badge svg.lucide { width: 14px; height: 14px; }
+    .seo-col h3 svg.lucide { width: 13px; height: 13px; color: var(--bleu, #1D3557); }
+    .header-tel svg.lucide { width: 16px; height: 16px; }
+    .btn-appel-fixe svg.lucide { width: 18px; height: 18px; }
+    .btn-ghost svg.lucide { width: 16px; height: 16px; }
+    .hero-cta svg.lucide { width: 15px; height: 15px; color: #FBBC04; }
+    .contact-info svg.lucide { width: 18px; height: 18px; color: var(--rouge, #E63946); }
+    .aside-links a svg.lucide { width: 14px; height: 14px; }
+    h3 svg.lucide, h2 svg.lucide { vertical-align: middle; }
+  
   </style>
 </head>
 <body>
@@ -97,7 +116,7 @@
     <div class="logo-nom">Atelier <span>PACA</span></div>
   </a>
   <div class="header-right">
-    <a href="tel:0492141414" class="header-tel">&#128222; 04 92 14 14 14</a>
+    <a href="tel:0492141414" class="header-tel"><i data-lucide="phone"></i> 04 92 14 14 14</a>
     <a href="index.html#contact" class="btn-devis-h">Devis gratuit</a>
   </div>
 </header>
@@ -158,7 +177,7 @@
 </section>
 
 <section class="cta-section">
-  <h2>&#128680; Un devis pour votre climatisation ?</h2>
+  <h2><i data-lucide="alert-triangle"></i> Un devis pour votre climatisation ?</h2>
   <p>Nos techniciens certifi&eacute;s interviennent 24h/24 dans le 06 et le Var. Devis gratuit sous 2h, sans engagement.</p>
   <div class="tel-cards">
     <a href="tel:0492141414" class="tel-card"><span>T&eacute;l&eacute;phone fixe</span><strong>04 92 14 14 14</strong></a>
@@ -178,5 +197,8 @@
   <div class="fbot">&copy; 2026 Atelier PACA &mdash; Tous droits r&eacute;serv&eacute;s &mdash; Alpes-Maritimes &amp; Var</div>
 </footer>
 
-</body>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+  lucide.createIcons();
+</script></body>
 </html>
