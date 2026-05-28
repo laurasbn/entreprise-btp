@@ -15,6 +15,27 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://atelierpaca.fr/marques.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://atelierpaca.fr/a-propos.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://atelierpaca.fr/faq.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Pages métier principales -->
   <url><loc>https://atelierpaca.fr/climatisation.html</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
   <url><loc>https://atelierpaca.fr/plomberie.html</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>

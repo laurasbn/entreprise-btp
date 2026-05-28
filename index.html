@@ -363,6 +363,30 @@
     .trust-icon { font-size: 22px; line-height: 1; }
     .trust-text strong { display: block; font-size: 13px; font-weight: 800; color: var(--bleu); line-height: 1.3; }
     .trust-text span { font-size: 12px; color: var(--sous); }
+
+    /* ======= POURQUOI NOUS CHOISIR ======= */
+    .pourquoi-section { background: #fff; padding: 80px 48px; }
+    .pourquoi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .pourquoi-card { text-align: center; padding: 36px 22px; border-radius: 16px; background: var(--gris); border: 1px solid var(--gris2); transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s; }
+    .pourquoi-card:hover { transform: translateY(-5px); box-shadow: 0 8px 32px rgba(0,0,0,0.10); border-color: rgba(230,57,70,0.30); }
+    .pourquoi-ico { font-size: 36px; margin-bottom: 14px; display: block; line-height: 1; }
+    .pourquoi-card h3 { font-size: 15px; font-weight: 800; color: var(--bleu); margin-bottom: 8px; line-height: 1.3; }
+    .pourquoi-card p { font-size: 13px; color: var(--sous); line-height: 1.65; }
+    @media (max-width: 768px) { .pourquoi-section { padding: 60px 20px; } }
+
+    /* ======= ZONES D'INTERVENTION ======= */
+    .zones-section { background: var(--gris); padding: 80px 48px; }
+    .zones-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 26px; max-width: 1200px; margin: 0 auto; }
+    .zone-card { background: #fff; border-radius: 16px; padding: 26px 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 6px 20px rgba(0,0,0,0.06); border-top: 3px solid var(--rouge); transition: transform 0.22s, box-shadow 0.22s; }
+    .zone-card:hover { transform: translateY(-4px); box-shadow: 0 4px 8px rgba(0,0,0,0.06), 0 16px 36px rgba(0,0,0,0.11); }
+    .zone-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--gris2); }
+    .zone-card-icon { font-size: 22px; line-height: 1; }
+    .zone-card-head h3 { font-size: 14px; font-weight: 800; color: var(--bleu); text-transform: uppercase; letter-spacing: 0.5px; }
+    .zone-villes { display: flex; flex-wrap: wrap; gap: 7px; }
+    .zone-ville { display: inline-block; background: var(--gris); border: 1px solid var(--gris2); color: var(--bleu); font-size: 12px; font-weight: 600; padding: 5px 11px; border-radius: 20px; text-decoration: none; transition: all 0.18s; }
+    .zone-ville:hover { background: var(--rouge); border-color: var(--rouge); color: #fff; transform: translateY(-1px); box-shadow: 0 3px 10px rgba(230,57,70,0.25); }
+    @media (max-width: 768px) { .zones-section { padding: 60px 20px; } }
+
   </style>
 </head>
 <body>
@@ -388,8 +412,19 @@
         <a href="volets-roulants.html">&#129695; Volets roulants</a>
       </div>
     </div>
+    <div class="nav-dropdown">
+      <a href="marques.html">Marques</a>
+      <div class="dropdown-menu">
+        <a href="marques.html#daikin">&#10052; Daikin</a>
+        <a href="marques.html#mitsubishi">&#10052; Mitsubishi</a>
+        <a href="marques.html#atlantic">&#128293; Atlantic</a>
+        <a href="marques.html#hitachi">&#10052; Hitachi</a>
+        <a href="marques.html#panasonic">&#10052; Panasonic</a>
+      </div>
+    </div>
     <a href="#avis">Avis</a>
-    <a href="#agences">Agences</a>
+    <a href="a-propos.html">&Agrave; propos</a>
+    <a href="faq.html">FAQ</a>
     <a href="realisations.html">R&eacute;alisations</a>
     <a href="#contact" class="btn-devis">Devis gratuit</a>
   </nav>
@@ -434,7 +469,7 @@
   <div class="stat"><span class="stat-n">4,9&#11088;</span><span class="stat-l">Sur Google &mdash; 166 avis</span></div>
   <div class="stat"><span class="stat-n">8</span><span class="stat-l">Agences locales</span></div>
   <div class="stat"><span class="stat-n">24/7</span><span class="stat-l">D&eacute;pannage urgent</span></div>
-  <div class="stat"><span class="stat-n">10&nbsp;ans</span><span class="stat-l">D&rsquo;exp&eacute;rience</span></div>
+  <div class="stat"><span class="stat-n">depuis&nbsp;2015</span><span class="stat-l">Fond&eacute;s &amp; reconnus</span></div>
   <div class="stat"><span class="stat-n">100&nbsp;%</span><span class="stat-l">Artisans qualifi&eacute;s</span></div>
 </div>
 
@@ -447,7 +482,7 @@
     </div>
     <div class="trust-item">
       <span class="trust-icon">&#127959;&#65039;</span>
-      <div class="trust-text"><strong>Garantie d&eacute;cennale</strong><span>Travaux couverts 10 ans</span></div>
+      <div class="trust-text"><strong>Garantie d&eacute;cennale</strong><span>Travaux garantis 10 ans</span></div>
     </div>
     <div class="trust-item">
       <span class="trust-icon">&#9989;</span>
@@ -568,6 +603,47 @@
       </div>
     </a>
 
+  </div>
+</section>
+
+<!-- POURQUOI NOUS CHOISIR -->
+<section class="pourquoi-section">
+  <div class="section-head">
+    <span class="eyebrow">Nos engagements</span>
+    <h2>Pourquoi choisir Atelier PACA&nbsp;?</h2>
+    <p>Des artisans certifi&eacute;s, des tarifs transparents et un service irr&eacute;prochable depuis 2015.</p>
+  </div>
+  <div class="pourquoi-grid">
+    <div class="pourquoi-card">
+      <span class="pourquoi-ico">&#128338;</span>
+      <h3>Intervention le jour m&ecirc;me</h3>
+      <p>Disponibles 24h/24, 7j/7. Nous intervenons le jour m&ecirc;me pour toute urgence dans le 06 et le Var.</p>
+    </div>
+    <div class="pourquoi-card">
+      <span class="pourquoi-ico">&#128179;</span>
+      <h3>Devis gratuit &amp; transparent</h3>
+      <p>Estimation claire sous 2h, sans surprise. Le tarif est annonc&eacute; avant toute intervention.</p>
+    </div>
+    <div class="pourquoi-card">
+      <span class="pourquoi-ico">&#127959;&#65039;</span>
+      <h3>Garantie d&eacute;cennale</h3>
+      <p>Tous nos travaux sont couverts par la garantie d&eacute;cennale. Votre investissement est prot&eacute;g&eacute; dans la dur&eacute;e.</p>
+    </div>
+    <div class="pourquoi-card">
+      <span class="pourquoi-ico">&#9989;</span>
+      <h3>Agr&eacute;&eacute; par les assurances</h3>
+      <p>Nos artisans sont agr&eacute;&eacute;s par les compagnies d&rsquo;assurances pour une prise en charge directe.</p>
+    </div>
+    <div class="pourquoi-card">
+      <span class="pourquoi-ico">&#11088;</span>
+      <h3>4,9/5 sur Google</h3>
+      <p>166 avis v&eacute;rifi&eacute;s. Notre r&eacute;putation repose sur la satisfaction concr&egrave;te de chaque client.</p>
+    </div>
+    <div class="pourquoi-card">
+      <span class="pourquoi-ico">&#128295;</span>
+      <h3>Artisans certifi&eacute;s</h3>
+      <p>Qualifications RGE, habilitations &eacute;lectriques, certifications fluides frigorigènes &mdash; toujours aux normes.</p>
+    </div>
   </div>
 </section>
 
@@ -709,6 +785,102 @@
       <div class="agence-body">
         <p>81, rue Waldeck Rousseau<br/>83700 Saint-Rapha&euml;l</p>
         <a href="https://maps.google.com/?q=81+rue+Waldeck+Rousseau+83700+Saint-Raphael" target="_blank" rel="noopener" class="agence-maps">Voir sur Maps &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NOS ZONES D'INTERVENTION -->
+<section class="zones-section" id="zones">
+  <div class="section-head">
+    <span class="eyebrow">Couverture g&eacute;ographique</span>
+    <h2>Nos zones d&rsquo;intervention</h2>
+    <p>Nos artisans se d&eacute;placent dans tout le d&eacute;partement 06 et le Var &mdash; choisissez votre m&eacute;tier et votre ville.</p>
+  </div>
+  <div class="zones-grid">
+
+    <div class="zone-card">
+      <div class="zone-card-head"><span class="zone-card-icon">&#10052;&#65039;</span><h3>Climatisation</h3></div>
+      <div class="zone-villes">
+        <a href="climatisation-nice.html" class="zone-ville">Nice</a>
+        <a href="climatisation-cannes.html" class="zone-ville">Cannes</a>
+        <a href="climatisation-antibes.html" class="zone-ville">Antibes</a>
+        <a href="climatisation-grasse.html" class="zone-ville">Grasse</a>
+        <a href="climatisation-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="climatisation-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="climatisation-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="climatisation-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+      </div>
+    </div>
+
+    <div class="zone-card">
+      <div class="zone-card-head"><span class="zone-card-icon">&#128295;</span><h3>Plomberie</h3></div>
+      <div class="zone-villes">
+        <a href="plombier-nice.html" class="zone-ville">Nice</a>
+        <a href="plombier-cannes.html" class="zone-ville">Cannes</a>
+        <a href="plombier-antibes.html" class="zone-ville">Antibes</a>
+        <a href="plombier-grasse.html" class="zone-ville">Grasse</a>
+        <a href="plombier-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="plombier-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="plombier-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="plombier-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+      </div>
+    </div>
+
+    <div class="zone-card">
+      <div class="zone-card-head"><span class="zone-card-icon">&#9889;</span><h3>&Eacute;lectricit&eacute;</h3></div>
+      <div class="zone-villes">
+        <a href="electricien-nice.html" class="zone-ville">Nice</a>
+        <a href="electricien-cannes.html" class="zone-ville">Cannes</a>
+        <a href="electricien-antibes.html" class="zone-ville">Antibes</a>
+        <a href="electricien-grasse.html" class="zone-ville">Grasse</a>
+        <a href="electricien-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="electricien-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="electricien-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="electricien-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+      </div>
+    </div>
+
+    <div class="zone-card">
+      <div class="zone-card-head"><span class="zone-card-icon">&#128293;</span><h3>Chauffage</h3></div>
+      <div class="zone-villes">
+        <a href="chauffagiste-nice.html" class="zone-ville">Nice</a>
+        <a href="chauffagiste-cannes.html" class="zone-ville">Cannes</a>
+        <a href="chauffagiste-antibes.html" class="zone-ville">Antibes</a>
+        <a href="chauffagiste-grasse.html" class="zone-ville">Grasse</a>
+        <a href="chauffagiste-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="chauffagiste-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="chauffagiste-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="chauffagiste-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+      </div>
+    </div>
+
+    <div class="zone-card">
+      <div class="zone-card-head"><span class="zone-card-icon">&#128274;</span><h3>Serrurerie</h3></div>
+      <div class="zone-villes">
+        <a href="serrurier-nice.html" class="zone-ville">Nice</a>
+        <a href="serrurier-cannes.html" class="zone-ville">Cannes</a>
+        <a href="serrurier-antibes.html" class="zone-ville">Antibes</a>
+        <a href="serrurier-grasse.html" class="zone-ville">Grasse</a>
+        <a href="serrurier-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="serrurier-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="serrurier-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="serrurier-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+      </div>
+    </div>
+
+    <div class="zone-card">
+      <div class="zone-card-head"><span class="zone-card-icon">&#129695;</span><h3>Volets roulants</h3></div>
+      <div class="zone-villes">
+        <a href="volets-roulants-nice.html" class="zone-ville">Nice</a>
+        <a href="volets-roulants-cannes.html" class="zone-ville">Cannes</a>
+        <a href="volets-roulants-antibes.html" class="zone-ville">Antibes</a>
+        <a href="volets-roulants-grasse.html" class="zone-ville">Grasse</a>
+        <a href="volets-roulants-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="volets-roulants-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="volets-roulants-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="volets-roulants-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
       </div>
     </div>
 
@@ -905,7 +1077,13 @@
       <a href="chauffage.html">&#128293; Chauffage</a>
       <a href="serrurerie.html">&#128274; Serrurerie</a>
       <a href="volets-roulants.html">&#129695; Volets Roulants</a>
-      <a href="realisations.html" style="margin-top:6px;color:#60c5f7;">&#128247; R&eacute;alisations</a>
+      <a href="marques.html" style="margin-top:6px;">&#127881; Nos marques</a>
+    </div>
+    <div class="fcol">
+      <h4>Informations</h4>
+      <a href="realisations.html">&#128247; R&eacute;alisations</a>
+      <a href="a-propos.html">&#127962;&#65039; &Agrave; propos</a>
+      <a href="faq.html">&#10067; FAQ</a>
     </div>
     <div class="fcol">
       <h4>Agences</h4>
@@ -926,17 +1104,14 @@
 </footer>
 
 <script>
-  // Dropdown desktop : délai à la fermeture pour éviter fermeture en traversant le pont
-  (function () {
-    var dd = document.querySelector('.nav-dropdown');
-    if (!dd) return;
+  // Dropdown desktop : délai à fermeture pour tous les menus déroulants
+  document.querySelectorAll('.nav-dropdown').forEach(function (dd) {
     var closeTimer;
-    dd.addEventListener('mouseenter', function () { clearTimeout(closeTimer); });
+    dd.addEventListener('mouseenter', function () { clearTimeout(closeTimer); dd.classList.add('dd-open'); });
     dd.addEventListener('mouseleave', function () {
       closeTimer = setTimeout(function () { dd.classList.remove('dd-open'); }, 200);
     });
-    dd.addEventListener('mouseenter', function () { dd.classList.add('dd-open'); });
-  })();
+  });
 </script>
 </body>
 </html>
