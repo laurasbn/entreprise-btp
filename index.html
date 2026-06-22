@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -70,13 +70,31 @@
       {"@type": "AdministrativeArea", "name": "Alpes-Maritimes"},
       {"@type": "AdministrativeArea", "name": "Var"},
       {"@type": "City", "name": "Nice"},
-      {"@type": "City", "name": "Cannes"},
       {"@type": "City", "name": "Antibes"},
+      {"@type": "City", "name": "Cannes"},
       {"@type": "City", "name": "Grasse"},
       {"@type": "City", "name": "Cagnes-sur-Mer"},
-      {"@type": "City", "name": "Saint-Laurent-du-Var"},
       {"@type": "City", "name": "Le Cannet"},
-      {"@type": "City", "name": "Saint-Raphaël"}
+      {"@type": "City", "name": "Vallauris"},
+      {"@type": "City", "name": "Mandelieu-la-Napoule"},
+      {"@type": "City", "name": "Menton"},
+      {"@type": "City", "name": "Mougins"},
+      {"@type": "City", "name": "Villeneuve-Loubet"},
+      {"@type": "City", "name": "Saint-Laurent-du-Var"},
+      {"@type": "City", "name": "Vence"},
+      {"@type": "City", "name": "Carros"},
+      {"@type": "City", "name": "Toulon"},
+      {"@type": "City", "name": "Fréjus"},
+      {"@type": "City", "name": "Saint-Raphaël"},
+      {"@type": "City", "name": "Draguignan"},
+      {"@type": "City", "name": "Hyères"},
+      {"@type": "City", "name": "La Seyne-sur-Mer"},
+      {"@type": "City", "name": "La Garde"},
+      {"@type": "City", "name": "Six-Fours-les-Plages"},
+      {"@type": "City", "name": "Sanary-sur-Mer"},
+      {"@type": "City", "name": "Brignoles"},
+      {"@type": "City", "name": "Saint-Maximin-la-Sainte-Baume"},
+      {"@type": "City", "name": "Bandol"}
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -108,9 +126,9 @@
       --rouge:   #D4526A;
       --bleu:    #1D3557;
       --bleu2:   #0f1f36;
-      --blanc:   #FFFFFF;
-      --gris:    #F7F8FA;
-      --gris2:   #EEF0F3;
+      --blanc:   #EEF1F6;
+      --gris:    #DFE5EE;
+      --gris2:   #CBD5E1;
       --texte:   #111827;
       --sous:    #6B7280;
       --google-jaune: #FBBC04;
@@ -133,7 +151,7 @@
     .logo-nom { font-size: 18px; font-weight: 700; color: #fff; }
     .logo-nom span { color: var(--rouge); }
     nav { display: flex; align-items: center; gap: 4px; }
-    nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 500; padding: 6px 14px; border-radius: 6px; transition: all 0.15s; }
+    nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px; font-weight: 500; padding: 6px 9px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
     nav a:hover { background: rgba(255,255,255,0.12); color: #fff; }
     .btn-devis { background: var(--rouge); color: #fff !important; font-weight: 700 !important; border-radius: 8px; padding: 8px 18px !important; }
     .btn-devis:hover { background: #BC3E5C !important; }
@@ -447,22 +465,16 @@
     <div class="logo-nom">Atelier <span>PACA</span></div>
   </a>
   <nav id="main-nav">
-    <div class="nav-dropdown">
-      <a href="#services">Services</a>
-      <div class="dropdown-menu">
-        <a href="climatisation.html"><i data-lucide="snowflake"></i> Climatisation</a>
-        <a href="plomberie.html"><i data-lucide="wrench"></i> Plomberie</a>
-        <a href="electricite.html"><i data-lucide="zap"></i> &Eacute;lectricit&eacute;</a>
-        <a href="chauffage.html"><i data-lucide="flame"></i> Chauffage</a>
-        <a href="serrurerie.html"><i data-lucide="lock"></i> Serrurerie</a>
-        <a href="volets-roulants.html"><i data-lucide="align-justify"></i> Volets roulants</a>
-      </div>
-    </div>
-    <a href="#avis">Avis</a>
+    <a href="index.html">Accueil</a>
+    <a href="plomberie.html">Plomberie</a>
+    <a href="climatisation.html">Climatisation</a>
+    <a href="#entretien">Entretien</a>
+    <a href="serrurerie.html">Serrurerie</a>
+    <a href="electricite.html">&Eacute;lectricit&eacute;</a>
     <a href="a-propos.html">&Agrave; propos</a>
+    <a href="#avis">Avis</a>
     <a href="faq.html">FAQ</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+    <a href="realisations.html">R&eacute;alisations</a>
     <a href="#contact" class="btn-devis">Devis gratuit</a>
   </nav>
   <span class="header-tel"><i data-lucide="phone"></i> 04 92 14 14 14</span>
@@ -497,6 +509,19 @@
       <span class="chip"><i data-lucide="zap"></i> &Eacute;lectricit&eacute;</span>
       <span class="chip"><i data-lucide="flame"></i> Chauffage</span>
       <span class="chip"><i data-lucide="lock"></i> Serrurerie</span>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRE ÉTÉ CLIMATISATION -->
+<section id="entretien" aria-label="Offre entretien climatisation" style="background:linear-gradient(135deg,#D4526A 0%,#b8344f 100%);padding:50px 24px;">
+  <div style="max-width:960px;margin:0 auto;text-align:center;color:#fff;">
+    <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,0.18);color:#fff;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:18px;"><i data-lucide="sun" style="width:16px;height:16px;"></i> Spécial été</div>
+    <h2 style="font-size:clamp(26px,5vw,48px);color:#fff;font-weight:900;line-height:1.12;margin:0 0 14px;text-transform:uppercase;letter-spacing:-0.5px;">Faites entretenir<br/>vos climatisations</h2>
+    <p style="font-size:clamp(22px,4.5vw,38px);font-weight:900;margin:0 0 24px;color:#fff;">à partir de <span style="display:inline-block;background:#fff;color:#D4526A;padding:4px 16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.18);">90 € par split</span></p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="tel:0492141414" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#D4526A;font-weight:800;padding:16px 30px;border-radius:10px;text-decoration:none;font-size:17px;box-shadow:0 6px 20px rgba(0,0,0,0.18);"><i data-lucide="phone" style="width:19px;height:19px;"></i> 04 92 14 14 14</a>
+      <a href="#contact" style="display:inline-flex;align-items:center;background:rgba(255,255,255,0.14);color:#fff;border:1.5px solid rgba(255,255,255,0.55);font-weight:700;padding:16px 30px;border-radius:10px;text-decoration:none;font-size:17px;">Devis gratuit</a>
     </div>
   </div>
 </section>
@@ -556,7 +581,7 @@
     <a href="climatisation.html" class="scard scard-clim">
       <div class="scard-img">
         <img
-          src="images/service-climatisation.jpg"
+          src="images/hero-climatisation.jpg"
           alt="Installation d'une climatisation split dans les Alpes-Maritimes par Atelier PACA"
           width="600" height="400" loading="eager"
         />
@@ -692,12 +717,12 @@
   </div>
 </div>
 
-<!-- POURQUOI NOUS CHOISIR -->
-<section class="pourquoi-section">
+<!-- POURQUOI NOUS CHOISIR (photo du camion en fond) -->
+<section class="pourquoi-section" style="background:linear-gradient(rgba(13,34,53,0.55),rgba(13,34,53,0.66)), url('images/camion-fondu.jpg') center/cover no-repeat;">
   <div class="section-head">
     <span class="eyebrow">Nos engagements</span>
-    <h2>Pourquoi choisir Atelier PACA&nbsp;?</h2>
-    <p>Des artisans certifi&eacute;s, des tarifs transparents et un service irr&eacute;prochable depuis plus de 10 ans.</p>
+    <h2 style="color:#fff;">Pourquoi choisir Atelier PACA&nbsp;?</h2>
+    <p style="color:rgba(255,255,255,0.85);">Des artisans certifi&eacute;s, des tarifs transparents et un service irr&eacute;prochable depuis plus de 10 ans.</p>
   </div>
   <div class="pourquoi-grid">
     <div class="pourquoi-card">
@@ -892,7 +917,7 @@
   <div class="section-head">
     <span class="eyebrow">Couverture g&eacute;ographique</span>
     <h2>Nos zones d&rsquo;intervention</h2>
-    <p>Nos artisans se d&eacute;placent dans tout le d&eacute;partement 06 et le Var &mdash; choisissez votre m&eacute;tier et votre ville.</p>
+    <p>Nos artisans interviennent dans 26 villes des Alpes-Maritimes (06) et du Var (83) &mdash; choisissez votre m&eacute;tier et votre ville.</p>
   </div>
   <div class="zones-grid">
 
@@ -900,13 +925,31 @@
       <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="snowflake"></i></span><h3>Climatisation</h3></div>
       <div class="zone-villes">
         <a href="climatisation-nice.html" class="zone-ville">Nice</a>
-        <a href="climatisation-cannes.html" class="zone-ville">Cannes</a>
         <a href="climatisation-antibes.html" class="zone-ville">Antibes</a>
+        <a href="climatisation-cannes.html" class="zone-ville">Cannes</a>
         <a href="climatisation-grasse.html" class="zone-ville">Grasse</a>
-        <a href="climatisation-le-cannet.html" class="zone-ville">Le Cannet</a>
         <a href="climatisation-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="climatisation-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="climatisation-vallauris.html" class="zone-ville">Vallauris</a>
+        <a href="climatisation-mandelieu-la-napoule.html" class="zone-ville">Mandelieu</a>
+        <a href="climatisation-menton.html" class="zone-ville">Menton</a>
+        <a href="climatisation-mougins.html" class="zone-ville">Mougins</a>
+        <a href="climatisation-villeneuve-loubet.html" class="zone-ville">Villeneuve-Loubet</a>
         <a href="climatisation-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="climatisation-vence.html" class="zone-ville">Vence</a>
+        <a href="climatisation-carros.html" class="zone-ville">Carros</a>
+        <a href="climatisation-toulon.html" class="zone-ville">Toulon</a>
+        <a href="climatisation-frejus.html" class="zone-ville">Fr&eacute;jus</a>
         <a href="climatisation-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+        <a href="climatisation-draguignan.html" class="zone-ville">Draguignan</a>
+        <a href="climatisation-hyeres.html" class="zone-ville">Hy&egrave;res</a>
+        <a href="climatisation-la-seyne-sur-mer.html" class="zone-ville">La Seyne-sur-Mer</a>
+        <a href="climatisation-la-garde.html" class="zone-ville">La Garde</a>
+        <a href="climatisation-six-fours-les-plages.html" class="zone-ville">Six-Fours</a>
+        <a href="climatisation-sanary-sur-mer.html" class="zone-ville">Sanary-sur-Mer</a>
+        <a href="climatisation-brignoles.html" class="zone-ville">Brignoles</a>
+        <a href="climatisation-saint-maximin-la-sainte-baume.html" class="zone-ville">Saint-Maximin</a>
+        <a href="climatisation-bandol.html" class="zone-ville">Bandol</a>
       </div>
     </div>
 
@@ -914,13 +957,31 @@
       <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="wrench"></i></span><h3>Plomberie</h3></div>
       <div class="zone-villes">
         <a href="plombier-nice.html" class="zone-ville">Nice</a>
-        <a href="plombier-cannes.html" class="zone-ville">Cannes</a>
         <a href="plombier-antibes.html" class="zone-ville">Antibes</a>
+        <a href="plombier-cannes.html" class="zone-ville">Cannes</a>
         <a href="plombier-grasse.html" class="zone-ville">Grasse</a>
-        <a href="plombier-le-cannet.html" class="zone-ville">Le Cannet</a>
         <a href="plombier-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="plombier-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="plombier-vallauris.html" class="zone-ville">Vallauris</a>
+        <a href="plombier-mandelieu-la-napoule.html" class="zone-ville">Mandelieu</a>
+        <a href="plombier-menton.html" class="zone-ville">Menton</a>
+        <a href="plombier-mougins.html" class="zone-ville">Mougins</a>
+        <a href="plombier-villeneuve-loubet.html" class="zone-ville">Villeneuve-Loubet</a>
         <a href="plombier-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="plombier-vence.html" class="zone-ville">Vence</a>
+        <a href="plombier-carros.html" class="zone-ville">Carros</a>
+        <a href="plombier-toulon.html" class="zone-ville">Toulon</a>
+        <a href="plombier-frejus.html" class="zone-ville">Fr&eacute;jus</a>
         <a href="plombier-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+        <a href="plombier-draguignan.html" class="zone-ville">Draguignan</a>
+        <a href="plombier-hyeres.html" class="zone-ville">Hy&egrave;res</a>
+        <a href="plombier-la-seyne-sur-mer.html" class="zone-ville">La Seyne-sur-Mer</a>
+        <a href="plombier-la-garde.html" class="zone-ville">La Garde</a>
+        <a href="plombier-six-fours-les-plages.html" class="zone-ville">Six-Fours</a>
+        <a href="plombier-sanary-sur-mer.html" class="zone-ville">Sanary-sur-Mer</a>
+        <a href="plombier-brignoles.html" class="zone-ville">Brignoles</a>
+        <a href="plombier-saint-maximin-la-sainte-baume.html" class="zone-ville">Saint-Maximin</a>
+        <a href="plombier-bandol.html" class="zone-ville">Bandol</a>
       </div>
     </div>
 
@@ -928,13 +989,31 @@
       <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="zap"></i></span><h3>&Eacute;lectricit&eacute;</h3></div>
       <div class="zone-villes">
         <a href="electricien-nice.html" class="zone-ville">Nice</a>
-        <a href="electricien-cannes.html" class="zone-ville">Cannes</a>
         <a href="electricien-antibes.html" class="zone-ville">Antibes</a>
+        <a href="electricien-cannes.html" class="zone-ville">Cannes</a>
         <a href="electricien-grasse.html" class="zone-ville">Grasse</a>
-        <a href="electricien-le-cannet.html" class="zone-ville">Le Cannet</a>
         <a href="electricien-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="electricien-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="electricien-vallauris.html" class="zone-ville">Vallauris</a>
+        <a href="electricien-mandelieu-la-napoule.html" class="zone-ville">Mandelieu</a>
+        <a href="electricien-menton.html" class="zone-ville">Menton</a>
+        <a href="electricien-mougins.html" class="zone-ville">Mougins</a>
+        <a href="electricien-villeneuve-loubet.html" class="zone-ville">Villeneuve-Loubet</a>
         <a href="electricien-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="electricien-vence.html" class="zone-ville">Vence</a>
+        <a href="electricien-carros.html" class="zone-ville">Carros</a>
+        <a href="electricien-toulon.html" class="zone-ville">Toulon</a>
+        <a href="electricien-frejus.html" class="zone-ville">Fr&eacute;jus</a>
         <a href="electricien-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+        <a href="electricien-draguignan.html" class="zone-ville">Draguignan</a>
+        <a href="electricien-hyeres.html" class="zone-ville">Hy&egrave;res</a>
+        <a href="electricien-la-seyne-sur-mer.html" class="zone-ville">La Seyne-sur-Mer</a>
+        <a href="electricien-la-garde.html" class="zone-ville">La Garde</a>
+        <a href="electricien-six-fours-les-plages.html" class="zone-ville">Six-Fours</a>
+        <a href="electricien-sanary-sur-mer.html" class="zone-ville">Sanary-sur-Mer</a>
+        <a href="electricien-brignoles.html" class="zone-ville">Brignoles</a>
+        <a href="electricien-saint-maximin-la-sainte-baume.html" class="zone-ville">Saint-Maximin</a>
+        <a href="electricien-bandol.html" class="zone-ville">Bandol</a>
       </div>
     </div>
 
@@ -942,13 +1021,31 @@
       <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="flame"></i></span><h3>Chauffage</h3></div>
       <div class="zone-villes">
         <a href="chauffagiste-nice.html" class="zone-ville">Nice</a>
-        <a href="chauffagiste-cannes.html" class="zone-ville">Cannes</a>
         <a href="chauffagiste-antibes.html" class="zone-ville">Antibes</a>
+        <a href="chauffagiste-cannes.html" class="zone-ville">Cannes</a>
         <a href="chauffagiste-grasse.html" class="zone-ville">Grasse</a>
-        <a href="chauffagiste-le-cannet.html" class="zone-ville">Le Cannet</a>
         <a href="chauffagiste-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="chauffagiste-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="chauffagiste-vallauris.html" class="zone-ville">Vallauris</a>
+        <a href="chauffagiste-mandelieu-la-napoule.html" class="zone-ville">Mandelieu</a>
+        <a href="chauffagiste-menton.html" class="zone-ville">Menton</a>
+        <a href="chauffagiste-mougins.html" class="zone-ville">Mougins</a>
+        <a href="chauffagiste-villeneuve-loubet.html" class="zone-ville">Villeneuve-Loubet</a>
         <a href="chauffagiste-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="chauffagiste-vence.html" class="zone-ville">Vence</a>
+        <a href="chauffagiste-carros.html" class="zone-ville">Carros</a>
+        <a href="chauffagiste-toulon.html" class="zone-ville">Toulon</a>
+        <a href="chauffagiste-frejus.html" class="zone-ville">Fr&eacute;jus</a>
         <a href="chauffagiste-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+        <a href="chauffagiste-draguignan.html" class="zone-ville">Draguignan</a>
+        <a href="chauffagiste-hyeres.html" class="zone-ville">Hy&egrave;res</a>
+        <a href="chauffagiste-la-seyne-sur-mer.html" class="zone-ville">La Seyne-sur-Mer</a>
+        <a href="chauffagiste-la-garde.html" class="zone-ville">La Garde</a>
+        <a href="chauffagiste-six-fours-les-plages.html" class="zone-ville">Six-Fours</a>
+        <a href="chauffagiste-sanary-sur-mer.html" class="zone-ville">Sanary-sur-Mer</a>
+        <a href="chauffagiste-brignoles.html" class="zone-ville">Brignoles</a>
+        <a href="chauffagiste-saint-maximin-la-sainte-baume.html" class="zone-ville">Saint-Maximin</a>
+        <a href="chauffagiste-bandol.html" class="zone-ville">Bandol</a>
       </div>
     </div>
 
@@ -956,13 +1053,31 @@
       <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="lock"></i></span><h3>Serrurerie</h3></div>
       <div class="zone-villes">
         <a href="serrurier-nice.html" class="zone-ville">Nice</a>
-        <a href="serrurier-cannes.html" class="zone-ville">Cannes</a>
         <a href="serrurier-antibes.html" class="zone-ville">Antibes</a>
+        <a href="serrurier-cannes.html" class="zone-ville">Cannes</a>
         <a href="serrurier-grasse.html" class="zone-ville">Grasse</a>
-        <a href="serrurier-le-cannet.html" class="zone-ville">Le Cannet</a>
         <a href="serrurier-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="serrurier-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="serrurier-vallauris.html" class="zone-ville">Vallauris</a>
+        <a href="serrurier-mandelieu-la-napoule.html" class="zone-ville">Mandelieu</a>
+        <a href="serrurier-menton.html" class="zone-ville">Menton</a>
+        <a href="serrurier-mougins.html" class="zone-ville">Mougins</a>
+        <a href="serrurier-villeneuve-loubet.html" class="zone-ville">Villeneuve-Loubet</a>
         <a href="serrurier-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="serrurier-vence.html" class="zone-ville">Vence</a>
+        <a href="serrurier-carros.html" class="zone-ville">Carros</a>
+        <a href="serrurier-toulon.html" class="zone-ville">Toulon</a>
+        <a href="serrurier-frejus.html" class="zone-ville">Fr&eacute;jus</a>
         <a href="serrurier-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+        <a href="serrurier-draguignan.html" class="zone-ville">Draguignan</a>
+        <a href="serrurier-hyeres.html" class="zone-ville">Hy&egrave;res</a>
+        <a href="serrurier-la-seyne-sur-mer.html" class="zone-ville">La Seyne-sur-Mer</a>
+        <a href="serrurier-la-garde.html" class="zone-ville">La Garde</a>
+        <a href="serrurier-six-fours-les-plages.html" class="zone-ville">Six-Fours</a>
+        <a href="serrurier-sanary-sur-mer.html" class="zone-ville">Sanary-sur-Mer</a>
+        <a href="serrurier-brignoles.html" class="zone-ville">Brignoles</a>
+        <a href="serrurier-saint-maximin-la-sainte-baume.html" class="zone-ville">Saint-Maximin</a>
+        <a href="serrurier-bandol.html" class="zone-ville">Bandol</a>
       </div>
     </div>
 
@@ -970,13 +1085,31 @@
       <div class="zone-card-head"><span class="zone-card-icon"><i data-lucide="align-justify"></i></span><h3>Volets roulants</h3></div>
       <div class="zone-villes">
         <a href="volets-roulants-nice.html" class="zone-ville">Nice</a>
-        <a href="volets-roulants-cannes.html" class="zone-ville">Cannes</a>
         <a href="volets-roulants-antibes.html" class="zone-ville">Antibes</a>
+        <a href="volets-roulants-cannes.html" class="zone-ville">Cannes</a>
         <a href="volets-roulants-grasse.html" class="zone-ville">Grasse</a>
-        <a href="volets-roulants-le-cannet.html" class="zone-ville">Le Cannet</a>
         <a href="volets-roulants-cagnes-sur-mer.html" class="zone-ville">Cagnes-sur-Mer</a>
+        <a href="volets-roulants-le-cannet.html" class="zone-ville">Le Cannet</a>
+        <a href="volets-roulants-vallauris.html" class="zone-ville">Vallauris</a>
+        <a href="volets-roulants-mandelieu-la-napoule.html" class="zone-ville">Mandelieu</a>
+        <a href="volets-roulants-menton.html" class="zone-ville">Menton</a>
+        <a href="volets-roulants-mougins.html" class="zone-ville">Mougins</a>
+        <a href="volets-roulants-villeneuve-loubet.html" class="zone-ville">Villeneuve-Loubet</a>
         <a href="volets-roulants-saint-laurent-du-var.html" class="zone-ville">Saint-Laurent-du-Var</a>
+        <a href="volets-roulants-vence.html" class="zone-ville">Vence</a>
+        <a href="volets-roulants-carros.html" class="zone-ville">Carros</a>
+        <a href="volets-roulants-toulon.html" class="zone-ville">Toulon</a>
+        <a href="volets-roulants-frejus.html" class="zone-ville">Fr&eacute;jus</a>
         <a href="volets-roulants-saint-raphael.html" class="zone-ville">Saint-Rapha&euml;l</a>
+        <a href="volets-roulants-draguignan.html" class="zone-ville">Draguignan</a>
+        <a href="volets-roulants-hyeres.html" class="zone-ville">Hy&egrave;res</a>
+        <a href="volets-roulants-la-seyne-sur-mer.html" class="zone-ville">La Seyne-sur-Mer</a>
+        <a href="volets-roulants-la-garde.html" class="zone-ville">La Garde</a>
+        <a href="volets-roulants-six-fours-les-plages.html" class="zone-ville">Six-Fours</a>
+        <a href="volets-roulants-sanary-sur-mer.html" class="zone-ville">Sanary-sur-Mer</a>
+        <a href="volets-roulants-brignoles.html" class="zone-ville">Brignoles</a>
+        <a href="volets-roulants-saint-maximin-la-sainte-baume.html" class="zone-ville">Saint-Maximin</a>
+        <a href="volets-roulants-bandol.html" class="zone-ville">Bandol</a>
       </div>
     </div>
 
@@ -1064,91 +1197,6 @@
         btn.textContent = 'Envoyer ma demande — Gratuit et sans engagement';
       });
     </script>
-  </div>
-</section>
-
-<!-- SEO LIENS VILLES -->
-<section class="seo-links-section" aria-label="Nos services par ville">
-  <p class="seo-links-title">Atelier PACA intervient dans les Alpes-Maritimes et le Var &mdash; retrouvez nos pages par ville et m&eacute;tier</p>
-  <div class="seo-links-grid">
-    <div class="seo-col">
-      <h3><i data-lucide="snowflake"></i> Climatisation</h3>
-      <ul>
-        <li><a href="climatisation-nice.html">Climatisation Nice</a></li>
-        <li><a href="climatisation-cannes.html">Climatisation Cannes</a></li>
-        <li><a href="climatisation-antibes.html">Climatisation Antibes</a></li>
-        <li><a href="climatisation-grasse.html">Climatisation Grasse</a></li>
-        <li><a href="climatisation-le-cannet.html">Climatisation Le Cannet</a></li>
-        <li><a href="climatisation-cagnes-sur-mer.html">Climatisation Cagnes-sur-Mer</a></li>
-        <li><a href="climatisation-saint-laurent-du-var.html">Climatisation Saint-Laurent-du-Var</a></li>
-        <li><a href="climatisation-saint-raphael.html">Climatisation Saint-Rapha&euml;l</a></li>
-      </ul>
-    </div>
-    <div class="seo-col">
-      <h3><i data-lucide="wrench"></i> Plomberie</h3>
-      <ul>
-        <li><a href="plombier-nice.html">Plombier Nice</a></li>
-        <li><a href="plombier-cannes.html">Plombier Cannes</a></li>
-        <li><a href="plombier-antibes.html">Plombier Antibes</a></li>
-        <li><a href="plombier-grasse.html">Plombier Grasse</a></li>
-        <li><a href="plombier-le-cannet.html">Plombier Le Cannet</a></li>
-        <li><a href="plombier-cagnes-sur-mer.html">Plombier Cagnes-sur-Mer</a></li>
-        <li><a href="plombier-saint-laurent-du-var.html">Plombier Saint-Laurent-du-Var</a></li>
-        <li><a href="plombier-saint-raphael.html">Plombier Saint-Rapha&euml;l</a></li>
-      </ul>
-    </div>
-    <div class="seo-col">
-      <h3><i data-lucide="zap"></i> &Eacute;lectricit&eacute;</h3>
-      <ul>
-        <li><a href="electricien-nice.html">Electricien Nice</a></li>
-        <li><a href="electricien-cannes.html">Electricien Cannes</a></li>
-        <li><a href="electricien-antibes.html">Electricien Antibes</a></li>
-        <li><a href="electricien-grasse.html">Electricien Grasse</a></li>
-        <li><a href="electricien-le-cannet.html">Electricien Le Cannet</a></li>
-        <li><a href="electricien-cagnes-sur-mer.html">Electricien Cagnes-sur-Mer</a></li>
-        <li><a href="electricien-saint-laurent-du-var.html">Electricien Saint-Laurent-du-Var</a></li>
-        <li><a href="electricien-saint-raphael.html">Electricien Saint-Rapha&euml;l</a></li>
-      </ul>
-    </div>
-    <div class="seo-col">
-      <h3><i data-lucide="flame"></i> Chauffage</h3>
-      <ul>
-        <li><a href="chauffagiste-nice.html">Chauffagiste Nice</a></li>
-        <li><a href="chauffagiste-cannes.html">Chauffagiste Cannes</a></li>
-        <li><a href="chauffagiste-antibes.html">Chauffagiste Antibes</a></li>
-        <li><a href="chauffagiste-grasse.html">Chauffagiste Grasse</a></li>
-        <li><a href="chauffagiste-le-cannet.html">Chauffagiste Le Cannet</a></li>
-        <li><a href="chauffagiste-cagnes-sur-mer.html">Chauffagiste Cagnes-sur-Mer</a></li>
-        <li><a href="chauffagiste-saint-laurent-du-var.html">Chauffagiste Saint-Laurent-du-Var</a></li>
-        <li><a href="chauffagiste-saint-raphael.html">Chauffagiste Saint-Rapha&euml;l</a></li>
-      </ul>
-    </div>
-    <div class="seo-col">
-      <h3><i data-lucide="lock"></i> Serrurerie</h3>
-      <ul>
-        <li><a href="serrurier-nice.html">Serrurier Nice</a></li>
-        <li><a href="serrurier-cannes.html">Serrurier Cannes</a></li>
-        <li><a href="serrurier-antibes.html">Serrurier Antibes</a></li>
-        <li><a href="serrurier-grasse.html">Serrurier Grasse</a></li>
-        <li><a href="serrurier-le-cannet.html">Serrurier Le Cannet</a></li>
-        <li><a href="serrurier-cagnes-sur-mer.html">Serrurier Cagnes-sur-Mer</a></li>
-        <li><a href="serrurier-saint-laurent-du-var.html">Serrurier Saint-Laurent-du-Var</a></li>
-        <li><a href="serrurier-saint-raphael.html">Serrurier Saint-Rapha&euml;l</a></li>
-      </ul>
-    </div>
-    <div class="seo-col">
-      <h3><i data-lucide="align-justify"></i> Volets roulants</h3>
-      <ul>
-        <li><a href="volets-roulants-nice.html">Volets roulants Nice</a></li>
-        <li><a href="volets-roulants-cannes.html">Volets roulants Cannes</a></li>
-        <li><a href="volets-roulants-antibes.html">Volets roulants Antibes</a></li>
-        <li><a href="volets-roulants-grasse.html">Volets roulants Grasse</a></li>
-        <li><a href="volets-roulants-le-cannet.html">Volets roulants Le Cannet</a></li>
-        <li><a href="volets-roulants-cagnes-sur-mer.html">Volets roulants Cagnes-sur-Mer</a></li>
-        <li><a href="volets-roulants-saint-laurent-du-var.html">Volets roulants Saint-Laurent-du-Var</a></li>
-        <li><a href="volets-roulants-saint-raphael.html">Volets roulants Saint-Rapha&euml;l</a></li>
-      </ul>
-    </div>
   </div>
 </section>
 

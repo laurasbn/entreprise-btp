@@ -55,6 +55,10 @@
     .gallery-img-placeholder{width:100%;height:240px;background:linear-gradient(135deg,var(--gris2) 0%,#dde1e7 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
     .placeholder-icon{font-size:40px;opacity:0.35}
     .placeholder-text{font-size:12px;font-weight:600;color:var(--sous);opacity:0.7;text-align:center;padding:0 20px}
+    .gallery-img{width:100%;height:240px;object-fit:cover;display:block;cursor:zoom-in;transition:transform .3s}
+    .gallery-card:hover .gallery-img{transform:scale(1.04)}
+    .gallery-cap{padding:13px 16px;font-size:14px;font-weight:800;color:var(--bleu)}
+    .gallery-cap span{display:block;font-size:12.5px;font-weight:500;color:var(--sous);margin-top:3px}
 
     /* LIGHTBOX */
     .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:1000;align-items:center;justify-content:center;padding:20px}
@@ -113,7 +117,7 @@
 <section class="hero">
   <p class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; R&eacute;alisations</p>
   <h1>Nos <em>R&eacute;alisations</em><br/>en C&ocirc;te d&rsquo;Azur</h1>
-  <p class="hero-sub">Climatisation, plomberie, &eacute;lectricit&eacute;, volets roulants &mdash; d&eacute;couvrez quelques-uns de nos chantiers dans les Alpes-Maritimes et le Var.</p>
+  <p class="hero-sub">D&eacute;pannage mais aussi vrais chantiers : installation de climatisation (unit&eacute;s et groupes ext&eacute;rieurs), r&eacute;novation de salle de bain, WC, douche &mdash; voici quelques r&eacute;alisations dans les Alpes-Maritimes et le Var.</p>
 </section>
 
 <!-- FILTRES -->
@@ -131,57 +135,33 @@
 <section class="gallery-section" id="section-clim" data-category="clim">
   <h2 class="gallery-section-title"><i data-lucide="snowflake"></i> Climatisation</h2>
   <div class="gallery-grid">
-
     <div class="gallery-card" data-category="clim">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="snowflake"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
+      <img class="gallery-img" src="images/chantier-clim-interieur.jpg" alt="Installation climatisation Daikin murale" loading="lazy" />
+      <div class="gallery-cap">Installation climatisation<span>Unit&eacute; murale Daikin</span></div>
     </div>
-
     <div class="gallery-card" data-category="clim">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="snowflake"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
+      <img class="gallery-img" src="images/chantier-clim-groupe-exterieur.jpg" alt="Installation groupes ext&eacute;rieurs climatisation" loading="lazy" />
+      <div class="gallery-cap">Groupes ext&eacute;rieurs<span>Installation multi-split Daikin</span></div>
     </div>
-
-    <div class="gallery-card" data-category="clim">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="snowflake"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- GALERIE PLOMBERIE -->
+<!-- GALERIE PLOMBERIE & SALLE DE BAIN -->
 <section class="gallery-section" id="section-plomberie" data-category="plomberie" style="background:var(--gris);padding:64px 48px;">
-  <h2 class="gallery-section-title"><i data-lucide="wrench"></i> Plomberie</h2>
+  <h2 class="gallery-section-title"><i data-lucide="wrench"></i> Plomberie &amp; salle de bain</h2>
   <div class="gallery-grid">
-
     <div class="gallery-card" data-category="plomberie">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="wrench"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
+      <img class="gallery-img" src="images/chantier-douche-italienne.jpg" alt="R&eacute;novation douche italienne" loading="lazy" />
+      <div class="gallery-cap">Douche italienne<span>R&eacute;novation salle de bain</span></div>
     </div>
-
     <div class="gallery-card" data-category="plomberie">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="wrench"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
+      <img class="gallery-img" src="images/chantier-salle-de-bain.jpg" alt="Salle de bain double vasque" loading="lazy" />
+      <div class="gallery-cap">Double vasque<span>Salle de bain sur mesure</span></div>
     </div>
-
     <div class="gallery-card" data-category="plomberie">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="wrench"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
+      <img class="gallery-img" src="images/chantier-wc-suspendu.jpg" alt="WC suspendu r&eacute;nov&eacute;" loading="lazy" />
+      <div class="gallery-cap">WC suspendu<span>R&eacute;novation toilette</span></div>
     </div>
-
   </div>
 </section>
 
@@ -189,28 +169,29 @@
 <section class="gallery-section" id="section-electricite" data-category="electricite">
   <h2 class="gallery-section-title"><i data-lucide="zap"></i> Electricit&eacute;</h2>
   <div class="gallery-grid">
-
     <div class="gallery-card" data-category="electricite">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="zap"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
+      <div class="gallery-img-placeholder"><span class="placeholder-icon"><i data-lucide="zap"></i></span><span class="placeholder-text">Photos bient&ocirc;t en ligne</span></div>
     </div>
+  </div>
+</section>
 
-    <div class="gallery-card" data-category="electricite">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="zap"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
+<!-- GALERIE CHAUFFAGE -->
+<section class="gallery-section" id="section-chauffage" data-category="chauffage" style="background:var(--gris);padding:64px 48px;">
+  <h2 class="gallery-section-title"><i data-lucide="flame"></i> Chauffage</h2>
+  <div class="gallery-grid">
+    <div class="gallery-card" data-category="chauffage">
+      <div class="gallery-img-placeholder"><span class="placeholder-icon"><i data-lucide="flame"></i></span><span class="placeholder-text">Photos bient&ocirc;t en ligne</span></div>
     </div>
+  </div>
+</section>
 
-    <div class="gallery-card" data-category="electricite">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="zap"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
+<!-- GALERIE SERRURERIE -->
+<section class="gallery-section" id="section-serrurerie" data-category="serrurerie">
+  <h2 class="gallery-section-title"><i data-lucide="lock"></i> Serrurerie</h2>
+  <div class="gallery-grid">
+    <div class="gallery-card" data-category="serrurerie">
+      <div class="gallery-img-placeholder"><span class="placeholder-icon"><i data-lucide="lock"></i></span><span class="placeholder-text">Photos bient&ocirc;t en ligne</span></div>
     </div>
-
   </div>
 </section>
 
@@ -218,60 +199,11 @@
 <section class="gallery-section" id="section-volets" data-category="volets" style="background:var(--gris);padding:64px 48px;">
   <h2 class="gallery-section-title"><i data-lucide="align-justify"></i> Volets roulants</h2>
   <div class="gallery-grid">
-
     <div class="gallery-card" data-category="volets">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="align-justify"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
+      <div class="gallery-img-placeholder"><span class="placeholder-icon"><i data-lucide="align-justify"></i></span><span class="placeholder-text">Photos bient&ocirc;t en ligne</span></div>
     </div>
-
-    <div class="gallery-card" data-category="volets">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="align-justify"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-category="volets">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="align-justify"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
-    </div>
-
   </div>
 </section>
-
-<!-- GALERIE SERRURERIE + CHAUFFAGE -->
-<section class="gallery-section" id="section-serrurerie" data-category="serrurerie">
-  <h2 class="gallery-section-title"><i data-lucide="lock"></i> Serrurerie &amp; <i data-lucide="flame"></i> Chauffage</h2>
-  <div class="gallery-grid">
-
-    <div class="gallery-card" data-category="serrurerie">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="lock"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-category="chauffage">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="flame"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-category="chauffage">
-      <div class="gallery-img-placeholder">
-        <span class="placeholder-icon"><i data-lucide="flame"></i></span>
-        <span class="placeholder-text">Photo &agrave; ajouter</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- CTA -->
 <section class="cta-section">
   <h2>Un projet ? Demandez un devis gratuit</h2>
@@ -289,6 +221,22 @@
     <a href="index.html#contact">Devis gratuit</a>
   </div>
 </footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lb" onclick="if(event.target.id==='lb')this.classList.remove('open')">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" type="button" aria-label="Fermer" onclick="document.getElementById('lb').classList.remove('open')">&times;</button>
+    <img id="lb-img" src="" alt="Photo chantier Atelier PACA" />
+  </div>
+</div>
+<script>
+  document.querySelectorAll('.gallery-img').forEach(function(im){
+    im.addEventListener('click', function(){
+      document.getElementById('lb-img').src = im.src;
+      document.getElementById('lb').classList.add('open');
+    });
+  });
+</script>
 
 <!-- FILTRE JS -->
 <script>
