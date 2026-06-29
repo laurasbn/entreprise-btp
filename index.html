@@ -226,25 +226,22 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .google-badge:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,0,0,0.14); }
-    .google-word { font-size: 22px; font-weight: 900; letter-spacing: -0.5px; line-height: 1; }
+    .google-word { font-size: 14px; font-weight: 800; letter-spacing: 2px; line-height: 1; color: var(--bleu); text-transform: uppercase; }
     .g1 { color: #4285F4; } .g2 { color: #EA4335; } .g3 { color: #FBBC05; }
     .g4 { color: #4285F4; } .g5 { color: #34A853; } .g6 { color: #EA4335; }
     .badge-stars { color: #FBBC04; font-size: 32px; letter-spacing: 3px; line-height: 1; margin: 4px 0; }
     .badge-score { font-size: 46px; font-weight: 900; color: var(--bleu); line-height: 1; }
     .badge-score small { font-size: 18px; font-weight: 600; color: var(--sous); }
     .badge-count { font-size: 14px; color: var(--sous); font-weight: 600; }
-    .badge-voir { margin-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--google-bleu); background: rgba(26,115,232,0.08); border-radius: 8px; padding: 7px 18px; transition: background 0.2s; }
-    .badge-voir:hover { background: rgba(26,115,232,0.15); }
+    .badge-voir { margin-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: #fff; background: var(--bleu); border-radius: 8px; padding: 8px 20px; transition: background 0.2s; }
+    .badge-voir:hover { background: #16294a; }
     .avis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px,1fr)); gap: 22px; max-width: 1000px; margin: 0 auto; }
-    .avis-card { background: #fff; border-radius: 16px; padding: 26px 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); display: flex; flex-direction: column; gap: 14px; border-top: 3px solid var(--bleu); }
-    .avis-top { display: flex; align-items: center; gap: 12px; }
-    .avis-avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #fff; flex-shrink: 0; }
-    .av1, .av2, .av3 { background: var(--bleu); }
-    .avis-meta strong { display: block; font-size: 14px; font-weight: 700; color: var(--bleu); }
+    .avis-card { background: #fff; border-radius: 16px; padding: 30px 26px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); display: flex; flex-direction: column; gap: 13px; border-top: 3px solid var(--bleu); text-align: center; align-items: center; }
+    .avis-stars { color: #FBBC04; font-size: 19px; letter-spacing: 3px; }
+    .avis-txt { font-size: 14px; line-height: 1.75; color: var(--texte); font-style: italic; flex: 1; }
+    .avis-meta { margin-top: 2px; }
+    .avis-meta strong { display: block; font-size: 14px; font-weight: 800; color: var(--bleu); }
     .avis-meta span { font-size: 12px; color: var(--sous); }
-    .avis-stars { color: #FBBC04; font-size: 16px; letter-spacing: 1px; }
-    .avis-txt { font-size: 14px; line-height: 1.72; color: var(--texte); flex: 1; }
-    .avis-service { display: inline-block; background: rgba(212,82,106,0.09); color: var(--rouge); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 6px; letter-spacing: 0.6px; text-transform: uppercase; }
 
     /* ======= SECTION COMMUNE ======= */
     .section { padding: 80px 48px; }
@@ -782,9 +779,7 @@
       class="google-badge"
       aria-label="Voir nos 166 avis sur Google Maps"
     >
-      <div class="google-word">
-        <span class="g1">G</span><span class="g2">o</span><span class="g3">o</span><span class="g4">g</span><span class="g5">l</span><span class="g6">e</span>
-      </div>
+      <div class="google-word">Avis Google</div>
       <div class="badge-stars" aria-label="5 étoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <div class="badge-score">4,9 <small>/ 5</small></div>
       <div class="badge-count">166 avis v&eacute;rifi&eacute;s</div>
@@ -795,40 +790,28 @@
   <!-- 3 avis clients -->
   <div class="avis-grid">
     <div class="avis-card">
-      <div class="avis-top">
-        <div class="avis-avatar av1">MC</div>
-        <div class="avis-meta">
-          <strong>Marie-Christine T.</strong>
-          <span>Antibes &bull; il y a 3 semaines</span>
-        </div>
-      </div>
       <div class="avis-stars" aria-label="5 étoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="avis-txt">&laquo;&nbsp;Excellent travail pour l&rsquo;installation de ma clim split &agrave; Antibes. Technicien ponctuel, soigneux et tr&egrave;s professionnel. R&eacute;sultat impeccable, je recommande vivement&nbsp;!&nbsp;&raquo;</p>
-      <span class="avis-service"><i data-lucide="snowflake"></i> Installation Climatisation</span>
+      <div class="avis-meta">
+        <strong>Marie-Christine T.</strong>
+        <span>Antibes &bull; Installation climatisation</span>
+      </div>
     </div>
     <div class="avis-card">
-      <div class="avis-top">
-        <div class="avis-avatar av2">JL</div>
-        <div class="avis-meta">
-          <strong>Jean-Louis M.</strong>
-          <span>Nice &bull; il y a 1 mois</span>
-        </div>
-      </div>
       <div class="avis-stars" aria-label="5 étoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="avis-txt">&laquo;&nbsp;Panne de clim en pleine canicule. Appel &agrave; 8h, technicien sur place &agrave; 11h. D&eacute;pannage imm&eacute;diat, tarif correct. &Eacute;quipe tr&egrave;s r&eacute;active &mdash; bravo&nbsp;!&nbsp;&raquo;</p>
-      <span class="avis-service"><i data-lucide="snowflake"></i> D&eacute;pannage Climatisation</span>
+      <div class="avis-meta">
+        <strong>Jean-Louis M.</strong>
+        <span>Nice &bull; D&eacute;pannage climatisation</span>
+      </div>
     </div>
     <div class="avis-card">
-      <div class="avis-top">
-        <div class="avis-avatar av3">PD</div>
-        <div class="avis-meta">
-          <strong>Philippe D.</strong>
-          <span>Cannes &bull; il y a 2 mois</span>
-        </div>
-      </div>
       <div class="avis-stars" aria-label="5 étoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="avis-txt">&laquo;&nbsp;Devis gratuit en 2h, installation soign&eacute;e en une journ&eacute;e. Climatiseur Daikin bien pos&eacute;, prix honn&ecirc;te et artisans certifi&eacute;s. Tr&egrave;s satisfait.&nbsp;&raquo;</p>
-      <span class="avis-service"><i data-lucide="snowflake"></i> Installation Climatisation</span>
+      <div class="avis-meta">
+        <strong>Philippe D.</strong>
+        <span>Cannes &bull; Installation climatisation</span>
+      </div>
     </div>
   </div>
 </section>
