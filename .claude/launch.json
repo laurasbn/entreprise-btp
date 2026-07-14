@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "const http=require('http'),fs=require('fs'),path=require('path');const m={'.html':'text/html; charset=utf-8','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.xml':'application/xml','.svg':'image/svg+xml','.css':'text/css'};http.createServer((q,s)=>{let f=decodeURIComponent(q.url.split('?')[0]);if(f==='/')f='/index.html';f=path.join(process.cwd(),f);fs.readFile(f,(e,d)=>{if(e){s.statusCode=404;s.end('404')}else{s.setHeader('Content-Type',m[path.extname(f).toLowerCase()]||'application/octet-stream');s.end(d)}})}).listen(4599,()=>console.log('up on 4599'))"],
+      "port": 4599
+    }
+  ]
+}

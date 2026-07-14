@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Logo recoloré — P rouge, texte blanc (3 variantes)</title>
+<style>
+  body{margin:0;font-family:Arial,sans-serif;background:#e9eaec;color:#222}
+  h1{font-size:18px;padding:20px 48px 0}
+  .intro{padding:6px 48px 10px;font-size:14px;color:#555}
+  .label{padding:20px 48px 6px;font-size:14px;font-weight:bold}
+  .desc{padding:0 48px 4px;font-size:13px;color:#666}
+  header{background:#1D3557;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 4px 20px rgba(0,0,0,0.25)}
+  .logo img{height:46px;width:auto;display:block}
+  .header-right{display:flex;align-items:center;gap:16px}
+  .header-tel{color:#fff;font-weight:700;font-size:15px}
+  .btn{background:#D4526A;color:#fff;font-weight:700;border-radius:8px;padding:8px 18px;font-size:14px}
+  /* test sur fond clair pour la version transparente */
+  .light{background:#ffffff;height:66px;display:flex;align-items:center;padding:0 48px;border:1px solid #ddd}
+</style>
+</head>
+<body>
+  <h1>Logo recoloré : grand P en ROUGE, « ATELIER » et « .A.C.A » en BLANC</h1>
+  <div class="intro">Même forme, même police, même disposition — seules les couleurs changent. Chaque header reproduit ton site (#1D3557, logo 46px).</div>
+
+  <div class="label">Variante A — Fond transparent (bords doux)</div>
+  <div class="desc">Le bleu du header transparaît derrière le logo. Bords doux d'origine conservés.</div>
+  <header>
+    <div class="logo"><img src="images/_preview-A-transp.png" alt="variante A" /></div>
+    <div class="header-right"><span class="header-tel">04 92 14 14 14</span><span class="btn">Devis gratuit</span></div>
+  </header>
+
+  <div class="label">Variante B — Fond aplati bleu marine (#1D3557)</div>
+  <div class="desc">Le fond devient exactement le bleu du header → fusion totale, aucun bord.</div>
+  <header>
+    <div class="logo"><img src="images/_preview-B-navy.png" alt="variante B" /></div>
+    <div class="header-right"><span class="header-tel">04 92 14 14 14</span><span class="btn">Devis gratuit</span></div>
+  </header>
+
+  <div class="label">Variante C — Fond transparent, bords nets</div>
+  <div class="desc">Bords durcis pour un rendu net sans halo. Transparent → réutilisable sur tout fond.</div>
+  <header>
+    <div class="logo"><img src="images/_preview-C-crisp.png" alt="variante C" /></div>
+    <div class="header-right"><span class="header-tel">04 92 14 14 14</span><span class="btn">Devis gratuit</span></div>
+  </header>
+
+  <div class="label">Variante C — test sur fond blanc (pour vérifier la polyvalence)</div>
+  <div class="desc">La version transparente nette posée sur du blanc : le texte blanc disparaît sur blanc (normal), mais le P rouge reste. Utile à savoir si tu réutilises le logo ailleurs.</div>
+  <div class="light"><img src="images/_preview-C-crisp.png" alt="variante C sur blanc" style="height:46px" /></div>
+
+  <div style="height:40px"></div>
+</body>
+</html>

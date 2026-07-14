@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propositions — Photo d'accueil Atelier PACA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --rouge:#D4526A; --bleu:#1D3557; --bleu2:#0f1f36; --bleu3:#0d2235;
+      --accent:#60c5f7; --blanc:#EEF1F6;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Inter',sans-serif;background:#e8ecf3;color:#111;}
+    .page-head{text-align:center;padding:40px 20px 10px;}
+    .page-head h1{font-size:26px;color:var(--bleu);}
+    .page-head p{color:#555;margin-top:8px;font-size:15px;}
+    .label{max-width:1100px;margin:46px auto 14px;padding:0 24px;}
+    .label .tag{display:inline-block;background:var(--rouge);color:#fff;font-weight:800;font-size:14px;padding:5px 14px;border-radius:8px;}
+    .label h2{display:inline-block;margin-left:12px;font-size:20px;color:var(--bleu);vertical-align:middle;}
+    .label .note{color:#666;font-size:14px;margin-top:6px;}
+    .frame{max-width:1100px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,0.18);}
+
+    /* boutons communs */
+    .btn-rouge{background:var(--rouge);color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;display:inline-block;}
+    .btn-ghost{background:rgba(255,255,255,0.14);border:1.5px solid rgba(255,255,255,0.4);color:#fff;padding:14px 26px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;display:inline-block;}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(212,82,106,0.2);border:1px solid rgba(212,82,106,0.5);color:#f6a;font-size:13px;font-weight:600;padding:5px 16px;border-radius:100px;margin-bottom:20px;}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px;}
+    .chip{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:12px;font-weight:500;padding:6px 12px;border-radius:8px;}
+    h1.title{font-size:clamp(28px,3.4vw,46px);font-weight:900;line-height:1.1;letter-spacing:-1px;color:#fff;margin-bottom:16px;}
+    h1.title em{color:var(--accent);font-style:normal;}
+    .sub{color:rgba(255,255,255,0.82);font-size:16px;line-height:1.6;max-width:480px;margin-bottom:24px;}
+    .rating{color:rgba(255,255,255,0.7);font-size:13px;margin-top:18px;}
+    .rating b{color:#fff;}
+
+    /* ===== PROPOSITION 1 : 2 colonnes, photo à droite ===== */
+    .v1{display:grid;grid-template-columns:1.1fr 0.9fr;min-height:480px;background:linear-gradient(135deg,#1D3557,#0d2235);}
+    .v1 .txt{padding:56px 50px;display:flex;flex-direction:column;justify-content:center;}
+    .v1 .photo{position:relative;overflow:hidden;}
+    .v1 .photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;}
+
+    /* ===== PROPOSITION 2 : 2 colonnes, photo à gauche ===== */
+    .v2{display:grid;grid-template-columns:0.9fr 1.1fr;min-height:480px;background:linear-gradient(135deg,#1D3557,#0d2235);}
+    .v2 .txt{padding:56px 50px;display:flex;flex-direction:column;justify-content:center;}
+    .v2 .photo{position:relative;overflow:hidden;}
+    .v2 .photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;}
+
+    /* ===== PROPOSITION 3 : photo en carte arrondie, posée sur fond bleu ===== */
+    .v3{background:linear-gradient(135deg,#1D3557,#0d2235);padding:50px;display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:center;min-height:480px;}
+    .v3 .txt{display:flex;flex-direction:column;justify-content:center;}
+    .v3 .card{border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.45);border:4px solid rgba(255,255,255,0.12);}
+    .v3 .card img{width:100%;height:440px;object-fit:cover;object-position:center 28%;display:block;}
+
+    /* ===== PROPOSITION 4 : fond plein écran recadré sur le technicien ===== */
+    .v4{position:relative;min-height:480px;display:flex;align-items:center;padding:56px 50px;overflow:hidden;}
+    .v4 .bg{position:absolute;inset:0;}
+    .v4 .bg img{width:100%;height:100%;object-fit:cover;object-position:18% 30%;display:block;}
+    .v4 .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(13,28,55,0.86) 0%,rgba(13,28,55,0.78) 40%,rgba(13,28,55,0.35) 100%);}
+    .v4 .txt{position:relative;z-index:1;max-width:560px;}
+
+    @media(max-width:760px){
+      .v1,.v2,.v3{grid-template-columns:1fr;}
+      .v1 .photo,.v2 .photo{height:300px;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>Propositions pour la photo d'accueil</h1>
+  <p>4 mises en page différentes avec ta vraie photo. Dis-moi le numéro que tu préfères (ou mélange d'idées).</p>
+</div>
+
+<!-- PROPOSITION 1 -->
+<div class="label">
+  <span class="tag">Proposition 1</span><h2>Photo à droite, texte à gauche</h2>
+  <p class="note">La photo est entièrement visible (jamais coupée), le texte sur fond bleu marque.</p>
+</div>
+<div class="frame">
+  <div class="v1">
+    <div class="txt">
+      <span class="pill">☀ Été 2026 — Côte d'Azur</span>
+      <h1 class="title">C'est l'été sur la <em>Côte d'Azur</em> — installez votre climatisation.</h1>
+      <p class="sub">Des artisans certifiés qui interviennent en urgence, 24h/24, partout dans le 06 et le Var.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#" class="btn-rouge">Demander un devis gratuit</a>
+        <a href="#" class="btn-ghost">📞 04 92 14 14 14</a>
+      </div>
+      <p class="rating">★ <b>4,9/5 — 172 avis Google</b> • Devis gratuit en 2h</p>
+    </div>
+    <div class="photo"><img src="images/hero-climatisation.jpg" alt="Technicien clim"></div>
+  </div>
+</div>
+
+<!-- PROPOSITION 2 -->
+<div class="label">
+  <span class="tag">Proposition 2</span><h2>Photo à gauche, texte à droite</h2>
+  <p class="note">Même idée mais inversée — la photo accueille l'œil en premier.</p>
+</div>
+<div class="frame">
+  <div class="v2">
+    <div class="photo"><img src="images/hero-climatisation.jpg" alt="Technicien clim"></div>
+    <div class="txt">
+      <span class="pill">☀ Été 2026 — Côte d'Azur</span>
+      <h1 class="title">C'est l'été sur la <em>Côte d'Azur</em> — installez votre climatisation.</h1>
+      <p class="sub">Des artisans certifiés qui interviennent en urgence, 24h/24, partout dans le 06 et le Var.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#" class="btn-rouge">Demander un devis gratuit</a>
+        <a href="#" class="btn-ghost">📞 04 92 14 14 14</a>
+      </div>
+      <p class="rating">★ <b>4,9/5 — 172 avis Google</b> • Devis gratuit en 2h</p>
+    </div>
+  </div>
+</div>
+
+<!-- PROPOSITION 3 -->
+<div class="label">
+  <span class="tag">Proposition 3</span><h2>Photo en cadre arrondi (effet « pro »)</h2>
+  <p class="note">La photo est posée dans un cadre élégant arrondi, avec une ombre — look haut de gamme.</p>
+</div>
+<div class="frame">
+  <div class="v3">
+    <div class="txt">
+      <span class="pill">☀ Été 2026 — Côte d'Azur</span>
+      <h1 class="title">C'est l'été sur la <em>Côte d'Azur</em> — installez votre climatisation.</h1>
+      <p class="sub">Des artisans certifiés qui interviennent en urgence, 24h/24, partout dans le 06 et le Var.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#" class="btn-rouge">Demander un devis gratuit</a>
+        <a href="#" class="btn-ghost">📞 04 92 14 14 14</a>
+      </div>
+      <p class="rating">★ <b>4,9/5 — 172 avis Google</b> • Devis gratuit en 2h</p>
+    </div>
+    <div class="card"><img src="images/hero-climatisation.jpg" alt="Technicien clim"></div>
+  </div>
+</div>
+
+<!-- PROPOSITION 4 -->
+<div class="label">
+  <span class="tag">Proposition 4</span><h2>Fond plein écran, recadré sur le technicien</h2>
+  <p class="note">On garde la photo en grand fond, mais recadrée à gauche pour bien voir le technicien + voile bleu pour la lisibilité.</p>
+</div>
+<div class="frame">
+  <div class="v4">
+    <div class="bg"><img src="images/hero-climatisation.jpg" alt="Technicien clim"></div>
+    <div class="txt">
+      <span class="pill">☀ Été 2026 — Côte d'Azur</span>
+      <h1 class="title">C'est l'été sur la <em>Côte d'Azur</em> — installez votre climatisation.</h1>
+      <p class="sub">Des artisans certifiés qui interviennent en urgence, 24h/24, partout dans le 06 et le Var.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#" class="btn-rouge">Demander un devis gratuit</a>
+        <a href="#" class="btn-ghost">📞 04 92 14 14 14</a>
+      </div>
+      <p class="rating">★ <b>4,9/5 — 172 avis Google</b> • Devis gratuit en 2h</p>
+    </div>
+  </div>
+</div>
+
+<div style="height:60px;"></div>
+</body>
+</html>
