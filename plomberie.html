@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Plombier Alpes-Maritimes &amp; Var | Atelier PACA</title>
   <meta name="description" content="Plombier dans le 06 et le Var : dépannage fuite, débouchage et rénovation salle de bain. Atelier PACA, intervention rapide, 4,9/5." />
-  <meta name="keywords" content="plombier urgence Alpes-Maritimes, fuite eau 06, débouchage canalisation, plombier Nice, plombier Antibes, plombier Cannes, chauffe-eau, Atelier PACA plomberie" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://atelierpaca.fr/plomberie.html" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -23,11 +24,8 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Service","serviceType":"Plomberie","name":"Plomberie — Atelier PACA","provider":{"@type":"LocalBusiness","name":"Atelier PACA","telephone":"+33492141414","url":"https://atelierpaca.fr/","priceRange":"€€","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"172","bestRating":"5"}},"areaServed":[{"@type":"AdministrativeArea","name":"Alpes-Maritimes"},{"@type":"AdministrativeArea","name":"Var"}],"description":"Fuite d'eau, débouchage canalisation, chauffe-eau. Intervention rapide 24h/24 dans les Alpes-Maritimes."}
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link href="fonts/fonts.css" rel="stylesheet" />
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--rouge:#e23b55;--rouge2:#ff5a72;--bleu:#3d7bd6;--or:#e8c88a;--txt:#eef2f8;--mut:#9fb0c9;--line:rgba(255,255,255,.12)}
 html{scroll-behavior:smooth}
@@ -166,6 +164,8 @@ footer{border-top:1px solid var(--line);background:rgba(6,10,18,.55);padding:44p
   .trust-items,.prestations-grid,.seo-links-grid,.fgrid,.crow{grid-template-columns:1fr}
 }
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://atelierpaca.fr/"},{"@type":"ListItem","position":2,"name":"Plomberie","item":"https://atelierpaca.fr/plomberie.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Intervenez-vous en urgence pour une fuite d'eau ?","acceptedAnswer":{"@type":"Answer","text":"Oui, une fuite d'eau ne peut pas attendre : nos plombiers interviennent 24 h/24 et 7 j/7 dans les Alpes-Maritimes et le Var, y compris la nuit et le week-end (majoration possible, toujours annoncée avant l'intervention)."}},{"@type":"Question","name":"Quels travaux de plomberie réalisez-vous ?","acceptedAnswer":{"@type":"Answer","text":"Recherche et réparation de fuites, débouchage de canalisations, remplacement de chauffe-eau, robinetterie, sanitaires, ainsi que la rénovation complète de salles de bain (douche, WC, double vasque)."}},{"@type":"Question","name":"Le déplacement et le devis sont-ils payants ?","acceptedAnswer":{"@type":"Answer","text":"Le devis est gratuit et sans engagement. Notre tarification est transparente : le prix vous est communiqué et validé avant toute intervention, sans surprise."}},{"@type":"Question","name":"Dans quelles villes vos plombiers se déplacent-ils ?","acceptedAnswer":{"@type":"Answer","text":"Nous couvrons 26 villes entre les Alpes-Maritimes et le Var : Nice, Antibes, Cannes, Grasse, Toulon, Fréjus, Saint-Raphaël et toutes les communes listées en bas de page."}}]}</script>
 </head>
 <body>
 
@@ -275,6 +275,27 @@ footer{border-top:1px solid var(--line);background:rgba(6,10,18,.55);padding:44p
   <p class="tarif-note">&#8505; <strong>Note tarifaire&nbsp;:</strong> ces prix sont indicatifs (province 2026, TTC). Majoration possible en urgence, la nuit, week-end ou jours f&eacute;ri&eacute;s. Tarif d&eacute;finitif communiqu&eacute; avant toute intervention.</p>
 </section>
 
+<section class="section" id="expertise" aria-label="L'expertise plomberie d'Atelier PACA">
+  <div class="section-head">
+    <span class="eyebrow">Notre expertise</span>
+    <h2>L'expertise plomberie d'Atelier PACA</h2>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card"><h3>Recherche de fuite méthodique</h3><p>Une tache d'humidité n'indique presque jamais l'endroit exact de la fuite. Nos plombiers procèdent par élimination — inspection, mise en pression, contrôle des raccords — pour intervenir au bon endroit du premier coup et limiter les dégâts comme les travaux de reprise.</p></div>
+    <div class="exp-card"><h3>Du dépannage à la rénovation</h3><p>Robinet qui goutte, chauffe-eau à remplacer, canalisation bouchée, mais aussi création complète de salle de bain : douche à l'italienne, double vasque, WC suspendu. Un seul interlocuteur pour le petit dépannage comme pour le chantier fini au cordeau.</p></div>
+    <div class="exp-card"><h3>Le respect du bâti azuréen</h3><p>Immeubles anciens du Vieux-Nice, copropriétés cannoises, villas varoises : chaque bâti a ses contraintes (colonnes communes, évacuations atypiques, accès). Nous adaptons nos méthodes et prévenons le syndic quand c'est nécessaire.</p></div>
+  </div>
+  <p class="exp-note">Urgence fuite 24 h/24 et 7 j/7 dans les Alpes-Maritimes et le Var — tarif annoncé avant intervention, <a href="#contact">devis gratuit sous 24 h</a>.</p>
+</section>
+<style>
+.exp-grid{max-width:1050px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.exp-grid{grid-template-columns:1fr}}
+.exp-card{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:16px;padding:24px}
+.exp-card h3{font-family:'Sora';font-size:16px;margin-bottom:10px;color:#fff}
+.exp-card p{color:var(--mut);font-size:14px;line-height:1.78}
+.exp-note{max-width:1050px;margin:20px auto 0;color:var(--mut);font-size:14.5px;line-height:1.8;text-align:center}
+.exp-note a{color:#5bb4f7;text-decoration:none}
+</style>
 <section class="cta-section">
   <h2><i data-lucide="alert-triangle"></i> Fuite d&rsquo;eau&nbsp;? On arrive.</h2>
   <p>Nos plombiers interviennent 24h/24 et 7j/7 dans toutes les Alpes-Maritimes et le Var.</p>
@@ -345,21 +366,60 @@ footer{border-top:1px solid var(--line);background:rgba(6,10,18,.55);padding:44p
   </div>
 </section>
 
+
+<section class="section" id="faq" aria-label="Questions fréquentes — Plomberie">
+  <div class="section-head">
+    <span class="eyebrow">FAQ</span>
+    <h2>Questions fréquentes — Plomberie</h2>
+  </div>
+  <div style="max-width:820px;margin:0 auto">
+  <details class="faq-item"><summary>Intervenez-vous en urgence pour une fuite d'eau ?</summary><p>Oui, une fuite d'eau ne peut pas attendre : nos plombiers interviennent 24 h/24 et 7 j/7 dans les Alpes-Maritimes et le Var, y compris la nuit et le week-end (majoration possible, toujours annoncée avant l'intervention).</p></details>
+  <details class="faq-item"><summary>Quels travaux de plomberie réalisez-vous ?</summary><p>Recherche et réparation de fuites, débouchage de canalisations, remplacement de chauffe-eau, robinetterie, sanitaires, ainsi que la rénovation complète de salles de bain (douche, WC, double vasque).</p></details>
+  <details class="faq-item"><summary>Le déplacement et le devis sont-ils payants ?</summary><p>Le devis est gratuit et sans engagement. Notre tarification est transparente : le prix vous est communiqué et validé avant toute intervention, sans surprise.</p></details>
+  <details class="faq-item"><summary>Dans quelles villes vos plombiers se déplacent-ils ?</summary><p>Nous couvrons 26 villes entre les Alpes-Maritimes et le Var : Nice, Antibes, Cannes, Grasse, Toulon, Fréjus, Saint-Raphaël et toutes les communes listées en bas de page.</p></details>
+  </div>
+</section>
+<style>
+.faq-item{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq-item summary{cursor:pointer;padding:18px 22px;font-family:'Sora';font-weight:600;font-size:15.5px;color:#fff;list-style:none;position:relative;padding-right:44px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--mut)}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item p{padding:0 22px 18px;color:var(--mut);line-height:1.75;font-size:14.5px}
+</style>
 <section class="seo-links-section" aria-label="Plomberie par ville">
   <p class="seo-links-title">Atelier PACA &mdash; Plomberie dans les Alpes-Maritimes et le Var</p>
   <div class="seo-links-grid">
     <div class="seo-col">
       <h3><i data-lucide="wrench"></i> Plomberie par ville</h3>
-      <ul>
+      <details class="villes-fold"><summary>Voir nos 26 villes d'intervention</summary><ul style="columns:2;column-gap:18px">
         <li><a href="plombier-nice.html">Plombier Nice</a></li>
-        <li><a href="plombier-cannes.html">Plombier Cannes</a></li>
         <li><a href="plombier-antibes.html">Plombier Antibes</a></li>
+        <li><a href="plombier-cannes.html">Plombier Cannes</a></li>
         <li><a href="plombier-grasse.html">Plombier Grasse</a></li>
-        <li><a href="plombier-le-cannet.html">Plombier Le Cannet</a></li>
         <li><a href="plombier-cagnes-sur-mer.html">Plombier Cagnes-sur-Mer</a></li>
+        <li><a href="plombier-le-cannet.html">Plombier Le Cannet</a></li>
+        <li><a href="plombier-mandelieu-la-napoule.html">Plombier Mandelieu-la-Napoule</a></li>
+        <li><a href="plombier-menton.html">Plombier Menton</a></li>
+        <li><a href="plombier-mougins.html">Plombier Mougins</a></li>
         <li><a href="plombier-saint-laurent-du-var.html">Plombier Saint-Laurent-du-Var</a></li>
-        <li><a href="plombier-saint-raphael.html">Plombier Saint-Rapha&euml;l</a></li>
-      </ul>
+        <li><a href="plombier-vallauris.html">Plombier Vallauris</a></li>
+        <li><a href="plombier-vence.html">Plombier Vence</a></li>
+        <li><a href="plombier-villeneuve-loubet.html">Plombier Villeneuve-Loubet</a></li>
+        <li><a href="plombier-carros.html">Plombier Carros</a></li>
+        <li><a href="plombier-toulon.html">Plombier Toulon</a></li>
+        <li><a href="plombier-frejus.html">Plombier Fréjus</a></li>
+        <li><a href="plombier-saint-raphael.html">Plombier Saint-Raphaël</a></li>
+        <li><a href="plombier-hyeres.html">Plombier Hyères</a></li>
+        <li><a href="plombier-la-garde.html">Plombier La Garde</a></li>
+        <li><a href="plombier-la-seyne-sur-mer.html">Plombier La Seyne-sur-Mer</a></li>
+        <li><a href="plombier-six-fours-les-plages.html">Plombier Six-Fours-les-Plages</a></li>
+        <li><a href="plombier-sanary-sur-mer.html">Plombier Sanary-sur-Mer</a></li>
+        <li><a href="plombier-bandol.html">Plombier Bandol</a></li>
+        <li><a href="plombier-brignoles.html">Plombier Brignoles</a></li>
+        <li><a href="plombier-draguignan.html">Plombier Draguignan</a></li>
+        <li><a href="plombier-saint-maximin-la-sainte-baume.html">Plombier Saint-Maximin-la-Sainte-Baume</a></li>
+      </ul></details><style>.villes-fold summary{cursor:pointer;color:#aab8cf;font-size:13.5px;padding:4px 0;list-style:none}.villes-fold summary::-webkit-details-marker{display:none}.villes-fold summary::before{content:"+ "}.villes-fold[open] summary::before{content:"\2212 "}.villes-fold ul{margin-top:10px}</style>
     </div>
     <div class="seo-col">
       <h3>Autres m&eacute;tiers</h3>
@@ -379,7 +439,7 @@ footer{border-top:1px solid var(--line);background:rgba(6,10,18,.55);padding:44p
     <div class="fcol">
       <h4>Atelier PACA</h4>
       <p>Votre sp&eacute;cialiste multi-services dans les Alpes-Maritimes. Artisans qualifi&eacute;s, disponibles 24h/24.</p>
-      <a href="https://www.google.com/maps/search/Atelier+PACA+Antibes+06600" target="_blank" rel="noopener" class="f-badge"><i data-lucide="star"></i> 4,9/5 &mdash; 172 avis Google</a>
+      <a href="https://www.google.com/maps/search/Atelier+PACA+Antibes+06600" target="_blank" rel="noopener noreferrer" class="f-badge"><i data-lucide="star"></i> 4,9/5 &mdash; 172 avis Google</a>
     </div>
     <div class="fcol">
       <h4>Nos services</h4>
@@ -412,7 +472,7 @@ footer{border-top:1px solid var(--line);background:rgba(6,10,18,.55);padding:44p
 <script>
   lucide.createIcons();
 </script><div id="float-contact" style="position:fixed;right:16px;bottom:18px;z-index:1000;display:flex;flex-direction:column;gap:12px;">
-<a href="https://wa.me/33677203752?text=Bonjour%2C%20je%20souhaite%20un%20devis%20gratuit%20(ou%20un%20rappel)%20Atelier%20PACA" target="_blank" rel="noopener" aria-label="Contacter Atelier PACA sur WhatsApp" style="width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.4);"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.88-9.89 9.88M20.46 3.49A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.49-8.42"/></svg></a>
+<a href="https://wa.me/33677203752?text=Bonjour%2C%20je%20souhaite%20un%20devis%20gratuit%20(ou%20un%20rappel)%20Atelier%20PACA" target="_blank" rel="noopener noreferrer" aria-label="Contacter Atelier PACA sur WhatsApp" style="width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.4);"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.88-9.89 9.88M20.46 3.49A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.49-8.42"/></svg></a>
 <a href="tel:0492141414" aria-label="Appeler Atelier PACA" style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#e23b55,#ff5a72);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(226,59,85,.5);"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
 </div>
 <style>.btn-appel-fixe{display:none!important}</style>

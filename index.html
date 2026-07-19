@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- ===== SEO 2026 ===== -->
 <title>Plombier, Climatisation, &Eacute;lectricien 06 &amp; Var | Atelier PACA</title>
 <meta name="description" content="Atelier PACA : climatisation, plomberie, électricité, chauffage et serrurerie dans le 06 et le Var. Devis gratuit, 4,9/5 sur Google, 24h/24." />
@@ -25,9 +27,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://atelierpaca.fr/","name":"Atelier PACA","description":"Spécialiste climatisation, plomberie, électricité, chauffage, serrurerie et volets roulants dans les Alpes-Maritimes.","url":"https://atelierpaca.fr/","telephone":"+33492141414","email":"atelierpaca.06@gmail.com","image":"https://atelierpaca.fr/images/hero-climatisation.jpg","address":{"@type":"PostalAddress","streetAddress":"48, chemin des Autrichiens","addressLocality":"Antibes","postalCode":"06600","addressRegion":"Alpes-Maritimes","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":43.5804,"longitude":7.1282},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"172","bestRating":"5","worstRating":"1"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"},"areaServed":[{"@type":"AdministrativeArea","name":"Alpes-Maritimes"},{"@type":"AdministrativeArea","name":"Var"},{"@type":"City","name":"Nice"},{"@type":"City","name":"Antibes"},{"@type":"City","name":"Cannes"},{"@type":"City","name":"Grasse"},{"@type":"City","name":"Toulon"},{"@type":"City","name":"Fréjus"},{"@type":"City","name":"Saint-Raphaël"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Services Atelier PACA","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Installation Climatisation Alpes-Maritimes"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Dépannage Climatisation 06"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Plomberie Alpes-Maritimes"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Électricité Alpes-Maritimes"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Chauffage Alpes-Maritimes"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Serrurerie Alpes-Maritimes"}}]}}
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="font" type="font/woff2" href="fonts/sora-400-xMQ9uFFYT72X5wkB_18qmnndmSdSnh2BAfO5mnuyOo1lfiQwV6-x.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+<link href="fonts/fonts.css" rel="stylesheet" />
 <link rel="preload" as="image" href="images/hero-climatisation.jpg" fetchpriority="high" />
 <style>
   :root{
@@ -175,7 +177,7 @@
 
 <header>
   <div class="wrap hd">
-    <a href="index.html" class="logo"><img src="images/logo-paca-azur.png" alt="Atelier PACA" /></a>
+    <a href="index.html" class="logo"><img src="images/logo-paca-azur.png" alt="Atelier PACA" width="600" height="304" /></a>
     <nav>
       <a href="climatisation.html">Climatisation</a><a href="plomberie.html">Plomberie</a><a href="electricite.html">Électricité</a>
       <a href="realisations.html">Réalisations</a><a href="#avis">Avis</a>
@@ -206,11 +208,12 @@
 
     <div class="shot">
       <div class="frame">
-        <img src="images/hero-climatisation.jpg" alt="Technicien Atelier PACA en intervention climatisation" />
+        <img src="images/hero-climatisation.jpg" alt="Technicien Atelier PACA en intervention climatisation" width="1200" height="1600" fetchpriority="high" decoding="async" />
         <div class="glow"></div>
       </div>
     </div>
   </section>
+
 
   <!-- separateur vague (fixe) -->
   <svg class="wave" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true">
@@ -292,7 +295,7 @@
   <div class="sec-h"><div class="eb">Une équipe mobile</div><h2>Notre camion près de chez vous</h2><div style="margin-top:14px"><span class="trait"></span></div></div>
   <section style="max-width:1000px;margin:0 auto 74px;position:relative;">
     <div style="position:absolute;inset:-20px;background:radial-gradient(circle at 60% 40%,rgba(226,59,85,.25),transparent 60%);filter:blur(22px);z-index:0;"></div>
-    <img src="images/camion-fondu.jpg" alt="Le camion d'intervention Atelier PACA — climatisation, plomberie, électricité dans le 06 et le Var" loading="lazy" style="position:relative;z-index:1;display:block;width:100%;height:340px;object-fit:cover;object-position:center 15%;border-radius:22px;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 70px rgba(0,0,0,.5);filter:brightness(1.12);" />
+    <img src="images/camion-fondu.jpg" width="1600" height="1200" decoding="async" alt="Le camion d'intervention Atelier PACA — climatisation, plomberie, électricité dans le 06 et le Var" loading="lazy" style="position:relative;z-index:1;display:block;width:100%;height:340px;object-fit:cover;object-position:center 15%;border-radius:22px;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 70px rgba(0,0,0,.5);filter:brightness(1.12);" />
     <p style="text-align:center;color:var(--mut);font-size:14.5px;margin-top:18px;position:relative;z-index:1;">Un camion tout équipé qui sillonne les Alpes-Maritimes et le Var, 7j/7 — une intervention soignée, directement chez vous.</p>
   </section>
 
@@ -330,29 +333,47 @@
   </section>
 </main>
 
+  <div class="zfoot" aria-label="Toutes nos zones d'intervention par métier">
+    <p class="zfoot-t">Atelier PACA près de chez vous — retrouvez votre ville :</p>
+      <details><summary>Climatisation — 26 villes</summary><div class="zfoot-chips"><a href="climatisation-nice.html">Nice</a><a href="climatisation-antibes.html">Antibes</a><a href="climatisation-cannes.html">Cannes</a><a href="climatisation-grasse.html">Grasse</a><a href="climatisation-cagnes-sur-mer.html">Cagnes-sur-Mer</a><a href="climatisation-le-cannet.html">Le Cannet</a><a href="climatisation-mandelieu-la-napoule.html">Mandelieu-la-Napoule</a><a href="climatisation-menton.html">Menton</a><a href="climatisation-mougins.html">Mougins</a><a href="climatisation-saint-laurent-du-var.html">Saint-Laurent-du-Var</a><a href="climatisation-vallauris.html">Vallauris</a><a href="climatisation-vence.html">Vence</a><a href="climatisation-villeneuve-loubet.html">Villeneuve-Loubet</a><a href="climatisation-carros.html">Carros</a><a href="climatisation-toulon.html">Toulon</a><a href="climatisation-frejus.html">Fréjus</a><a href="climatisation-saint-raphael.html">Saint-Raphaël</a><a href="climatisation-hyeres.html">Hyères</a><a href="climatisation-la-garde.html">La Garde</a><a href="climatisation-la-seyne-sur-mer.html">La Seyne-sur-Mer</a><a href="climatisation-six-fours-les-plages.html">Six-Fours-les-Plages</a><a href="climatisation-sanary-sur-mer.html">Sanary-sur-Mer</a><a href="climatisation-bandol.html">Bandol</a><a href="climatisation-brignoles.html">Brignoles</a><a href="climatisation-draguignan.html">Draguignan</a><a href="climatisation-saint-maximin-la-sainte-baume.html">Saint-Maximin-la-Sainte-Baume</a></div></details>
+      <details><summary>Plombier — 26 villes</summary><div class="zfoot-chips"><a href="plombier-nice.html">Nice</a><a href="plombier-antibes.html">Antibes</a><a href="plombier-cannes.html">Cannes</a><a href="plombier-grasse.html">Grasse</a><a href="plombier-cagnes-sur-mer.html">Cagnes-sur-Mer</a><a href="plombier-le-cannet.html">Le Cannet</a><a href="plombier-mandelieu-la-napoule.html">Mandelieu-la-Napoule</a><a href="plombier-menton.html">Menton</a><a href="plombier-mougins.html">Mougins</a><a href="plombier-saint-laurent-du-var.html">Saint-Laurent-du-Var</a><a href="plombier-vallauris.html">Vallauris</a><a href="plombier-vence.html">Vence</a><a href="plombier-villeneuve-loubet.html">Villeneuve-Loubet</a><a href="plombier-carros.html">Carros</a><a href="plombier-toulon.html">Toulon</a><a href="plombier-frejus.html">Fréjus</a><a href="plombier-saint-raphael.html">Saint-Raphaël</a><a href="plombier-hyeres.html">Hyères</a><a href="plombier-la-garde.html">La Garde</a><a href="plombier-la-seyne-sur-mer.html">La Seyne-sur-Mer</a><a href="plombier-six-fours-les-plages.html">Six-Fours-les-Plages</a><a href="plombier-sanary-sur-mer.html">Sanary-sur-Mer</a><a href="plombier-bandol.html">Bandol</a><a href="plombier-brignoles.html">Brignoles</a><a href="plombier-draguignan.html">Draguignan</a><a href="plombier-saint-maximin-la-sainte-baume.html">Saint-Maximin-la-Sainte-Baume</a></div></details>
+      <details><summary>Électricien — 26 villes</summary><div class="zfoot-chips"><a href="electricien-nice.html">Nice</a><a href="electricien-antibes.html">Antibes</a><a href="electricien-cannes.html">Cannes</a><a href="electricien-grasse.html">Grasse</a><a href="electricien-cagnes-sur-mer.html">Cagnes-sur-Mer</a><a href="electricien-le-cannet.html">Le Cannet</a><a href="electricien-mandelieu-la-napoule.html">Mandelieu-la-Napoule</a><a href="electricien-menton.html">Menton</a><a href="electricien-mougins.html">Mougins</a><a href="electricien-saint-laurent-du-var.html">Saint-Laurent-du-Var</a><a href="electricien-vallauris.html">Vallauris</a><a href="electricien-vence.html">Vence</a><a href="electricien-villeneuve-loubet.html">Villeneuve-Loubet</a><a href="electricien-carros.html">Carros</a><a href="electricien-toulon.html">Toulon</a><a href="electricien-frejus.html">Fréjus</a><a href="electricien-saint-raphael.html">Saint-Raphaël</a><a href="electricien-hyeres.html">Hyères</a><a href="electricien-la-garde.html">La Garde</a><a href="electricien-la-seyne-sur-mer.html">La Seyne-sur-Mer</a><a href="electricien-six-fours-les-plages.html">Six-Fours-les-Plages</a><a href="electricien-sanary-sur-mer.html">Sanary-sur-Mer</a><a href="electricien-bandol.html">Bandol</a><a href="electricien-brignoles.html">Brignoles</a><a href="electricien-draguignan.html">Draguignan</a><a href="electricien-saint-maximin-la-sainte-baume.html">Saint-Maximin-la-Sainte-Baume</a></div></details>
+      <details><summary>Chauffagiste — 26 villes</summary><div class="zfoot-chips"><a href="chauffagiste-nice.html">Nice</a><a href="chauffagiste-antibes.html">Antibes</a><a href="chauffagiste-cannes.html">Cannes</a><a href="chauffagiste-grasse.html">Grasse</a><a href="chauffagiste-cagnes-sur-mer.html">Cagnes-sur-Mer</a><a href="chauffagiste-le-cannet.html">Le Cannet</a><a href="chauffagiste-mandelieu-la-napoule.html">Mandelieu-la-Napoule</a><a href="chauffagiste-menton.html">Menton</a><a href="chauffagiste-mougins.html">Mougins</a><a href="chauffagiste-saint-laurent-du-var.html">Saint-Laurent-du-Var</a><a href="chauffagiste-vallauris.html">Vallauris</a><a href="chauffagiste-vence.html">Vence</a><a href="chauffagiste-villeneuve-loubet.html">Villeneuve-Loubet</a><a href="chauffagiste-carros.html">Carros</a><a href="chauffagiste-toulon.html">Toulon</a><a href="chauffagiste-frejus.html">Fréjus</a><a href="chauffagiste-saint-raphael.html">Saint-Raphaël</a><a href="chauffagiste-hyeres.html">Hyères</a><a href="chauffagiste-la-garde.html">La Garde</a><a href="chauffagiste-la-seyne-sur-mer.html">La Seyne-sur-Mer</a><a href="chauffagiste-six-fours-les-plages.html">Six-Fours-les-Plages</a><a href="chauffagiste-sanary-sur-mer.html">Sanary-sur-Mer</a><a href="chauffagiste-bandol.html">Bandol</a><a href="chauffagiste-brignoles.html">Brignoles</a><a href="chauffagiste-draguignan.html">Draguignan</a><a href="chauffagiste-saint-maximin-la-sainte-baume.html">Saint-Maximin-la-Sainte-Baume</a></div></details>
+      <details><summary>Serrurier — 26 villes</summary><div class="zfoot-chips"><a href="serrurier-nice.html">Nice</a><a href="serrurier-antibes.html">Antibes</a><a href="serrurier-cannes.html">Cannes</a><a href="serrurier-grasse.html">Grasse</a><a href="serrurier-cagnes-sur-mer.html">Cagnes-sur-Mer</a><a href="serrurier-le-cannet.html">Le Cannet</a><a href="serrurier-mandelieu-la-napoule.html">Mandelieu-la-Napoule</a><a href="serrurier-menton.html">Menton</a><a href="serrurier-mougins.html">Mougins</a><a href="serrurier-saint-laurent-du-var.html">Saint-Laurent-du-Var</a><a href="serrurier-vallauris.html">Vallauris</a><a href="serrurier-vence.html">Vence</a><a href="serrurier-villeneuve-loubet.html">Villeneuve-Loubet</a><a href="serrurier-carros.html">Carros</a><a href="serrurier-toulon.html">Toulon</a><a href="serrurier-frejus.html">Fréjus</a><a href="serrurier-saint-raphael.html">Saint-Raphaël</a><a href="serrurier-hyeres.html">Hyères</a><a href="serrurier-la-garde.html">La Garde</a><a href="serrurier-la-seyne-sur-mer.html">La Seyne-sur-Mer</a><a href="serrurier-six-fours-les-plages.html">Six-Fours-les-Plages</a><a href="serrurier-sanary-sur-mer.html">Sanary-sur-Mer</a><a href="serrurier-bandol.html">Bandol</a><a href="serrurier-brignoles.html">Brignoles</a><a href="serrurier-draguignan.html">Draguignan</a><a href="serrurier-saint-maximin-la-sainte-baume.html">Saint-Maximin-la-Sainte-Baume</a></div></details>
+      <details><summary>Volets roulants — 26 villes</summary><div class="zfoot-chips"><a href="volets-roulants-nice.html">Nice</a><a href="volets-roulants-antibes.html">Antibes</a><a href="volets-roulants-cannes.html">Cannes</a><a href="volets-roulants-grasse.html">Grasse</a><a href="volets-roulants-cagnes-sur-mer.html">Cagnes-sur-Mer</a><a href="volets-roulants-le-cannet.html">Le Cannet</a><a href="volets-roulants-mandelieu-la-napoule.html">Mandelieu-la-Napoule</a><a href="volets-roulants-menton.html">Menton</a><a href="volets-roulants-mougins.html">Mougins</a><a href="volets-roulants-saint-laurent-du-var.html">Saint-Laurent-du-Var</a><a href="volets-roulants-vallauris.html">Vallauris</a><a href="volets-roulants-vence.html">Vence</a><a href="volets-roulants-villeneuve-loubet.html">Villeneuve-Loubet</a><a href="volets-roulants-carros.html">Carros</a><a href="volets-roulants-toulon.html">Toulon</a><a href="volets-roulants-frejus.html">Fréjus</a><a href="volets-roulants-saint-raphael.html">Saint-Raphaël</a><a href="volets-roulants-hyeres.html">Hyères</a><a href="volets-roulants-la-garde.html">La Garde</a><a href="volets-roulants-la-seyne-sur-mer.html">La Seyne-sur-Mer</a><a href="volets-roulants-six-fours-les-plages.html">Six-Fours-les-Plages</a><a href="volets-roulants-sanary-sur-mer.html">Sanary-sur-Mer</a><a href="volets-roulants-bandol.html">Bandol</a><a href="volets-roulants-brignoles.html">Brignoles</a><a href="volets-roulants-draguignan.html">Draguignan</a><a href="volets-roulants-saint-maximin-la-sainte-baume.html">Saint-Maximin-la-Sainte-Baume</a></div></details>
+    <p class="zfoot-b"><a href="plan-du-site.html">Voir le plan du site complet</a></p>
+  </div>
+  <style>
+  .zfoot{max-width:1150px;margin:0 auto;padding:34px 5vw 26px;border-top:1px solid var(--line)}
+  .zfoot-t{color:var(--mut);font-size:13px;margin-bottom:12px}
+  .zfoot details{border-bottom:1px solid rgba(255,255,255,.06)}
+  .zfoot summary{cursor:pointer;padding:10px 2px;font-size:13px;color:#aab8cf;list-style:none;position:relative;padding-right:30px}
+  .zfoot summary:hover{color:#fff}
+  .zfoot summary::-webkit-details-marker{display:none}
+  .zfoot summary::after{content:"+";position:absolute;right:8px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:15px}
+  .zfoot details[open] summary::after{content:"\2212"}
+  .zfoot-chips{padding:4px 0 14px}
+  .zfoot-chips a{display:inline-block;font-size:12.5px;color:#93a1b8;text-decoration:none;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:5px 12px;margin:0 6px 8px 0}
+  .zfoot-chips a:hover{color:#fff;border-color:rgba(226,59,85,.5)}
+  .zfoot-b{margin-top:14px;font-size:13px}
+  .zfoot-b a{color:#8fbef0;text-decoration:none}
+  </style>
+
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div style="text-align:center">
-        <img src="images/logo-paca-azur.png" alt="Atelier PACA" style="height:54px;display:inline-block" />
+        <img src="images/logo-paca-azur.png" alt="Atelier PACA" width="600" height="304" style="height:54px;width:auto;display:inline-block" loading="lazy" />
         <p style="margin:16px auto 0;max-width:360px;line-height:1.95">Artisans du bâtiment<br/>dans les <span style="white-space:nowrap">Alpes-Maritimes</span> et le Var.<br/>Climatisation · Plomberie · Électricité.<br/>4,9/5 sur 172 avis Google.</p>
       </div>
       <div><h5>Services</h5><a href="climatisation.html">Climatisation</a><a href="plomberie.html">Plomberie</a><a href="electricite.html">Électricité</a><a href="chauffage.html">Chauffage</a><a href="serrurerie.html">Serrurerie</a><a href="volets-roulants.html">Volets roulants</a></div>
       <div><h5>Villes</h5><a href="climatisation-nice.html">Nice</a><a href="climatisation-cannes.html">Cannes</a><a href="climatisation-antibes.html">Antibes</a><a href="climatisation-grasse.html">Grasse</a><a href="climatisation-toulon.html">Toulon</a><a href="climatisation-frejus.html">Fréjus</a></div>
       <div><h5>Contact</h5><p>04 92 14 14 14</p><p>atelierpaca.06@gmail.com</p><p>48, chemin des Autrichiens<br/>06600 Antibes</p></div>
     </div>
-    <div class="fbot">© 2026 Atelier PACA — Tous droits réservés · <a href="mentions-legales.html">Mentions légales</a> · <a href="#">Plan du site</a></div>
+    <div class="fbot">© 2026 Atelier PACA — Tous droits réservés · <a href="mentions-legales.html">Mentions légales</a> · <a href="plan-du-site.html">Plan du site</a></div>
   </div>
 </footer>
 
-<script>
-(function(){
-  var cities=[["nice","Nice"],["cannes","Cannes"],["antibes","Antibes"],["grasse","Grasse"],["cagnes-sur-mer","Cagnes-sur-Mer"],["le-cannet","Le Cannet"],["mandelieu-la-napoule","Mandelieu-la-Napoule"],["menton","Menton"],["mougins","Mougins"],["saint-laurent-du-var","Saint-Laurent-du-Var"],["vallauris","Vallauris"],["vence","Vence"],["villeneuve-loubet","Villeneuve-Loubet"],["carros","Carros"],["toulon","Toulon"],["frejus","Fréjus"],["saint-raphael","Saint-Raphaël"],["hyeres","Hyères"],["la-garde","La Garde"],["la-seyne-sur-mer","La Seyne-sur-Mer"],["six-fours-les-plages","Six-Fours-les-Plages"],["sanary-sur-mer","Sanary-sur-Mer"],["bandol","Bandol"],["brignoles","Brignoles"],["draguignan","Draguignan"],["saint-maximin-la-sainte-baume","Saint-Maximin-la-Sainte-Baume"]];
-  var metiers=[["Climatisation","climatisation"],["Plomberie","plombier"],["Électricité","electricien"],["Chauffage","chauffagiste"],["Serrurerie","serrurier"],["Volets roulants","volets-roulants"]];
-  var el=document.getElementById("zones");
-  if(el){el.innerHTML=metiers.map(function(m){return '<div class="zblock"><h4>'+m[0]+'</h4><div class="villes">'+cities.map(function(c){return '<a href="'+m[1]+'-'+c[0]+'.html">'+c[1]+'</a>';}).join(" · ")+'</div></div>';}).join("");}
-})();
-</script>
 
 <script>
 document.getElementById('devis-form').addEventListener('submit', async function(e){
@@ -370,7 +391,7 @@ document.getElementById('devis-form').addEventListener('submit', async function(
 </script>
 
 <div id="float-contact" style="position:fixed;right:16px;bottom:18px;z-index:1000;display:flex;flex-direction:column;gap:12px;">
-<a href="https://wa.me/33677203752?text=Bonjour%2C%20je%20souhaite%20un%20devis%20gratuit%20(ou%20un%20rappel)%20Atelier%20PACA" target="_blank" rel="noopener" aria-label="Contacter Atelier PACA sur WhatsApp" style="width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.4);"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.88-9.89 9.88M20.46 3.49A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.49-8.42"/></svg></a>
+<a href="https://wa.me/33677203752?text=Bonjour%2C%20je%20souhaite%20un%20devis%20gratuit%20(ou%20un%20rappel)%20Atelier%20PACA" target="_blank" rel="noopener noreferrer" aria-label="Contacter Atelier PACA sur WhatsApp" style="width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.4);"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.88-9.89 9.88M20.46 3.49A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.49-8.42"/></svg></a>
 <a href="tel:0492141414" aria-label="Appeler Atelier PACA" style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#e23b55,#ff5a72);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(226,59,85,.5);"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
 </div>
 <style>.btn-appel-fixe{display:none!important}</style>
