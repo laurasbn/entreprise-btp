@@ -59,8 +59,8 @@
   .hd{display:flex;align-items:center;justify-content:space-between;height:70px}
   .logo{display:inline-flex;align-items:center;text-decoration:none}
   .logo img{height:56px;width:auto;display:block}
-  nav{display:flex;gap:28px;align-items:center}
-  nav a{font-family:'Poppins';font-size:18px;font-weight:600;letter-spacing:.2px;text-decoration:none;color:#fff;transition:color .2s}
+  nav{display:flex;gap:20px;align-items:center}
+  nav a{font-family:'Poppins';font-size:15px;font-weight:600;letter-spacing:.2px;text-decoration:none;color:#fff;transition:color .2s}
   nav a:hover{color:#5bb4f7}
   .tel{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(90deg,var(--rouge),var(--rouge2));color:#fff;font-weight:800;font-size:17px;letter-spacing:.3px;padding:12px 22px;border-radius:12px;text-decoration:none;box-shadow:0 10px 28px rgba(226,59,85,.45)}
   .tel svg{width:18px;height:18px}
@@ -179,7 +179,7 @@
   <div class="wrap hd">
     <a href="index.html" class="logo"><img src="images/logo-paca-azur.png" alt="Atelier PACA" width="600" height="304" /></a>
     <nav>
-      <a href="climatisation.html">Climatisation</a><a href="plomberie.html">Plomberie</a><a href="electricite.html">Électricité</a>
+      <a href="climatisation.html">Climatisation</a><a href="plomberie.html">Plomberie</a><a href="electricite.html">Électricité</a><a href="chauffage.html">Chauffage</a><a href="serrurerie.html">Serrurerie</a><a href="volets-roulants.html">Volets</a>
       <a href="realisations.html">Réalisations</a><a href="#avis">Avis</a>
     </nav>
     <a href="tel:0492141414" class="tel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 04 92 14 14 14</a>
@@ -233,11 +233,26 @@
     <h2>Un expert pour chaque besoin</h2>
     <div style="margin-top:14px"><span class="trait"></span></div>
   </div>
-  <section class="svcs">
-    <div class="card"><div class="corner"></div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></div><h3>Climatisation</h3><p>Installation, entretien annuel et dépannage rapide de vos splits et pompes à chaleur.</p></div>
-    <div class="card"><div class="corner"></div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Plomberie</h3><p>Fuite, débouchage, chauffe-eau, sanitaire — intervention propre et garantie.</p></div>
-    <div class="card"><div class="corner"></div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Électricité</h3><p>Panne, tableau électrique, mise aux normes par des électriciens habilités.</p></div>
+  <section class="svcs svc6-grid">
+    <a class="svc6" href="climatisation.html"><span class="ph"><img src="images/service-climatisation.jpg" alt="Installation de climatisation dans le 06 et le Var" loading="lazy" width="800" height="533" /></span><span class="bd"><h3>Climatisation</h3><ul><li>Installation mono &amp; multi-split</li><li>Entretien annuel dès 90 €</li><li>Dépannage urgent en été</li></ul><span class="lnk">Découvrir →</span></span></a>
+    <a class="svc6" href="plomberie.html"><span class="ph"><img src="images/plomberie-salle-de-bain-marbre.jpg" alt="Salle de bain moderne en marbre — plomberie" loading="lazy" width="1000" height="667" /></span><span class="bd"><h3>Plomberie</h3><ul><li>Fuites &amp; débouchage 24 h/24</li><li>Chauffe-eau &amp; sanitaires</li><li>Rénovation de salle de bain</li></ul><span class="lnk">Découvrir →</span></span></a>
+    <a class="svc6" href="electricite.html"><span class="ph"><img src="images/service-electricite.jpg" alt="Électricien professionnel — mise aux normes" loading="lazy" width="800" height="533" /></span><span class="bd"><h3>Électricité</h3><ul><li>Dépannage panne &amp; tableau</li><li>Mise aux normes NF C 15-100</li><li>Rénovation électrique</li></ul><span class="lnk">Découvrir →</span></span></a>
+    <a class="svc6" href="chauffage.html"><span class="ph"><img src="images/service-chauffage.jpg" alt="Chauffagiste — pompe à chaleur et chauffe-eau" loading="lazy" width="800" height="533" /></span><span class="bd"><h3>Chauffage</h3><ul><li>Pompe à chaleur réversible</li><li>Chauffe-eau &amp; ballons</li><li>Entretien &amp; contrats annuels</li></ul><span class="lnk">Découvrir →</span></span></a>
+    <a class="svc6" href="serrurerie.html"><span class="ph"><img src="images/serrurerie-porte-blindee.jpg" alt="Serrure multipoints haute sécurité — serrurier" loading="lazy" width="1000" height="667" /></span><span class="bd"><h3>Serrurerie</h3><ul><li>Ouverture de porte sans casse</li><li>Serrures haute sécurité</li><li>Sécurisation après effraction</li></ul><span class="lnk">Découvrir →</span></span></a>
+    <a class="svc6" href="volets-roulants.html"><span class="ph"><img src="images/volets-cote-azur.jpg" alt="Volets sur façade azuréenne" loading="lazy" width="1000" height="1500" /></span><span class="bd"><h3>Volets roulants</h3><ul><li>Réparation lames &amp; moteurs</li><li>Motorisation de l'existant</li><li>Toutes marques (Somfy…)</li></ul><span class="lnk">Découvrir →</span></span></a>
   </section>
+  <style>
+  .svc6{display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;transition:border-color .2s}
+  .svc6:hover{border-color:rgba(91,180,247,.55)}
+  .svc6 .ph{display:block;height:168px;overflow:hidden}
+  .svc6 .ph img{width:100%;height:100%;object-fit:cover}
+  .svc6 .bd{display:flex;flex-direction:column;gap:10px;padding:20px 22px 22px;flex:1}
+  .svc6 h3{font-family:'Sora';font-size:18px;color:#fff}
+  .svc6 ul{list-style:none;margin:0;padding:0;color:var(--mut);font-size:13.5px;line-height:2}
+  .svc6 ul li{display:flex;gap:8px;align-items:baseline}
+  .svc6 ul li::before{content:"";width:6px;height:6px;border-radius:50%;background:#5bb4f7;flex:none;transform:translateY(-2px)}
+  .svc6 .lnk{margin-top:auto;color:#5bb4f7;font-weight:600;font-size:14px}
+  </style>
 
   <!-- OFFRE ENTRETIEN CLIM -->
   <section class="band">
@@ -292,6 +307,23 @@
   </section>
 
   <!-- CAMION -->
+  <div class="sec-h"><div class="eb">Comment ça se passe</div><h2>Votre projet en 4 étapes, sans surprise</h2><div style="margin-top:14px"><span class="trait"></span></div></div>
+  <section class="steps">
+    <div class="step"><span class="sn">1</span><b>Vous nous contactez</b><p>Par téléphone, WhatsApp ou formulaire. Premier retour en 2 h en journée, devis gratuit sous 24 h.</p></div>
+    <div class="step"><span class="sn">2</span><b>Diagnostic &amp; conseil</b><p>Un technicien évalue votre besoin, vous conseille objectivement et fixe un prix ferme — validé avant tout démarrage.</p></div>
+    <div class="step"><span class="sn">3</span><b>Intervention soignée</b><p>Travail propre et dans les règles de l'art, protection des lieux, chantier laissé impeccable.</p></div>
+    <div class="step"><span class="sn">4</span><b>Garantie &amp; suivi</b><p>Facture détaillée, garantie décennale sur les travaux, et une équipe joignable après l'intervention.</p></div>
+  </section>
+  <style>
+  .steps{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:6px 0 80px}
+  @media(max-width:980px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.steps{grid-template-columns:1fr}}
+  .step{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:26px 22px}
+  .sn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;background:rgba(91,180,247,.14);border:1px solid rgba(91,180,247,.4);color:#5bb4f7;font-family:'Sora';font-weight:800;font-size:17px;margin-bottom:14px}
+  .step b{display:block;font-family:'Sora';font-size:15.5px;color:#fff;margin-bottom:8px}
+  .step p{color:var(--mut);font-size:13.5px;line-height:1.75}
+  </style>
+
   <div class="sec-h"><div class="eb">Une équipe mobile</div><h2>Notre camion près de chez vous</h2><div style="margin-top:14px"><span class="trait"></span></div></div>
   <section style="max-width:1000px;margin:0 auto 74px;position:relative;">
     <div style="position:absolute;inset:-20px;background:radial-gradient(circle at 60% 40%,rgba(226,59,85,.25),transparent 60%);filter:blur(22px);z-index:0;"></div>
